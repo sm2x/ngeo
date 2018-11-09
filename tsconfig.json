@@ -10,7 +10,8 @@
     "baseUrl": ".",
     "paths": {
       "ngeo/*": ["src/*"],
-      "gmf/*": ["contribs/gmf/src/*"]
+      "gmf/*": ["contribs/gmf/src/*"],
+      "goog/asserts.js": ["src/goog.asserts.prod.js"]
     }
   },
   "include": [

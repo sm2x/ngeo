@@ -1,8 +1,11 @@
 /**
  * @module ngeo.misc.debounce
  */
+
+import angular from 'angular';
+
 /**
- * @type {!angular.Module}
+ * @type {!angular.IModule}
  */
 const exports = angular.module('ngeoDebounce', []);
 
@@ -11,7 +14,7 @@ const exports = angular.module('ngeoDebounce', []);
  * Provides a debounce service. That service is a function
  * used to debounce calls to a user-provided function.
  *
- * @param {angular.$timeout} $timeout Angular timeout service.
+ * @param {angular.ITimeoutService} $timeout Angular timeout service.
  * @return {ngeox.miscDebounce} The debounce function.
  *
  * @ngdoc service
@@ -30,7 +33,7 @@ exports.factory_ = function($timeout) {
      */
     function(func, wait, invokeApply) {
       /**
-       * @type {?angular.$q.Promise}
+       * @type {?angular.IPromise}
        */
       let timeout = null;
       return (

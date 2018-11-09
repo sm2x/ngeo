@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 /**
  * @module gmf.raster.RasterService
  */
@@ -7,7 +9,7 @@
  * information at a specific coordinate.
  * @constructor
  * @struct
- * @param {angular.$http} $http Angular http service.
+ * @param {angular.IHttpService} $http Angular http service.
  * @param {string} gmfRasterUrl URL to a the c2cgeoportal raster service.
  * @ngInject
  * @ngdoc service
@@ -16,7 +18,7 @@
 const exports = function($http, gmfRasterUrl) {
 
   /**
-   * @type {angular.$http}
+   * @type {angular.IHttpService}
    * @private
    */
   this.$http_ = $http;
@@ -32,7 +34,7 @@ const exports = function($http, gmfRasterUrl) {
 /**
  * @param {ol.Coordinate} coordinate Coordinate.
  * @param {Object=} opt_params Optional parameters for the request.
- * @return {angular.$q.Promise} Promise.
+ * @return {angular.IPromise} Promise.
  * @export
  */
 exports.prototype.getRaster = function(coordinate, opt_params) {
@@ -48,7 +50,7 @@ exports.prototype.getRaster = function(coordinate, opt_params) {
 
 
 /**
- * @param {angular.$http.Response} resp Ajax response.
+ * @param {angular.IHttpResponse} resp Ajax response.
  * @return {Object.<string, number>} The response object.
  * @private
  */
@@ -67,7 +69,7 @@ exports.Param = {
 
 
 /**
- * @type {!angular.Module}
+ * @type {!angular.IModule}
  */
 exports.module = angular.module('gmfRaster', []);
 exports.module.service('gmfRaster', exports);
