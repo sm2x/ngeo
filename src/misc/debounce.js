@@ -2,7 +2,7 @@
  * @module ngeo.misc.debounce
  */
 
-import angular from 'angular';
+import * as angular from 'angular';
 
 /**
  * @type {!angular.IModule}
