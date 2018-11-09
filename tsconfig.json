@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": false,
+    "moduleResolution": "node",
+
+    "baseUrl": ".",
+    "paths": {
+      "ngeo/*": ["src/*"],
+      "gmf/*": ["contribs/gmf/src/*"],
+      "goog/asserts.js": ["src/goog.asserts.prod.js"]
+    }
+  },
+  "include": [
+    "src/**/*.js",
+    "contribs/gmf/src/**/*.js",
+    "node_modules/@types/openlayers/*",
+    "types/**/*"
+  ]
+}

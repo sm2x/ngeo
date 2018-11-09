@@ -1,24 +1,32 @@
 /**
  * @module ngeo.misc.debounce
  */
+
+import * as angular from 'angular';
+
 /**
- * @type {!angular.Module}
+ * @type {!angular.IModule}
  */
 const exports = angular.module('ngeoDebounce', []);
 
+/**
+ * Provides a debounce function used to debounce calls to a user-provided
+ * function.
+ * @typedef {function(function(?), number, boolean):function()} miscDebounce
+ */
 
 /**
  * Provides a debounce service. That service is a function
  * used to debounce calls to a user-provided function.
  *
- * @param {angular.$timeout} $timeout Angular timeout service.
- * @return {ngeox.miscDebounce} The debounce function.
+ * @param {angular.ITimeoutService} $timeout Angular timeout service.
+ * @return {miscDebounce} The debounce function.
  *
  * @ngdoc service
  * @ngname ngeoDebounce
  * @ngInject
  */
-exports.factory_ = function($timeout) {
+function factory($timeout) {
   return (
     // FIXME: eslint can't detect that the function returns a function
     /**
@@ -30,7 +38,7 @@ exports.factory_ = function($timeout) {
      */
     function(func, wait, invokeApply) {
       /**
-       * @type {?angular.$q.Promise}
+       * @type {?angular.IPromise}
        */
       let timeout = null;
       return (
@@ -48,7 +56,7 @@ exports.factory_ = function($timeout) {
     });
 };
 
-exports.factory('ngeoDebounce', exports.factory_);
+exports.factory('ngeoDebounce', factory);
 
 
 export default exports;
