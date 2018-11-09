@@ -12,7 +12,7 @@
     "serve-gmf-examples": "DEV_SERVER=1 TARGET=gmf-examples webpack-dev-server --port 3000 --progress --watch --bail --debug",
     "serve-gmf-apps": "DEV_SERVER=1 TARGET=gmf-apps webpack-dev-server --port 3000 --progress --watch --bail --debug",
     "typecheck": "tsc --pretty",
-    "doc": "typedoc --module system --target ES6 --name ngeo --out apidoc src/ contribs/gmf/src/"
+    "doc": "typedoc --module system --target ES6 --name ngeo --out apidoc contribs/gmf/src/"
   },
   "repository": {
     "type": "git",
