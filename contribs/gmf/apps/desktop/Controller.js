@@ -32,7 +32,8 @@ if (!window.requestAnimationFrame) {
  * @ngInject
  * @export
  */
-const exports = function($scope, $injector) {
+const exports = function($scope, $injector, toto) {
+  console.log(toto)
   gmfControllersAbstractDesktopController.call(this, {
     srid: 21781,
     mapViewConfig: {
@@ -128,5 +129,11 @@ exports.module.run(/* @ngInject */ ($templateCache) => {
 });
 
 exports.module.controller('DesktopController', exports);
+setTimeout(() => {
+        exports.module.constant('toto', 100);
+        //angular.bootstrap(document, 'Appdesktop') 
+        angular.bootstrap(document, [exports.module.name]) 
+}, 1000);
+console.log("end")
 
 export default exports;
