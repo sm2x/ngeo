@@ -61,7 +61,7 @@ exports.MainController = function($http, $scope) {
             'LAYERS': 'ch.swisstopo.pixelkarte-farbe-pk1000.noscale',
             'FORMAT': 'image/jpeg'
           },
-          serverType: /** @type {ol.source.WMSServerType} */ ('mapserver')
+          serverType: /** @type {import("ol/source/WMSServerType.js").default} */ ('mapserver')
         })
       }),
       new olLayerVector({
@@ -111,7 +111,7 @@ exports.MainController = function($http, $scope) {
     let i;
     const len = data.length;
     const lineString = new olGeomLineString([],
-      /** @type {ol.geom.GeometryLayout} */ ('XYM'));
+      /** @type {import("ol/geom/GeometryLayout.js").default} */ ('XYM'));
     for (i = 0; i < len; i++) {
       const p = data[i];
       lineString.appendCoordinate([p.x, p.y, p.dist]);

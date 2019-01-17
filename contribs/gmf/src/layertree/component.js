@@ -318,7 +318,7 @@ Controller.prototype.updateDimensions_ = function(treeCtrl) {
 
 
 /**
- * @param {ol.layer.Layer} layer Layer to update.
+ * @param {import("ol/layer/Layer.js").default} layer Layer to update.
  * @param {gmfThemes.GmfGroup|gmfThemes.GmfLayer} node Layer tree node.
  * @private
  */

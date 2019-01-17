@@ -98,7 +98,7 @@ exports.prototype.setStyle = function(style) {
 
 
 /**
- * @param {ol.Collection.Event} evt Feature collection event.
+ * @param {import("ol/Collection/Event.js").default} evt Feature collection event.
  * @private
  */
 exports.prototype.handleFeatureAdd_ = function(evt) {
@@ -108,7 +108,7 @@ exports.prototype.handleFeatureAdd_ = function(evt) {
 
 
 /**
- * @param {ol.Collection.Event} evt Feature collection event.
+ * @param {import("ol/Collection/Event.js").default} evt Feature collection event.
  * @private
  */
 exports.prototype.handleFeatureRemove_ = function(evt) {

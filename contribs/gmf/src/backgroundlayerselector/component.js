@@ -61,7 +61,7 @@ function gmfBackgroundlayerselectorTemplateUrl($element, $attrs, gmfBackgroundla
  *
  *  * thumbnail: The URL used for the icon.
  *
- * @htmlAttribute {ol.Map=} gmf-backgroundlayerselector-map The map.
+ * @htmlAttribute {import("ol/Map/.js").default} gmf-backgroundlayerselector-map The map.
  * @htmlAttribute {string} gmf-backgroundlayer-opacity-options The opacity slider options.
  * @htmlAttribute {Function} gmf-backgroundlayerselector-select Function called
  *     when a layer was selected by the user.
@@ -127,7 +127,7 @@ function Controller($scope, ngeoBackgroundLayerMgr, gmfThemes) {
   this.bgLayers;
 
   /**
-   * @type {ol.layer.Base}
+   * @type {import("ol/layer/Base.js").default}
    * @export
    */
   this.opacityLayer;
@@ -210,7 +210,7 @@ Controller.prototype.getSetBgLayerOpacity = function(val) {
 };
 
 /**
- * @param {ol.layer.Base} layer Layer.
+ * @param {import("ol/layer/Base.js").default} layer Layer.
  * @param {boolean=} opt_silent Do not notify listeners.
  * @export
  */
@@ -224,7 +224,7 @@ Controller.prototype.setLayer = function(layer, opt_silent) {
 
 /**
  * Set a background layer overlay, used by the opacity slider.
- * @param {ol.layer.Base} layer The opacity background layer.
+ * @param {import("ol/layer/Base.js").default} layer The opacity background layer.
  * @export
  */
 Controller.prototype.setOpacityBgLayer = function(layer) {

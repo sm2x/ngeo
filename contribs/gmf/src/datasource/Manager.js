@@ -743,7 +743,7 @@ const exports = class {
   /**
    * Update layer filter parameter according to data sources filter rules
    * and dimensions filters.
-   * @param {ol.layer.Base} layer The layer to update.
+   * @param {import("ol/layer/Base.js").default} layer The layer to update.
    * @private
    */
   updateLayerFilter_(layer) {

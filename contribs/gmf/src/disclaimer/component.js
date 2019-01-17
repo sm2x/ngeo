@@ -147,7 +147,7 @@ Controller.prototype.$onInit = function() {
 };
 
 /**
- * @param {ol.Collection.Event} evt Event.
+ * @param {import("ol/Collection/Event.js").default} evt Event.
  * @private
  */
 Controller.prototype.handleLayersAdd_ = function(evt) {
@@ -160,7 +160,7 @@ Controller.prototype.handleLayersAdd_ = function(evt) {
 
 
 /**
- * @param {ol.Collection.Event} evt Event.
+ * @param {import("ol/Collection/Event.js").default} evt Event.
  * @private
  */
 Controller.prototype.handleLayersRemove_ = function(evt) {
@@ -171,7 +171,7 @@ Controller.prototype.handleLayersRemove_ = function(evt) {
 
 
 /**
- * @param {ol.layer.Base} layer Layer.
+ * @param {import("ol/layer/Base.js").default} layer Layer.
  * @private
  */
 Controller.prototype.registerLayer_ = function(layer) {
@@ -219,7 +219,7 @@ Controller.prototype.registerLayer_ = function(layer) {
 
 
 /**
- * @param {ol.layer.Base} layer Layer.
+ * @param {import("ol/layer/Base.js").default} layer Layer.
  * @private
  */
 Controller.prototype.unregisterLayer_ = function(layer) {
@@ -341,7 +341,7 @@ Controller.prototype.closeDisclaimerMessage_ = function(msg) {
  * @htmlAttribute {string?} gmf-disclaimer-external-msg variable that will
  *     contains the disclaimer messages. To uses it, you must set the
  *     gmf-disclaimer-external to true.
- * @htmlAttribute {ol.Map=} gmf-disclaimer-map The map.
+ * @htmlAttribute {import("ol/Map/.js").default} gmf-disclaimer-map The map.
  *
  * @ngdoc component
  * @ngname gmfDisclaimer

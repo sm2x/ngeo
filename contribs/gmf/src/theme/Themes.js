@@ -19,7 +19,7 @@ import olLayerTile from 'ol/layer/Tile.js';
  * objects in the tree returned by the "themes" web service.
  *
  * @constructor
- * @extends {ol.events.EventTarget}
+ * @extends {import("ol/events/EventTarget.js").default}
  * @param {angular.IHttpService} $http Angular http service.
  * @param {angular.auto.IInjectorService} $injector Main injector.
  * @param {angular.IQService} $q Angular q service
@@ -245,8 +245,8 @@ exports.prototype.getBgLayers = function() {
 
   /**
    * @param {gmfThemes.GmfGroup|gmfThemes.GmfLayer} item The item.
-   * @param {ol.layer.Base} layer The layer.
-   * @return {ol.layer.Base} the provided layer.
+   * @param {import("ol/layer/Base.js").default} layer The layer.
+   * @return {import("ol/layer/Base.js").default} the provided layer.
    */
   const callback = function(item, layer) {
     layer.set('label', item.name);

@@ -154,7 +154,7 @@ export default class extends ngeoRuleRule {
   /**
    * Called when the geometry of the features changes. Update the expression
    * accordingly.
-   * @param {ol.Object.Event} evt Event
+   * @param {import("ol/Object/Event.js").default} evt Event
    * @private
    */
   handleGeometryChange_(evt) {

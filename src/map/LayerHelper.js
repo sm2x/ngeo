@@ -75,7 +75,7 @@ exports.REFRESH_PARAM = 'random';
  * @param {Object.<string, string>=} opt_params WMS parameters.
  * @param {string=} opt_crossOrigin crossOrigin.
  * @param {Object=} opt_customOptions Some initial options.
- * @return {ol.layer.Image} WMS Layer.
+ * @return {import("ol/layer/Image.js").default} WMS Layer.
  * @export
  */
 exports.prototype.createBasicWMSLayer = function(sourceURL,
@@ -114,7 +114,7 @@ exports.prototype.createBasicWMSLayer = function(sourceURL,
  *
  * @param {ngeo.datasource.OGC} dataSource OGC data source.
  * @param {string=} opt_crossOrigin crossOrigin.
- * @return {ol.layer.Image} WMS Layer.
+ * @return {import("ol/layer/Image.js").default} WMS Layer.
  * @export
  */
 exports.prototype.createBasicWMSLayerFromDataSource = function(
@@ -240,7 +240,7 @@ exports.prototype.createWMTSLayerFromCapabilititesObj = function(
  * directly add them in the returned group.
  * @param {ol.Collection.<ol.layer.Base>=} opt_layers The layer to add to the
  * returned Group.
- * @return {ol.layer.Group} Layer group.
+ * @return {import("ol/layer/Group.js").default} Layer group.
  * @export
  */
 exports.prototype.createBasicGroup = function(opt_layers) {
@@ -259,7 +259,7 @@ exports.prototype.createBasicGroup = function(opt_layers) {
  * the map.
  * @param {import("ol/Map.js").default} map A map.
  * @param {string} groupName The name of the group.
- * @return {ol.layer.Group} The group corresponding to the given name.
+ * @return {import("ol/layer/Group.js").default} The group corresponding to the given name.
  * @export
  */
 exports.prototype.getGroupFromMap = function(map, groupName) {
@@ -267,7 +267,7 @@ exports.prototype.getGroupFromMap = function(map, groupName) {
   let group;
   groups.getArray().some((existingGroup) => {
     if (existingGroup.get(exports.GROUP_KEY) === groupName) {
-      group = /** @type {ol.layer.Group} */ (existingGroup);
+      group = /** @type {import("ol/layer/Group.js").default} */ (existingGroup);
       return true;
     } else {
       return false;
@@ -285,7 +285,7 @@ exports.prototype.getGroupFromMap = function(map, groupName) {
 /**
  * Get an array of all layers in a group. The group can contain multiple levels
  * of others groups.
- * @param {ol.layer.Base} layer The base layer, mostly a group of layers.
+ * @param {import("ol/layer/Base.js").default} layer The base layer, mostly a group of layers.
  * @return {Array.<ol.layer.Layer>} Layers.
  * @export
  */
@@ -307,7 +307,7 @@ exports.prototype.getFlatLayers = function(layer) {
  * If opacity is defined on the group, this value is lost.
  * Computed opacity is a custom 'back-up' value that contains
  * the calculated value of all ancestors and the given layer.
- * @param {ol.layer.Base} layer The base layer, mostly a group of layers.
+ * @param {import("ol/layer/Base.js").default} layer The base layer, mostly a group of layers.
  * @param {Array.<ol.layer.Base>} array An array to add layers.
  * @param {number|undefined} computedOpacity Opacity inherited from ancestor layer groups.
  * @return {Array.<ol.layer.Layer>} Layers.
@@ -362,7 +362,7 @@ exports.prototype.getLayerByName = function(layerName, layers) {
 
 /**
  * Get the WMTS legend URL for the given layer.
- * @param {ol.layer.Tile} layer Tile layer as returned by the
+ * @param {import("ol/layer/Tile.js").default} layer Tile layer as returned by the
  * ngeo layerHelper service.
  * @return {string|undefined} The legend URL or undefined.
  * @export
@@ -443,7 +443,7 @@ exports.prototype.getWMSLegendURL = function(url,
 
 /**
  * Returns if this layer is visible at the current resolution.
- * @param {ol.layer.Base} layer Layer.
+ * @param {import("ol/layer/Base.js").default} layer Layer.
  * @param {import("ol/Map.js").default} map Map.
  * @return {boolean} Is the layer currently visible?
  */
@@ -491,7 +491,7 @@ exports.prototype.setZIndexToFirstLevelChildren = function(element, ZIndex) {
 
 /**
  * Update the LAYERS parameter of the source of the given WMS layer.
- * @param {ol.layer.Image} layer The WMS layer.
+ * @param {import("ol/layer/Image.js").default} layer The WMS layer.
  * @param {string} names The names that will be used to set
  * the LAYERS parameter.
  * @param {string=} opt_time The start
@@ -505,7 +505,7 @@ exports.prototype.updateWMSLayerState = function(layer, names, opt_time) {
     layer.setVisible(false);
   } else {
     layer.setVisible(true);
-    const source = /** @type {ol.source.ImageWMS} */ (layer.getSource());
+    const source = /** @type {import("ol/source/ImageWMS.js").default} */ (layer.getSource());
     if (opt_time) {
       source.updateParams({'LAYERS': names, 'TIME': opt_time});
     } else {
@@ -516,7 +516,7 @@ exports.prototype.updateWMSLayerState = function(layer, names, opt_time) {
 
 
 /**
- * @param {ol.layer.Image} layer The WMS layer.
+ * @param {import("ol/layer/Image.js").default} layer The WMS layer.
  * @return {Array.<number>|undefined} List of query source ids, a.k.a.
  *     the data source ids this layer is composed of.
  * @export

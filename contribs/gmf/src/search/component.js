@@ -813,7 +813,7 @@ class SearchController {
    * Style for search results.
    * @param {null|ol.Feature|ol.render.Feature} feature The searched feature.
    * @param {number} resolution The current resolution of the map.
-   * @return {ol.style.Style} A style for this kind of features.
+   * @return {import("ol/style/Style.js").default} A style for this kind of features.
    * @private
    */
   getSearchStyle_(feature, resolution) {
@@ -949,7 +949,7 @@ class SearchController {
    */
   selectFromGMF_(event, feature, dataset) {
     const actions = feature.get('actions');
-    const featureGeometry = /** @type {ol.geom.SimpleGeometry} */
+    const featureGeometry = /** @type {import("ol/geom/SimpleGeometry.js").default} */
         (feature.getGeometry());
     if (actions) {
       for (let i = 0, ii = actions.length; i < ii; i++) {

@@ -56,7 +56,7 @@ const exports = function() {
   this.groups_ = [];
 
   /**
-   * @type {ol.source.Vector}
+   * @type {import("ol/source/Vector.js").default}
    * @private
    */
   this.source_ = new olSourceVector({
@@ -64,7 +64,7 @@ const exports = function() {
   });
 
   /**
-   * @type {ol.layer.Vector}
+   * @type {import("ol/layer/Vector.js").default}
    * @private
    */
   this.layer_ = new olLayerVector({
@@ -123,7 +123,7 @@ exports.prototype.clear = function(groupIndex) {
 
 
 /**
- * @return {ol.layer.Vector} The vector layer used internally.
+ * @return {import("ol/layer/Vector.js").default} The vector layer used internally.
  * @export
  */
 exports.prototype.getLayer = function() {

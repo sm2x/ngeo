@@ -62,7 +62,7 @@ exports.prototype.createPrintMaskPostcompose = function(getSize, getScale, opt_r
 
   return (
   /**
-        * @param {ol.render.Event} evt Postcompose event.
+        * @param {import("ol/render/Event.js").default} evt Postcompose event.
         */
     function(evt) {
       const context = evt.context;

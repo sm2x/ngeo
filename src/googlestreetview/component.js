@@ -164,7 +164,7 @@ class Controller {
     this.panoramaListener_ = null;
 
     /**
-     * @type {ol.geom.Point}
+     * @type {import("ol/geom/Point.js").default}
      * @private
      */
     this.point_ = new olGeomPoint([0, 0]);

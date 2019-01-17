@@ -34,7 +34,7 @@ const exports = angular.module('gmfDrawProfileLine', [
  *
  *
  * @htmlAttribute {import("ol/Map.js").default} gmf-drawprofileline-map The map.
- * @htmlAttribute {ol.geom.LineString} gmf-drawprofileline-line The variable to
+ * @htmlAttribute {import("ol/geom/LineString.js").default} gmf-drawprofileline-line The variable to
  *     connect with the drawn line.
  * @htmlAttribute {boolean=} gmf-drawprofileline-active Active the component.
  * @htmlAttribute {ol.style.Style=} gmf-drawprofileline-style Optional style
@@ -119,7 +119,7 @@ function Controller($scope, $timeout, ngeoFeatureOverlayMgr) {
    * @export
    */
   this.interaction = new olInteractionDraw({
-    type: /** @type {ol.geom.GeometryType} */ ('LineString'),
+    type: /** @type {import("ol/geom/GeometryType.js").default} */ ('LineString'),
     features: this.features_
   });
 

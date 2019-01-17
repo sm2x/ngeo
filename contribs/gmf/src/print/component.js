@@ -306,7 +306,7 @@ class Controller {
     this.ngeoLayerHelper_ = ngeoLayerHelper;
 
     /**
-     * @type {ol.layer.Vector}
+     * @type {import("ol/layer/Vector.js").default}
      * @private
      */
     this.featureOverlayLayer_ = ngeoFeatureOverlayMgr.getLayer();
@@ -1043,7 +1043,7 @@ class Controller {
   /**
    * Get the optimal scale to display the print mask. Return the first scale if
    * no scale matches.
-   * @param {ol.Size|undefined} mapSize Size of the map on the screen (px).
+   * @param {import("ol/Size/undefined.js").default} mapSize Size of the map on the screen (px).
    * @param {number|undefined} viewResolution Resolution of the map on the screen.
    * @return {number} The best scale. -1 is returned if there is no optimal
    *     scale, that is the optimal scale is lower than or equal to the first

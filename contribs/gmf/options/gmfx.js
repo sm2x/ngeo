@@ -445,7 +445,7 @@ gmfx.ProfileHoverPointInformations;
 
 /**
  * Coordinate of the point.
- * @type {ol.Coordinate|undefined}
+ * @type {import("ol/Coordinate/undefined.js").default}
  */
 gmfx.ProfileHoverPointInformations.prototype.coordinate;
 

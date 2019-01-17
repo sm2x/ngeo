@@ -133,7 +133,7 @@ olUtilInherits(exports, olOverlay);
 
 
 /**
- * @param {ol.PluggableMap|undefined} map Map.
+ * @param {import("ol/PluggableMap/undefined.js").default} map Map.
  * @export
  * @override
  */

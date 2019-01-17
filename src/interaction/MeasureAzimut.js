@@ -121,7 +121,7 @@ exports.getFormattedAzimut = function(line, decimals, format) {
 
 /**
  * Compute azimut from a 2 points line.
- * @param {ol.geom.LineString} line LineString.
+ * @param {import("ol/geom/LineString.js").default} line LineString.
  * @return {number} Azimut value.
  */
 exports.getAzimut = function(line) {

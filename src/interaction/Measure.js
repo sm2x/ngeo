@@ -55,7 +55,7 @@ import olStyleStyle from 'ol/style/Style.js';
  *
  * @constructor
  * @abstract
- * @extends {ol.interaction.Interaction}
+ * @extends {import("ol/interaction/Interaction.js").default}
  * @param {ngeo.interaction.MeasureBaseOptions=} options Options
  */
 const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOptions} */ ({})) {
@@ -188,7 +188,7 @@ const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOption
 
   /**
    * The vector layer used to show final measure features.
-   * @type {ol.layer.Vector}
+   * @type {import("ol/layer/Vector.js").default}
    * @private
    */
   this.vectorLayer_ = new olLayerVector({
@@ -237,7 +237,7 @@ olUtilInherits(exports, olInteractionInteraction);
  * @this {ngeo.interaction.Measure}
  */
 exports.getFormattedArea = function(polygon, projection, precision, format) {
-  const geom = /** @type {ol.geom.Polygon} */ (polygon.clone().transform(projection, 'EPSG:4326'));
+  const geom = /** @type {import("ol/geom/Polygon.js").default} */ (polygon.clone().transform(projection, 'EPSG:4326'));
   const area = Math.abs(olSphere.getArea(geom, {'projection': 'EPSG:4326'}));
   return format(area, 'm²', 'square', precision);
 };
@@ -329,7 +329,7 @@ exports.prototype.getDrawInteraction = function() {
  * @abstract
  * @param {ol.style.Style|Array.<ol.style.Style>|ol.StyleFunction|undefined}
  *     style The sketchStyle used for the drawing interaction.
- * @param {ol.source.Vector} source Vector source.
+ * @param {import("ol/source/Vector.js").default} source Vector source.
  * @return {ol.interaction.Draw|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw} The interaction
  * @protected
  */

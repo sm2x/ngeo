@@ -65,7 +65,7 @@ exports.prototype.getProjectionList = function(projectionsCodes) {
  * which it falls inside of the viewProjection extent.
  * @param {import("ol/Coordinate.js").default} coordinates The point to test.
  * @param {import("ol/Extent.js").default} extent Limits in which coordinates can be valid.
- * @param {ol.proj.Projection} viewProjection Target projection the point.
+ * @param {import("ol/proj/Projection.js").default} viewProjection Target projection the point.
  * @param {Array.<ol.proj.Projection>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of
  *     the array.
@@ -99,7 +99,7 @@ exports.prototype.tryProjections = function(coordinates,
  * re-call it with coordinates in reverse order.
  * @param {import("ol/Coordinate.js").default} coordinates The point to test.
  * @param {import("ol/Extent.js").default} extent Limits in which coordinates can be valid.
- * @param {ol.proj.Projection} viewProjection Target projection the point.
+ * @param {import("ol/proj/Projection.js").default} viewProjection Target projection the point.
  * @param {Array.<ol.proj.Projection>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of
  *     the array.

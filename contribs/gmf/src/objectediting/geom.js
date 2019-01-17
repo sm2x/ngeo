@@ -35,7 +35,7 @@ exports.isEmpty = function(geom) {
  * Convert all coordinates within a geometry object to XY, i.e. remove any
  * extra dimension other than X and Y to the coordinates of a geometry.
  *
- * @param {ol.geom.Geometry} geom Geometry
+ * @param {import("ol/geom/Geometry.js").default} geom Geometry
  */
 exports.toXY = function(geom) {
   if (geom instanceof olGeomPoint) {

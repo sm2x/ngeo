@@ -1048,7 +1048,7 @@ exports.prototype.initLayers_ = function() {
 
 
 /**
- * @param {ol.Collection.Event} event Collection event.
+ * @param {import("ol/Collection/Event.js").default} event Collection event.
  * @private
  */
 exports.prototype.handleNgeoFeaturesAdd_ = function(event) {
@@ -1059,7 +1059,7 @@ exports.prototype.handleNgeoFeaturesAdd_ = function(event) {
 
 
 /**
- * @param {ol.Collection.Event} event Collection event.
+ * @param {import("ol/Collection/Event.js").default} event Collection event.
  * @private
  */
 exports.prototype.handleNgeoFeaturesRemove_ = function(event) {

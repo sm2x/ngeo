@@ -1013,12 +1013,12 @@ exports.Controller.prototype.handleWindowBeforeUnload_ = function(e) {
  * Depending on the current behaviour, use the added sketch feature to process
  * the existing geometry.
  *
- * @param {ol.Collection.Event} evt Event.
+ * @param {import("ol/Collection/Event.js").default} evt Event.
  * @private
  */
 exports.Controller.prototype.handleSketchFeaturesAdd_ = function(evt) {
   const sketchFeature = /** @type {import("ol/Feature.js").default} */ (evt.element);
-  const sketchGeom = /** @type {ol.geom.Geometry} */ (
+  const sketchGeom = /** @type {import("ol/geom/Geometry.js").default} */ (
     sketchFeature.getGeometry());
 
   const geom = this.feature.getGeometry();

@@ -17,7 +17,7 @@ import * as olColor from 'ol/color.js';
  */
 const exports = function() {
   /**
-   * @type {ol.format.GeoJSON}
+   * @type {import("ol/format/GeoJSON.js").default}
    */
   this.geojsonFormat = new olFormatGeoJSON();
 };
@@ -48,7 +48,7 @@ const PRINT_STYLE_TYPES = {
 
 /**
  * @param {Array.<MapFishPrintLayer>} arr Array.
- * @param {ol.layer.Vector} layer Layer.
+ * @param {import("ol/layer/Vector.js").default} layer Layer.
  * @param {number} resolution Resolution.
  */
 exports.prototype.encodeVectorLayer = function(arr, layer, resolution) {
@@ -139,8 +139,8 @@ exports.prototype.encodeVectorLayer = function(arr, layer, resolution) {
 
 /**
  * @param {MapFishPrintVectorStyle} object MapFish style object.
- * @param {ol.geom.GeometryType} geometryType Type of the GeoJSON geometry
- * @param {ol.style.Style} style Style.
+ * @param {import("ol/geom/GeometryType.js").default} geometryType Type of the GeoJSON geometry
+ * @param {import("ol/style/Style.js").default} style Style.
  * @param {string} styleId Style id.
  * @param {string} featureStyleProp Feature style property name.
  */
@@ -267,7 +267,7 @@ exports.prototype.encodeVectorStylePoint = function(symbolizers, imageStyle) {
      * Mapfish Print does not support image defined with ol.style.RegularShape.
      * As a workaround, I try to map the image on a well-known image name.
      */
-    const points = /** @type {ol.style.RegularShape} */ (imageStyle).getPoints();
+    const points = /** @type {import("ol/style/RegularShape.js").default} */ (imageStyle).getPoints();
     if (points !== null) {
       symbolizer = /** @type {MapFishPrintSymbolizerPoint} */ ({
         type: 'point'
@@ -314,7 +314,7 @@ exports.prototype.encodeVectorStylePoint = function(symbolizers, imageStyle) {
  * @param {Array.<MapFishPrintSymbolizer>} symbolizers Array of MapFish Print
  *     symbolizers.
  * @param {!ol.style.Fill} fillStyle Fill style.
- * @param {ol.style.Stroke} strokeStyle Stroke style.
+ * @param {import("ol/style/Stroke.js").default} strokeStyle Stroke style.
  * @protected
  */
 exports.prototype.encodeVectorStylePolygon = function(symbolizers, fillStyle, strokeStyle) {

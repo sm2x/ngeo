@@ -95,9 +95,9 @@ function gmfDisplayquerywindowTemplateUrl($element, $attrs, gmfDisplayquerywindo
  *        gmf-displayquerywindow-selectedfeaturestyle="ctrl.styleForTheCurrentFeature">
  *      </gmf-displayquerywindow>
  *
- * @htmlAttribute {ol.style.Style} gmf-displayquerywindow-featuresstyle A style
+ * @htmlAttribute {import("ol/style/Style.js").default} gmf-displayquerywindow-featuresstyle A style
  *     object for all features from the result of the query.
- * @htmlAttribute {ol.style.Style} selectedfeaturestyle A style
+ * @htmlAttribute {import("ol/style/Style.js").default} selectedfeaturestyle A style
  *     object for the current displayed feature.
  * @htmlAttribute {boolean=} defaultcollapsed If the query result window is
  *     collapsed.
@@ -526,7 +526,7 @@ Controller.prototype.collectFeatures_ = function() {
 
 /**
  * Highlight the current displayed feature.
- * @param {ol.Feature=} opt_lastFeature last highlighted feature. Require if
+ * @param {import("ol/Feature/.js").default} opt_lastFeature last highlighted feature. Require if
  * it exists because it must be added to the 'non-selected' features collection.
  * @private
  */

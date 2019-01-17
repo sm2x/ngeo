@@ -79,9 +79,9 @@ function gmfProfileTemplateUrl($element, $attrs, gmfProfileTemplateUrl) {
  *
  *
  * @htmlAttribute {boolean} gmf-profile-active Active the component.
- * @htmlAttribute {ol.geom.LineString} gmf-profile-line The linestring geometry
+ * @htmlAttribute {import("ol/geom/LineString.js").default} gmf-profile-line The linestring geometry
  *     to use to draw the profile.
- * @htmlAttribute {ol.Map?} gmf-profile-map An optional map.
+ * @htmlAttribute {import("ol/Map/.js").default} gmf-profile-map An optional map.
  * @htmlAttribute {Object.<string, gmfx.ProfileLineConfiguration>}
  *     gmf-profile-linesconfiguration The configuration of the lines. Each keys
  *     will be used to request elevation layers.
@@ -208,7 +208,7 @@ function Controller($scope, $http, $element, $filter,
   this.nbPoints_ = 100;
 
   /**
-   * @type {ol.geom.LineString}
+   * @type {import("ol/geom/LineString.js").default}
    * @export
    */
   this.line;
