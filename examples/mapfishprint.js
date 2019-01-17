@@ -132,7 +132,7 @@ exports.MainController = function($timeout, ngeoCreatePrint, ngeoPrintUtils) {
   this.printUtils_ = ngeoPrintUtils;
 
   /**
-   * @type {function(ol.render.Event)}
+   * @type {function(import("ol/render/Event.js").default)}
    */
   const postcomposeListener = ngeoPrintUtils.createPrintMaskPostcompose(
     /**

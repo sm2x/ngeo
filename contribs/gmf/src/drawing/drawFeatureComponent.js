@@ -504,7 +504,7 @@ Controller.prototype.removeFeature = function(feature) {
 
 
 /**
- * @param {!ol.Collection.Event} evt Event.
+ * @param {!import("ol/Collection/Event.js").default} evt Event.
  * @private
  */
 Controller.prototype.handleFeaturesAdd_ = function(evt) {
@@ -518,7 +518,7 @@ Controller.prototype.handleFeaturesAdd_ = function(evt) {
 
 
 /**
- * @param {!ol.Collection.Event} evt Event.
+ * @param {!import("ol/Collection/Event.js").default} evt Event.
  * @private
  */
 Controller.prototype.handleFeaturesRemove_ = function(evt) {
@@ -750,7 +750,7 @@ Controller.prototype.handleMenuActionClick_ = function(vertexInfo, evt) {
 
 
 /**
- * @param {!ol.interaction.Translate.Event} evt Event.
+ * @param {!import("ol/interaction/Translate.js").default.Event} evt Event.
  * @private
  */
 Controller.prototype.handleTranslateEnd_ = function(evt) {

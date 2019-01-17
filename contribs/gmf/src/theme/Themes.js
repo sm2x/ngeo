@@ -221,7 +221,7 @@ exports.getFlatNodes = function(node, nodes) {
 
 /**
  * Get background layers.
- * @return {!angular.IPromise.<!Array.<!ol.layer.Base>>} Promise.
+ * @return {!angular.IPromise.<!Array.<!import("ol/layer/Base.js").default>>} Promise.
  */
 exports.prototype.getBgLayers = function() {
   const gettextCatalog = this.gettextCatalog;
@@ -261,7 +261,7 @@ exports.prototype.getBgLayers = function() {
   /**
    * @param {gmfThemes.GmfOgcServers} ogcServers The ogc servers.
    * @param {gmfThemes.GmfGroup|gmfThemes.GmfLayer} gmfLayer The item.
-   * @return {angular.IPromise.<ol.layer.Base>|ol.layer.Base} the created layer.
+   * @return {angular.IPromise.<ol.layer.Base>|import("ol/layer/Base.js").default} the created layer.
    */
   const layerLayerCreationFn = function(ogcServers, gmfLayer) {
     if (gmfLayer.type === 'WMTS') {
@@ -313,7 +313,7 @@ exports.prototype.getBgLayers = function() {
   /**
    * @param {gmfThemes.GmfOgcServers} ogcServers The ogc servers.
    * @param {gmfThemes.GmfGroup} item The item.
-   * @return {angular.IPromise.<ol.layer.Group>} the created layer.
+   * @return {angular.IPromise.<import("ol/layer/Group.js").default>} the created layer.
    */
   const layerGroupCreationFn = function(ogcServers, item) {
     // We assume no child is a layer group.
@@ -334,7 +334,7 @@ exports.prototype.getBgLayers = function() {
   /**
    * @param {gmfThemes.GmfThemesResponse} data The "themes" web service
    *     response.
-   * @return {angular.IPromise.<Array.<ol.layer.Base>>} Promise.
+   * @return {angular.IPromise.<Array.<import("ol/layer/Base.js").default>>} Promise.
    */
   const promiseSuccessFn = function(data) {
     const promises = data.background_layers.map((item) => {

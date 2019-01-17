@@ -38,7 +38,7 @@ exports.prototype.stringToCoordinates = function(str) {
  *     for each code that are not defined in ol projections.
  * @param {Array.<string>} projectionsCodes EPSG codes (e.g. 'EPSG:3857',
  *     'epsg:3857' or '3857').
- * @return {Array.<ol.proj.Projection>} An array of projections.
+ * @return {Array.<import("ol/proj/Projection.js").default>} An array of projections.
  * @export
  */
 exports.prototype.getProjectionList = function(projectionsCodes) {
@@ -66,7 +66,7 @@ exports.prototype.getProjectionList = function(projectionsCodes) {
  * @param {import("ol/Coordinate.js").default} coordinates The point to test.
  * @param {import("ol/Extent.js").default} extent Limits in which coordinates can be valid.
  * @param {import("ol/proj/Projection.js").default} viewProjection Target projection the point.
- * @param {Array.<ol.proj.Projection>=} opt_projections optional array of
+ * @param {Array.<import("ol/proj/Projection.js").default>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of
  *     the array.
  * @return {?ol.Coordinate} A coordinates in the view's projection if it matches
@@ -100,7 +100,7 @@ exports.prototype.tryProjections = function(coordinates,
  * @param {import("ol/Coordinate.js").default} coordinates The point to test.
  * @param {import("ol/Extent.js").default} extent Limits in which coordinates can be valid.
  * @param {import("ol/proj/Projection.js").default} viewProjection Target projection the point.
- * @param {Array.<ol.proj.Projection>=} opt_projections optional array of
+ * @param {Array.<import("ol/proj/Projection.js").default>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of
  *     the array.
  * @return {?ol.Coordinate} A coordinates in the view's projection if it matches

@@ -66,7 +66,7 @@ const exports = function(options) {
 
   /**
    * Segment RTree for each layer
-   * @type {ol.structs.RBush.<ol.ModifySegmentDataType>}
+   * @type {import("ol/structs/RBush.js").default.<ol.ModifySegmentDataType>}
    * @private
    */
   this.rBush_ = new olStructsRBush();

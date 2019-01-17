@@ -88,7 +88,7 @@ const exports = function(config, $scope, $injector) {
   });
 
   /**
-   * @type {!ol.style.Style}
+   * @type {!import("ol/style/Style.js").default}
    * @export
    */
   this.googleStreetViewStyle = new olStyleStyle({

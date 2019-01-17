@@ -285,7 +285,7 @@ function Controller($element, $q, $scope, $timeout,
   this.editableNode_;
 
   /**
-   * @type {ol.layer.Image|ol.layer.Tile}
+   * @type {ol.layer.Image|import("ol/layer/Tile.js").default}
    * @private
    */
   this.editableWMSLayer_;
@@ -1258,7 +1258,7 @@ Controller.prototype.handleMenuVertexActionClick_ = function(evt) {
 
 
 /**
- * @param {ol.interaction.Translate.Event} evt Event.
+ * @param {import("ol/interaction/Translate.js").default.Event} evt Event.
  * @private
  */
 Controller.prototype.handleTranslateEnd_ = function(evt) {

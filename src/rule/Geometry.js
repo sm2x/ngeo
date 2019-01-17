@@ -45,7 +45,7 @@ export default class extends ngeoRuleRule {
     this.feature_ = new olFeature(properties);
 
     /**
-     * @type {!ol.format.GeoJSON}
+     * @type {!import("ol/format/GeoJSON.js").default}
      * @private
      */
     this.format_ = new olFormatGeoJSON();
@@ -110,7 +110,7 @@ export default class extends ngeoRuleRule {
   // === Calculated property getters/setters ===
 
   /**
-   * @return {?ol.geom.Geometry} Geometry
+   * @return {?import("ol/geom/Geometry.js").default} Geometry
    * @export
    */
   get geometry() {
@@ -118,7 +118,7 @@ export default class extends ngeoRuleRule {
   }
 
   /**
-   * @param {?ol.geom.Geometry} geometry Geometry
+   * @param {?import("ol/geom/Geometry.js").default} geometry Geometry
    * @export
    */
   set geometry(geometry) {

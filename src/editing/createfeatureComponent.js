@@ -98,7 +98,7 @@ function Controller(gettextCatalog, $compile, $filter, $scope, $timeout, ngeoEve
   this.active;
 
   /**
-   * @type {ol.Collection.<!ol.Feature>|!ol.source.Vector}
+   * @type {ol.Collection.<!ol.Feature>|!import("ol/source/Vector.js").default}
    * @export
    */
   this.features;
@@ -258,7 +258,7 @@ Controller.prototype.$onInit = function() {
 /**
  * Called when a feature is finished being drawn. Add the feature to the
  * collection.
- * @param {ol.interaction.Draw.Event|MeasureEvent} event Event.
+ * @param {import("ol/interaction/Draw.js").default.Event|MeasureEvent} event Event.
  * @export
  */
 Controller.prototype.handleDrawEnd_ = function(event) {

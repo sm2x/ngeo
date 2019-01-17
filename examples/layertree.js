@@ -62,7 +62,7 @@ exports.module.component('appLayertree', exports.layertreeComponent);
  * @constructor
  * @param {angular.IHttpService} $http Angular http service.
  * @param {angular.ISCEService} $sce Angular sce service.
- * @param {function(Object):ol.layer.Layer} appGetLayer Get layer service.
+ * @param {function(Object):import("ol/layer/Layer.js").default} appGetLayer Get layer service.
  * @param {PopupFactory} ngeoCreatePopup Popup service.
  * @ngInject
  * @export
@@ -93,7 +93,7 @@ exports.LayertreeController = function($http, $sce, appGetLayer, ngeoCreatePopup
 
   /**
    * @private
-   * @type {function(Object):ol.layer.Layer}
+   * @type {function(Object):import("ol/layer/Layer.js").default}
    */
   this.getLayer_ = appGetLayer;
 
@@ -162,7 +162,7 @@ exports.module.controller('AppLayertreeController', exports.LayertreeController)
  */
 exports.getLayer = (function() {
   /**
-   * @type {Object.<string, ol.layer.Layer>}
+   * @type {Object.<string, import("ol/layer/Layer.js").default>}
    */
   const layerCache = {};
   return (

@@ -115,13 +115,13 @@ function Controller($scope, ngeoBackgroundLayerMgr, gmfThemes) {
   this.select;
 
   /**
-   * @type {?ol.layer.Base}
+   * @type {?import("ol/layer/Base.js").default}
    * @export
    */
   this.bgLayer;
 
   /**
-   * @type {?Array.<!ol.layer.Base>}
+   * @type {?Array.<!import("ol/layer/Base.js").default>}
    * @export
    */
   this.bgLayers;

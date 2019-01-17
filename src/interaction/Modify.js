@@ -59,7 +59,7 @@ const exports = function(options) {
   this.listenerKeys_ = [];
 
   /**
-   * @type {Array.<ol.interaction.Interaction>}
+   * @type {Array.<import("ol/interaction/Interaction.js").default>}
    * @private
    */
   this.interactions_ = [];

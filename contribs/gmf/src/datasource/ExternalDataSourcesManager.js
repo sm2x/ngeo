@@ -564,7 +564,7 @@ const exports = class {
   }
 
   /**
-   * @param {!ol.layer.Tile} layer WMTS layer
+   * @param {!import("ol/layer/Tile.js").default} layer WMTS layer
    * @param {boolean|undefined} value Current visible property of the DS
    * @param {boolean|undefined} oldValue Old visible property of the DS
    * @private

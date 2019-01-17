@@ -303,7 +303,7 @@ class RuleController {
     this.selectedFeatures = new olCollection();
 
     /**
-     * @type {!ol.Collection.<!ol.interaction.Interaction>}
+     * @type {!ol.Collection.<!import("ol/interaction/Interaction.js").default>}
      * @private
      */
     this.interactions_ = new olCollection();
@@ -958,7 +958,7 @@ class RuleController {
   }
 
   /**
-   * @param {ol.interaction.Translate.Event} evt Event.
+   * @param {import("ol/interaction/Translate.js").default.Event} evt Event.
    * @private
    */
   handleTranslateEnd_(evt) {

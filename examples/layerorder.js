@@ -107,7 +107,7 @@ exports.MainController = function($scope) {
   this.roads_.set('name', 'Roads');
 
   /**
-   * @type {Array.<ol.layer.Base>}
+   * @type {Array.<import("ol/layer/Base.js").default>}
    * @const
    * @export
    */

@@ -198,7 +198,7 @@ const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOption
 
   /**
    * The draw interaction to be used.
-   * @type {ol.interaction.Draw|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw}
+   * @type {import("ol/interaction/Draw.js").default|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw}
    * @private
    */
   this.drawInteraction_ = this.createDrawInteraction(options.sketchStyle,
@@ -229,8 +229,8 @@ olUtilInherits(exports, olInteractionInteraction);
 /**
  * Calculate the area of the passed polygon and return a formatted string
  * of the area.
- * @param {!ol.geom.Polygon} polygon Polygon.
- * @param {!ol.proj.Projection} projection Projection of the polygon coords.
+ * @param {!import("ol/geom/Polygon.js").default} polygon Polygon.
+ * @param {!import("ol/proj/Projection.js").default} projection Projection of the polygon coords.
  * @param {number|undefined} precision Precision.
  * @param {!unitPrefix} format The format function.
  * @return {string} Formatted string of the area.
@@ -246,7 +246,7 @@ exports.getFormattedArea = function(polygon, projection, precision, format) {
 /**
  * Calculate the area of the passed circle and return a formatted string
  * of the area.
- * @param {!ol.geom.Circle} circle Circle
+ * @param {!import("ol/geom/Circle.js").default} circle Circle
  * @param {number|undefined} precision Precision.
  * @param {!unitPrefix} format The format function.
  * @return {string} Formatted string of the area.
@@ -260,8 +260,8 @@ exports.getFormattedCircleArea = function(circle, precision, format) {
 /**
  * Calculate the length of the passed line string and return a formatted
  * string of the length.
- * @param {!ol.geom.LineString} lineString Line string.
- * @param {!ol.proj.Projection} projection Projection of the line string coords.
+ * @param {!import("ol/geom/LineString.js").default} lineString Line string.
+ * @param {!import("ol/proj/Projection.js").default} projection Projection of the line string coords.
  * @param {number|undefined} precision Precision.
  * @param {!unitPrefix} format The format function.
  * @return {string} Formatted string of length.
@@ -280,7 +280,7 @@ exports.getFormattedLength = function(lineString, projection, precision, format)
 
 /**
  * Return a formatted string of the point.
- * @param {!ol.geom.Point} point Point.
+ * @param {!import("ol/geom/Point.js").default} point Point.
  * @param {number|undefined} decimals Decimals.
  * @param {!numberCoordinates} format A function to format coordinate into text
  * @param {string=} opt_template The template.
@@ -316,7 +316,7 @@ exports.handleEvent_ = function(evt) {
 
 
 /**
- * @return {ol.interaction.Draw|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw} The draw interaction.
+ * @return {import("ol/interaction/Draw.js").default|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw} The draw interaction.
  */
 exports.prototype.getDrawInteraction = function() {
   return this.drawInteraction_;
@@ -327,10 +327,10 @@ exports.prototype.getDrawInteraction = function() {
  * Creates the draw interaction.
  *
  * @abstract
- * @param {ol.style.Style|Array.<ol.style.Style>|ol.StyleFunction|undefined}
+ * @param {ol.style.Style|Array.<import("ol/style/Style.js").default>|ol.StyleFunction|undefined}
  *     style The sketchStyle used for the drawing interaction.
  * @param {import("ol/source/Vector.js").default} source Vector source.
- * @return {ol.interaction.Draw|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw} The interaction
+ * @return {import("ol/interaction/Draw.js").default|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw} The interaction
  * @protected
  */
 exports.prototype.createDrawInteraction = function(style, source) {};
@@ -358,7 +358,7 @@ exports.prototype.setMap = function(map) {
 
 /**
  * Handle draw interaction `drawstart` event.
- * @param {ol.interaction.Draw.Event|DrawEvent} evt Event.
+ * @param {import("ol/interaction/Draw.js").default.Event|DrawEvent} evt Event.
  * @private
  */
 exports.prototype.onDrawStart_ = function(evt) {
@@ -386,7 +386,7 @@ exports.prototype.onDrawStart_ = function(evt) {
 
 /**
  * Handle draw interaction `drawend` event.
- * @param {ol.interaction.Draw.Event|DrawEvent} evt Event.
+ * @param {import("ol/interaction/Draw.js").default.Event|DrawEvent} evt Event.
  * @private
  */
 exports.prototype.onDrawEnd_ = function(evt) {

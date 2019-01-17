@@ -256,7 +256,7 @@ WfsPermalinkService.prototype.issue = function(queryData, map) {
 
 /**
  * @param {WfsType} wfsType Type.
- * @param {ol.format.filter.Filter} filter Filter.
+ * @param {import("ol/format/filter.js").default.Filter} filter Filter.
  * @param {import("ol/Map.js").default} map The ol3 map object to get the current projection from.
  * @param {boolean} showFeatures Show features or only zoom to feature extent?
  * @private
@@ -323,7 +323,7 @@ WfsPermalinkService.prototype.getExtent_ = function(features) {
  * Create OGC filters for the filter groups extracted from the query params.
  *
  * @param {Array.<WfsPermalinkFilterGroup>} filterGroups Filter groups.
- * @return {ol.format.filter.Filter} OGC filters.
+ * @return {import("ol/format/filter.js").default.Filter} OGC filters.
  * @private
  */
 WfsPermalinkService.prototype.createFilters_ = function(filterGroups) {
@@ -349,8 +349,8 @@ WfsPermalinkService.prototype.createFilters_ = function(filterGroups) {
 /**
  * Join a list of filters with `and(...)`.
  *
- * @param {Array.<ol.format.filter.Filter>} filters The filters to join.
- * @return {ol.format.filter.Filter} The joined filters.
+ * @param {Array.<import("ol/format/filter.js").default.Filter>} filters The filters to join.
+ * @return {import("ol/format/filter.js").default.Filter} The joined filters.
  * @private
  */
 WfsPermalinkService.and_ = function(filters) {
@@ -361,8 +361,8 @@ WfsPermalinkService.and_ = function(filters) {
 /**
  * Join a list of filters with `or(...)`.
  *
- * @param {Array.<ol.format.filter.Filter>} filters The filters to join.
- * @return {ol.format.filter.Filter} The joined filters.
+ * @param {Array.<import("ol/format/filter.js").default.Filter>} filters The filters to join.
+ * @return {import("ol/format/filter.js").default.Filter} The joined filters.
  * @private
  */
 WfsPermalinkService.or_ = function(filters) {
@@ -373,10 +373,10 @@ WfsPermalinkService.or_ = function(filters) {
 /**
  * Join a list of filters with a given join function.
  *
- * @param {Array.<ol.format.filter.Filter>} filters The filters to join.
- * @param {function(!ol.format.filter.Filter, !ol.format.filter.Filter):
+ * @param {Array.<import("ol/format/filter.js").default.Filter>} filters The filters to join.
+ * @param {function(!ol.format.filter.Filter, !import("ol/format/filter.js").default.Filter):
  *    ol.format.filter.Filter} joinFn The function to join two filters.
- * @return {ol.format.filter.Filter} The joined filters.
+ * @return {import("ol/format/filter.js").default.Filter} The joined filters.
  * @private
  */
 WfsPermalinkService.joinFilters_ = function(filters, joinFn) {

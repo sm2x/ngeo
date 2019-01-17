@@ -667,7 +667,7 @@ exports.prototype.userMustChangeItsPassword = function() {
 
 
 /**
- * @param {Array.<ol.layer.Base>} layers Layers list.
+ * @param {Array.<import("ol/layer/Base.js").default>} layers Layers list.
  * @param {Array.<string>} labels default_basemap list.
  * @return {import("ol/layer/Base.js").default} layer or null
  */

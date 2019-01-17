@@ -130,7 +130,7 @@ function Controller($element, $sce, $timeout, gettextCatalog, ngeoCreatePopup, n
   this.ngeoLayerHelper_ = ngeoLayerHelper;
 
   /**
-   * @type {?ol.layer.Group}
+   * @type {?import("ol/layer/Group.js").default}
    * @private
    */
   this.dataLayerGroup_ = null;

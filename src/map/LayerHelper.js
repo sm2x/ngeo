@@ -64,7 +64,7 @@ exports.REFRESH_PARAM = 'random';
 
 /**
  * Create and return a basic WMS layer with only a source URL and a comma
- * separated layers names (see {@link ol.source.ImageWMS}).
+ * separated layers names (see {@link import("ol/source/ImageWMS.js").default}).
  *
  * @param {string} sourceURL The source URL.
  * @param {string} sourceLayersName A comma separated names string.
@@ -160,7 +160,7 @@ exports.prototype.createBasicWMSLayerFromDataSource = function(
  * @param {string=} opt_matrixSet Optional WMTS matrix set.
  * @param {Object.<string, string>=} opt_dimensions WMTS dimensions.
  * @param {Object=} opt_customOptions Some initial options.
- * @return {angular.IPromise.<ol.layer.Tile>} A Promise with a layer (with source) on success,
+ * @return {angular.IPromise.<import("ol/layer/Tile.js").default>} A Promise with a layer (with source) on success,
  *     no layer else.
  * @export
  */
@@ -207,7 +207,7 @@ exports.prototype.createWMTSLayerFromCapabilitites = function(capabilitiesURL, l
  * @param {!Object} capabilities The complete capabilities object of the service
  * @param {!Object} layerCap The layer capability object
  * @param {Object.<string, string>=} opt_dimensions WMTS dimensions.
- * @return {!ol.layer.Tile} WMTS layer
+ * @return {!import("ol/layer/Tile.js").default} WMTS layer
  * @export
  */
 exports.prototype.createWMTSLayerFromCapabilititesObj = function(
@@ -238,7 +238,7 @@ exports.prototype.createWMTSLayerFromCapabilititesObj = function(
 /**
  * Create and return an ol.layer.Group. You can pass a collection of layers to
  * directly add them in the returned group.
- * @param {ol.Collection.<ol.layer.Base>=} opt_layers The layer to add to the
+ * @param {ol.Collection.<import("ol/layer/Base.js").default>=} opt_layers The layer to add to the
  * returned Group.
  * @return {import("ol/layer/Group.js").default} Layer group.
  * @export
@@ -286,7 +286,7 @@ exports.prototype.getGroupFromMap = function(map, groupName) {
  * Get an array of all layers in a group. The group can contain multiple levels
  * of others groups.
  * @param {import("ol/layer/Base.js").default} layer The base layer, mostly a group of layers.
- * @return {Array.<ol.layer.Layer>} Layers.
+ * @return {Array.<import("ol/layer/Layer.js").default>} Layers.
  * @export
  */
 exports.prototype.getFlatLayers = function(layer) {
@@ -308,9 +308,9 @@ exports.prototype.getFlatLayers = function(layer) {
  * Computed opacity is a custom 'back-up' value that contains
  * the calculated value of all ancestors and the given layer.
  * @param {import("ol/layer/Base.js").default} layer The base layer, mostly a group of layers.
- * @param {Array.<ol.layer.Base>} array An array to add layers.
+ * @param {Array.<import("ol/layer/Base.js").default>} array An array to add layers.
  * @param {number|undefined} computedOpacity Opacity inherited from ancestor layer groups.
- * @return {Array.<ol.layer.Layer>} Layers.
+ * @return {Array.<import("ol/layer/Layer.js").default>} Layers.
  * @private
  */
 exports.prototype.getFlatLayers_ = function(layer, array, computedOpacity) {
@@ -340,8 +340,8 @@ exports.prototype.getFlatLayers_ = function(layer, array, computedOpacity) {
  * an array of layers. If one of the layers in the array is a group, then the
  * layers contained in that group are searched as well.
  * @param {string} layerName The name of the layer we're looking for.
- * @param {Array.<ol.layer.Base>} layers Layers.
- * @return {?ol.layer.Base} Layer.
+ * @param {Array.<import("ol/layer/Base.js").default>} layers Layers.
+ * @return {?import("ol/layer/Base.js").default} Layer.
  * @export
  */
 exports.prototype.getLayerByName = function(layerName, layers) {
@@ -460,7 +460,7 @@ exports.prototype.isLayerVisible = function(layer, map) {
 
 /**
  * Force a WMS layer to refresh using a random value.
- * @param {ol.layer.Image|ol.layer.Tile} layer Layer to refresh.
+ * @param {ol.layer.Image|import("ol/layer/Tile.js").default} layer Layer to refresh.
  */
 exports.prototype.refreshWMSLayer = function(layer) {
   const source_ = layer.getSource();
@@ -468,7 +468,7 @@ exports.prototype.refreshWMSLayer = function(layer) {
     source_ instanceof olSourceImageWMS ||
     source_ instanceof olSourceTileWMS
   );
-  const source = /** @type {ol.source.ImageWMS|ol.source.TileWMS} */ (source_);
+  const source = /** @type {ol.source.ImageWMS|import("ol/source/TileWMS.js").default} */ (source_);
   const params = source.getParams();
   params[exports.REFRESH_PARAM] = Math.random();
   source.updateParams(params);
@@ -477,7 +477,7 @@ exports.prototype.refreshWMSLayer = function(layer) {
 
 /**
  * Set ZIndex property to first level children elements
- * @param {ol.layer.Group|ol.layer.Base} element The group of layer with first level children layers.
+ * @param {ol.layer.Group|import("ol/layer/Base.js").default} element The group of layer with first level children layers.
  * @param {number} ZIndex The ZIndex for children element.
  */
 exports.prototype.setZIndexToFirstLevelChildren = function(element, ZIndex) {
