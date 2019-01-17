@@ -886,7 +886,7 @@ exports.getFilteredFeatureValues = function(feature) {
 };
 
 /**
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @return {number} Angle.
  * @export
  */
@@ -915,7 +915,7 @@ exports.prototype.getColorProperty = function(feature) {
 
 /**
  * @param {!ol.Feature} feature Feature.
- * @return {ol.Color} Color.
+ * @return {import("ol/Color.js").default} Color.
  * @export
  */
 exports.prototype.getRGBAColorProperty = function(feature) {

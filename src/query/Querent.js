@@ -234,7 +234,7 @@ const exports = class {
    * The map view resolution determines if the inner ogc layers are in range.
    *
    * @param {!Array.<!ngeo.datasource.DataSource>} dataSources Data sources
-   * @param {ol.Map} map Map.
+   * @param {import("ol/Map.js").default} map Map.
    * @return {!QueryableDataSources} Queryable data sources.
    * @export
    */

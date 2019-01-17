@@ -98,7 +98,7 @@ exports.MainController = function($scope, gmfEditFeature, gmfUser) {
   this.layerId_ = 113;
 
   /**
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @export
    */
   this.feature = null;
@@ -110,7 +110,7 @@ exports.MainController = function($scope, gmfEditFeature, gmfUser) {
   this.pending = false;
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map = new olMap({
@@ -139,7 +139,7 @@ exports.MainController = function($scope, gmfEditFeature, gmfUser) {
 
 
 /**
- * @param {ol.MapBrowserEvent} evt MapBrowser event
+ * @param {import("ol/MapBrowserEvent.js").default} evt MapBrowser event
  * @private
  */
 exports.MainController.prototype.handleMapSingleClick_ = function(evt) {

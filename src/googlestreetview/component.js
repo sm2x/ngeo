@@ -298,7 +298,7 @@ class Controller {
   /**
    * Called when the map is clicked while this component is active. Update the
    * location accordingly.
-   * @param {ol.MapBrowserEvent} evt The map browser event being fired.
+   * @param {import("ol/MapBrowserEvent.js").default} evt The map browser event being fired.
    * @private
    */
   handleMapClick_(evt) {
@@ -370,7 +370,7 @@ class Controller {
 
   /**
    * @param {!ol.Coordinate} lonLat LonLat coordinate.
-   * @return {ol.Coordinate} Map view projection coordinate.
+   * @return {import("ol/Coordinate.js").default} Map view projection coordinate.
    */
   fromLonLat_(lonLat) {
     return olProj.fromLonLat(
@@ -381,7 +381,7 @@ class Controller {
 
   /**
    * @param {!ol.Coordinate} coordinate Map view projection coordinate.
-   * @return {ol.Coordinate} LonLat coordinate.
+   * @return {import("ol/Coordinate.js").default} LonLat coordinate.
    */
   toLonLat_(coordinate) {
     return olProj.toLonLat(

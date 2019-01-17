@@ -126,7 +126,7 @@ exports.prototype.getRoute = function(coordinates, config) {
 
 /**
  * Snaps a coordinate to the street network and returns the nearest match
- * @param {ol.Coordinate} coordinate coordinate to query
+ * @param {import("ol/Coordinate.js").default} coordinate coordinate to query
  * @param {?Object} config optional configuration
  * @return {!angular.IHttpPromise} promise of the OSRM API request
  * @see https://github.com/Project-OSRM/osrm-backend/blob/master/docs/http.md#nearest-service

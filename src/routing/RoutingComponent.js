@@ -137,7 +137,7 @@ exports.Controller = function($injector, $scope, ngeoRoutingService, ngeoNominat
   this.$q_ = $q;
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map;
@@ -149,13 +149,13 @@ exports.Controller = function($injector, $scope, ngeoRoutingService, ngeoNominat
   this.errorMessage = '';
 
   /**
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @export
    */
   this.startFeature_ = null;
 
   /**
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @export
    */
   this.targetFeature_ = null;
@@ -268,8 +268,8 @@ exports.Controller.prototype.clearRoute = function() {
 
 /**
  * Converts feature point into LonLat coordinate.
- * @param {ol.Feature} point Feature point to convert
- * @return {ol.Coordinate} LonLat coordinate
+ * @param {import("ol/Feature.js").default} point Feature point to convert
+ * @return {import("ol/Coordinate.js").default} LonLat coordinate
  * @private
  */
 exports.Controller.prototype.getLonLatFromPoint_ = function(point) {

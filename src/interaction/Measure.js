@@ -74,7 +74,7 @@ const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOption
 
   /**
    * Overlay to show the help messages.
-   * @type {ol.Overlay}
+   * @type {import("ol/Overlay.js").default}
    * @private
    */
   this.helpTooltipOverlay_ = null;
@@ -90,7 +90,7 @@ const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOption
 
   /**
    * Overlay to show the measurement.
-   * @type {ol.Overlay}
+   * @type {import("ol/Overlay.js").default}
    * @private
    */
   this.measureTooltipOverlay_ = null;
@@ -98,7 +98,7 @@ const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOption
 
   /**
    * The measurement overlay coordinate.
-   * @type {ol.Coordinate}
+   * @type {import("ol/Coordinate.js").default}
    * @private
    */
   this.measureTooltipOverlayCoord_ = null;
@@ -106,7 +106,7 @@ const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOption
 
   /**
    * The sketch feature.
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @protected
    */
   this.sketchFeature = null;
@@ -222,7 +222,7 @@ olUtilInherits(exports, olInteractionInteraction);
 
 /**
  * @const
- * @type {ol.Sphere}
+ * @type {import("ol/Sphere.js").default}
  */
 
 
@@ -293,7 +293,7 @@ exports.getFormattedPoint = function(point, decimals, format, opt_template) {
 
 /**
  * Handle map browser event.
- * @param {ol.MapBrowserEvent} evt Map browser event.
+ * @param {import("ol/MapBrowserEvent.js").default} evt Map browser event.
  * @return {boolean} `false` if event propagation should be stopped.
  * @this {ngeo.interaction.Measure}
  * @private

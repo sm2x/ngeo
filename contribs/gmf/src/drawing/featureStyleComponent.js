@@ -34,7 +34,7 @@ exports.run(/* @ngInject */ ($templateCache) => {
  *         gmf-featurestyle-feature="ctrl.selectedFeature">
  *     </gmf-featurestyle>
  *
- * @htmlAttribute {ol.Feature} gmf-featurestyle-feature The feature.
+ * @htmlAttribute {import("ol/Feature.js").default} gmf-featurestyle-feature The feature.
  * @return {angular.IDirective} The directive specs.
  * @ngInject
  * @ngdoc directive

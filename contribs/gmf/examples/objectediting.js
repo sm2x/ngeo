@@ -108,7 +108,7 @@ exports.MainController = function(gmfObjectEditingManager, gmfThemes,
   });
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map = new olMap({

@@ -97,7 +97,7 @@ function gmfDisplayquerygridTemplateUrl($element, $attrs, gmfDisplayquerygridTem
  *     object for all features from the result of the query.
  * @htmlAttribute {ol.style.Style} gmf-displayquerygrid-selectedfeaturestyle A style
  *     object for the currently selected features.
- * @htmlAttribute {ol.Map} gmf-displayquerygrid-map The map.
+ * @htmlAttribute {import("ol/Map.js").default} gmf-displayquerygrid-map The map.
  * @htmlAttribute {boolean?} gmf-displayquerygrid-removeemptycolumns Optional. Should
  *     empty columns be hidden? Default: `false`.
  * @htmlAttribute {number?} gmf-displayquerygrid-maxrecenterzoom Optional. Maximum
@@ -281,7 +281,7 @@ function Controller($injector, $scope, ngeoQueryResult, ngeoMapQuerent,
     $injector.get('gmfCsvFilename') : 'query-results.csv';
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @private
    */
   this.map_ = null;

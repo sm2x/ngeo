@@ -26,7 +26,7 @@ const exports = angular.module('ngeoControl', []);
  *
  * See our live example: [../examples/control.html](../examples/control.html)
  *
- * @htmlAttribute {ol.Map} ngeo-control-map The map.
+ * @htmlAttribute {import("ol/Map.js").default} ngeo-control-map The map.
  * @return {angular.IDirective} The directive specs.
  * @ngInject
  * @ngdoc directive
@@ -46,7 +46,7 @@ function component() {
               (scope.$eval(attrs['ngeoControl']));
       googAsserts.assertInstanceof(control, olControlControl);
 
-      const map = /** @type {ol.Map} */
+      const map = /** @type {import("ol/Map.js").default} */
               (scope.$eval(attrs['ngeoControlMap']));
       googAsserts.assertInstanceof(map, olMap);
 

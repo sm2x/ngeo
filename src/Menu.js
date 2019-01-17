@@ -51,7 +51,7 @@ import olOverlayPositioning from 'ol/OverlayPositioning.js';
  * any of the action is clicked.
  *
  * @constructor
- * @extends {ol.Overlay}
+ * @extends {import("ol/Overlay.js").default}
  * @param {MenuOptions=} menuOptions Menu options.
  * @param {olx.OverlayOptions=} opt_overlayOptions Overlay options.
  */
@@ -176,7 +176,7 @@ exports.prototype.setMap = function(map) {
 /**
  * Opens the menu at the desited coordinate. Also starts listening for the
  * clickout if autoClose is enabled.
- * @param {ol.Coordinate} coordinate Where to open the menu.
+ * @param {import("ol/Coordinate.js").default} coordinate Where to open the menu.
  * @export
  */
 exports.prototype.open = function(coordinate) {
@@ -243,7 +243,7 @@ exports.prototype.handleClickOut_ = function(evt) {
  * map. This prevents behaviours such as vertex still appearing while mouse
  * hovering edges of features bound to an active modify control while the
  * cursor is on top of the menu.
- * @param {ol.MapBrowserEvent} evt Event.
+ * @param {import("ol/MapBrowserEvent.js").default} evt Event.
  * @private
  */
 exports.prototype.handleMapPointerMove_ = function(evt) {

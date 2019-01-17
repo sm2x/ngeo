@@ -257,7 +257,7 @@ exports.prototype.createBasicGroup = function(opt_layers) {
  * the base array of layers of a map. The given name is used as unique
  * identifier. If the group is created, it will be automatically added to
  * the map.
- * @param {ol.Map} map A map.
+ * @param {import("ol/Map.js").default} map A map.
  * @param {string} groupName The name of the group.
  * @return {ol.layer.Group} The group corresponding to the given name.
  * @export
@@ -444,7 +444,7 @@ exports.prototype.getWMSLegendURL = function(url,
 /**
  * Returns if this layer is visible at the current resolution.
  * @param {ol.layer.Base} layer Layer.
- * @param {ol.Map} map Map.
+ * @param {import("ol/Map.js").default} map Map.
  * @return {boolean} Is the layer currently visible?
  */
 exports.prototype.isLayerVisible = function(layer, map) {

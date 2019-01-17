@@ -78,7 +78,7 @@ const exports = function() {
 
 
 /**
- * @param {ol.Feature} feature The feature to add.
+ * @param {import("ol/Feature.js").default} feature The feature to add.
  * @param {number} groupIndex The group groupIndex.
  * @export
  */
@@ -93,7 +93,7 @@ exports.prototype.addFeature = function(feature, groupIndex) {
 
 
 /**
- * @param {ol.Feature} feature The feature to add.
+ * @param {import("ol/Feature.js").default} feature The feature to add.
  * @param {number} groupIndex The group groupIndex.
  * @export
  */
@@ -146,7 +146,7 @@ exports.prototype.getFeatureOverlay = function() {
 
 
 /**
- * @param {ol.Map} map Map.
+ * @param {import("ol/Map.js").default} map Map.
  * @export
  */
 exports.prototype.init = function(map) {

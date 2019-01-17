@@ -279,7 +279,7 @@ exports.filter('ngeoUnitPrefix', exports.UnitPrefix);
  */
 exports.NumberCoordinates = function($filter) {
   /**
-   * @param {ol.Coordinate} coordinates Array of two numbers.
+   * @param {import("ol/Coordinate.js").default} coordinates Array of two numbers.
    * @param {(number|string)=} opt_fractionDigits Optional number of digit.
    *     Default to 0.
    * @param {string=} opt_template Optional template. Default to '{x} {y}'.
@@ -335,7 +335,7 @@ exports.DMSCoordinates = function() {
   };
 
   /**
-   * @param {ol.Coordinate} coordinates Array of two numbers.
+   * @param {import("ol/Coordinate.js").default} coordinates Array of two numbers.
    * @param {(number|string)=} opt_fractionDigits Optional number of digit.
    *     Default to 0.
    * @param {string=} opt_template Optional template. Default to

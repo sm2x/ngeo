@@ -40,7 +40,7 @@ const exports = class {
     this.collection_ = new olCollection();
 
     /**
-     * @type {ol.Map}
+     * @type {import("ol/Map.js").default}
      * @private
      */
     this.map_ = null;
@@ -80,7 +80,7 @@ const exports = class {
 
   /**
    * Bind a map to this service.
-   * @param {ol.Map} map Map.
+   * @param {import("ol/Map.js").default} map Map.
    * @private
    */
   bindMap_(map) {
@@ -99,7 +99,7 @@ const exports = class {
 
   /**
    * Unbind a map to this service.
-   * @param {ol.Map} map Map.
+   * @param {import("ol/Map.js").default} map Map.
    * @private
    */
   unbindMap_(map) {

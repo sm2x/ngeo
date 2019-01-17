@@ -42,7 +42,7 @@ const exports = function($http, gmfLayersUrl) {
  * of layer ids inside a specified extent.
  *
  * @param {Array.<number>} layerIds List of layer ids to get the features from.
- * @param {ol.Extent} extent The extent where to get the features from.
+ * @param {import("ol/Extent.js").default} extent The extent where to get the features from.
  * @return {angular.IPromise} Promise.
  * @export
  */
@@ -113,7 +113,7 @@ exports.prototype.insertFeatures = function(layerId, features) {
 
 /**
  * @param {number} layerId The layer id that contains the feature.
- * @param {ol.Feature} feature The feature to update.
+ * @param {import("ol/Feature.js").default} feature The feature to update.
  * @return {angular.IPromise} Promise.
  * @export
  */
@@ -129,7 +129,7 @@ exports.prototype.updateFeature = function(layerId, feature) {
 
 /**
  * @param {number} layerId The layer id that contains the feature.
- * @param {ol.Feature} feature The feature to delete.
+ * @param {import("ol/Feature.js").default} feature The feature to delete.
  * @return {angular.IPromise} Promise.
  * @export
  */

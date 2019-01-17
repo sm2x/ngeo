@@ -47,7 +47,7 @@ const exports = function($scope, $sce, gettextCatalog,
   this.features;
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map;

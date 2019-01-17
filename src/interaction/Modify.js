@@ -129,7 +129,7 @@ exports.prototype.setActive = function(active) {
  * Remove the interaction from its current map and attach it to the new map.
  * Subclasses may set up event handlers to get notified about changes to
  * the map here.
- * @param {ol.PluggableMap} map Map.
+ * @param {import("ol/PluggableMap.js").default} map Map.
  * @override
  */
 exports.prototype.setMap = function(map) {
@@ -200,13 +200,13 @@ exports.prototype.handleFeaturesAdd_ = function(evt) {
  * @private
  */
 exports.prototype.handleFeaturesRemove_ = function(evt) {
-  const feature = /** @type {ol.Feature} */ (evt.element);
+  const feature = /** @type {import("ol/Feature.js").default} */ (evt.element);
   this.removeFeature_(feature);
 };
 
 
 /**
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @private
  */
 exports.prototype.addFeature_ = function(feature) {
@@ -216,7 +216,7 @@ exports.prototype.addFeature_ = function(feature) {
 
 
 /**
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @private
  */
 exports.prototype.removeFeature_ = function(feature) {
@@ -226,7 +226,7 @@ exports.prototype.removeFeature_ = function(feature) {
 
 
 /**
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @return {ol.Collection.<ol.Feature>} Collection of features for this feature.
  * @private
  */

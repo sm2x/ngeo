@@ -105,10 +105,10 @@ function gmfObjecteditingTemplateUrl($element, $attrs, gmfObjecteditingTemplateU
  *
  * @htmlAttribute {boolean} gmf-objectediting-active Whether the component is
  *     active or not.
- * @htmlAttribute {ol.Feature} gmf-objectediting-feature The feature to edit.
+ * @htmlAttribute {import("ol/Feature.js").default} gmf-objectediting-feature The feature to edit.
  * @htmlAttribute {string} gmf-objectediting-geomtype The geometry type.
  * @htmlAttribute {number} gmf-objectediting-layernodeid The GMF layer node id.
- * @htmlAttribute {ol.Map} gmf-objectediting-map The map.
+ * @htmlAttribute {import("ol/Map.js").default} gmf-objectediting-map The map.
  * @htmlAttribute {ol.Collection.<ol.Feature>} gmf-objectediting-sketchfeatures
  *     Collection of temporary features being drawn by the tools.
  * @ngdoc component
@@ -161,7 +161,7 @@ exports.Controller = function($scope, $timeout, gettextCatalog,
   this.active;
 
   /**
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @export
    */
   this.feature;
@@ -179,7 +179,7 @@ exports.Controller = function($scope, $timeout, gettextCatalog,
   this.layerNodeId;
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map;
@@ -811,7 +811,7 @@ exports.Controller.prototype.handleModifyInteractionModifyEnd_ = function(
 
 /**
  * @param {gmfx.StylesObject} styles Hash of style.
- * @param {ol.Color} color Color.
+ * @param {import("ol/Color.js").default} color Color.
  * @param {boolean=} opt_incVertice Whether to include vertice or not. Defaults
  *     to `true`.
  * @private
@@ -1017,7 +1017,7 @@ exports.Controller.prototype.handleWindowBeforeUnload_ = function(e) {
  * @private
  */
 exports.Controller.prototype.handleSketchFeaturesAdd_ = function(evt) {
-  const sketchFeature = /** @type {ol.Feature} */ (evt.element);
+  const sketchFeature = /** @type {import("ol/Feature.js").default} */ (evt.element);
   const sketchGeom = /** @type {ol.geom.Geometry} */ (
     sketchFeature.getGeometry());
 

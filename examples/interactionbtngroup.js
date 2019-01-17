@@ -64,7 +64,7 @@ exports.MainController = function(ngeoFeatureOverlayMgr) {
   }));
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map = new olMap({

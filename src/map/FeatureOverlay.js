@@ -33,7 +33,7 @@ const exports = function(manager, index) {
 
 /**
  * Add a feature to the feature overlay.
- * @param {ol.Feature} feature The feature to add.
+ * @param {import("ol/Feature.js").default} feature The feature to add.
  * @export
  */
 exports.prototype.addFeature = function(feature) {
@@ -43,7 +43,7 @@ exports.prototype.addFeature = function(feature) {
 
 /**
  * Remove a feature from the feature overlay.
- * @param {ol.Feature} feature The feature to remove.
+ * @param {import("ol/Feature.js").default} feature The feature to remove.
  * @export
  */
 exports.prototype.removeFeature = function(feature) {
@@ -102,7 +102,7 @@ exports.prototype.setStyle = function(style) {
  * @private
  */
 exports.prototype.handleFeatureAdd_ = function(evt) {
-  const feature = /** @type {ol.Feature} */ (evt.element);
+  const feature = /** @type {import("ol/Feature.js").default} */ (evt.element);
   this.addFeature(feature);
 };
 
@@ -112,7 +112,7 @@ exports.prototype.handleFeatureAdd_ = function(evt) {
  * @private
  */
 exports.prototype.handleFeatureRemove_ = function(evt) {
-  const feature = /** @type {ol.Feature} */ (evt.element);
+  const feature = /** @type {import("ol/Feature.js").default} */ (evt.element);
   this.removeFeature(feature);
 };
 

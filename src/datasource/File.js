@@ -96,7 +96,7 @@ export default class extends ngeoDatasourceDataSource {
   // ===================================
 
   /**
-   * @return {ol.Extent} Extent.
+   * @return {import("ol/Extent.js").default} Extent.
    * @export
    */
   get extent() {

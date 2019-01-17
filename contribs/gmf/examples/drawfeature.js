@@ -72,7 +72,7 @@ exports.MainController = function($scope, ngeoFeatureHelper, ngeoFeatures,
   featureOverlay.setFeatures(ngeoFeatures);
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map = new olMap({
@@ -127,7 +127,7 @@ exports.MainController = function($scope, ngeoFeatureHelper, ngeoFeatures,
 
 
 /**
- * @param {ol.MapBrowserEvent} evt MapBrowser event
+ * @param {import("ol/MapBrowserEvent.js").default} evt MapBrowser event
  * @private
  */
 exports.MainController.prototype.handleMapPointerMove_ = function(evt) {

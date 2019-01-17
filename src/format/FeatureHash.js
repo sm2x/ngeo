@@ -215,7 +215,7 @@ exports.ACCURACY_ = 0.1;
 
 /**
  * Get features's properties.
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @return {Object.<string, (string|number)>} The feature properties to
  * serialize.
  * @private
@@ -582,7 +582,7 @@ exports.readMultiPolygonGeometry_ = function(text) {
  * Read a logical sequence of characters and apply the decoded style on the
  * given feature.
  * @param {string} text Text.
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @private
  */
 exports.setStyleInFeature_ = function(text, feature) {
@@ -643,7 +643,7 @@ exports.setStyleInFeature_ = function(text, feature) {
  * style properties for the feature. Legacy keys are converted to the new ones
  * for compatibility.
  * @param {string} text Text.
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @private
  */
 exports.setStyleProperties_ = function(text, feature) {
@@ -739,7 +739,7 @@ exports.castValue_ = function(key, value) {
  * depending on the property. Some properties are also deleted when they don't
  * match the geometry of the feature.
  * @param {string} text Text.
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @return {Object.<string, boolean|number|string>} The style properties for
  *     the feature.
  * @private
@@ -1025,7 +1025,7 @@ exports.prototype.encodeCoordinates_ = function(flatCoordinates, stride, offset,
  * Read a feature from a logical sequence of characters.
  * @param {string} text Text.
  * @param {olx.format.ReadOptions=} opt_options Read options.
- * @return {ol.Feature} Feature.
+ * @return {import("ol/Feature.js").default} Feature.
  * @protected
  * @override
  */
@@ -1126,7 +1126,7 @@ exports.prototype.readGeometryFromText = function(text, opt_options) {
 
 /**
  * Encode a feature into a logical sequence of characters.
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @param {olx.format.ReadOptions=} opt_options Read options.
  * @return {string} Encoded feature.
  * @protected

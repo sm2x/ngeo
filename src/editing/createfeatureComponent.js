@@ -50,11 +50,11 @@ const exports = angular.module('ngeoCreatefeature', [
  *
  * @htmlAttribute {boolean} ngeo-createfeature-active Whether the directive is
  *     active or not.
- * @htmlAttribute {ol.Collection} ngeo-createfeature-features The collection of
+ * @htmlAttribute {import("ol/Collection.js").default} ngeo-createfeature-features The collection of
  *     features where to add those created by this directive.
  * @htmlAttribute {string} ngeo-createfeature-geom-type Determines the type
  *     of geometry this directive should draw.
- * @htmlAttribute {ol.Map} ngeo-createfeature-map The map.
+ * @htmlAttribute {import("ol/Map.js").default} ngeo-createfeature-map The map.
  *
  * @return {angular.IDirective} The directive specs.
  * @ngdoc directive

@@ -95,7 +95,7 @@ const exports = angular.module('ngeoDrawfeature', [
  * @htmlAttribute {!ol.Collection=} ngeo-drawfeature-features The features
  *     collection in which to push the drawn features. If none is provided,
  *     then the `ngeoFeatures` collection is used.
- * @htmlAttribute {ol.Map} ngeo-drawfeature-map The map.
+ * @htmlAttribute {import("ol/Map.js").default} ngeo-drawfeature-map The map.
  * @htmlAttribute {boolean} ngeo-drawfeature-showmeasure. Checks the
  *      checkbox in order to display the feature measurements as a label.
  *      Default to false.

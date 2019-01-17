@@ -63,8 +63,8 @@ exports.prototype.getProjectionList = function(projectionsCodes) {
 /**
  * It projects the point using the projection array and finds the first one for
  * which it falls inside of the viewProjection extent.
- * @param {ol.Coordinate} coordinates The point to test.
- * @param {ol.Extent} extent Limits in which coordinates can be valid.
+ * @param {import("ol/Coordinate.js").default} coordinates The point to test.
+ * @param {import("ol/Extent.js").default} extent Limits in which coordinates can be valid.
  * @param {ol.proj.Projection} viewProjection Target projection the point.
  * @param {Array.<ol.proj.Projection>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of
@@ -97,8 +97,8 @@ exports.prototype.tryProjections = function(coordinates,
 /**
  * Same as AutoProjection.tryProjections but if tryProjections return null,
  * re-call it with coordinates in reverse order.
- * @param {ol.Coordinate} coordinates The point to test.
- * @param {ol.Extent} extent Limits in which coordinates can be valid.
+ * @param {import("ol/Coordinate.js").default} coordinates The point to test.
+ * @param {import("ol/Extent.js").default} extent Limits in which coordinates can be valid.
  * @param {ol.proj.Projection} viewProjection Target projection the point.
  * @param {Array.<ol.proj.Projection>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of

@@ -685,7 +685,7 @@ exports.prototype.setMap = function(map) {
 
 /**
  * Listen to the map view property change and update the state accordingly.
- * @param {ol.Map} map The ol3 map object.
+ * @param {import("ol/Map.js").default} map The ol3 map object.
  * @param {?ol.Feature} oeFeature ObjectEditing feature
  * @private
  */
@@ -1072,7 +1072,7 @@ exports.prototype.handleNgeoFeaturesRemove_ = function(event) {
 /**
  * Listen to any changes that may occur within the feature in order to
  * update the state of the permalink accordingly.
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @private
  */
 exports.prototype.addNgeoFeature_ = function(feature) {
@@ -1087,7 +1087,7 @@ exports.prototype.addNgeoFeature_ = function(feature) {
 
 /**
  * Unregister any event listener from the feature.
- * @param {ol.Feature} feature Feature.
+ * @param {import("ol/Feature.js").default} feature Feature.
  * @private
  */
 exports.prototype.removeNgeoFeature_ = function(feature) {

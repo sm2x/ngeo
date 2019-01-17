@@ -86,7 +86,7 @@ const exports = function(options) {
 
   /**
    * Sketch feature.
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @private
    */
   this.sketchFeature_ = null;
@@ -100,7 +100,7 @@ const exports = function(options) {
 
   /**
    * Current sketch point.
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @private
    */
   this.sketchPoint_ = null;
@@ -507,7 +507,7 @@ exports.prototype.getSketchPointGeometry_ = function() {
 
 /**
  * Returns the center of the map view
- * @return {ol.Coordinate} Coordinate.
+ * @return {import("ol/Coordinate.js").default} Coordinate.
  * @private
  */
 exports.prototype.getCenter_ = function() {

@@ -63,7 +63,7 @@ exports.run(/* @ngInject */ ($templateCache) => {
  *
  * @htmlAttribute {boolean} gmf-drawfeature-active Whether the directive is
  *     active or not.
- * @htmlAttribute {ol.Map} gmf-drawfeature-map The map.
+ * @htmlAttribute {import("ol/Map.js").default} gmf-drawfeature-map The map.
  * @return {angular.IDirective} The directive specs.
  * @ngInject
  * @ngdoc directive
@@ -510,7 +510,7 @@ Controller.prototype.removeFeature = function(feature) {
 Controller.prototype.handleFeaturesAdd_ = function(evt) {
   // timeout to prevent double-click to zoom the map
   this.timeout_(() => {
-    this.selectedFeature = /** @type {ol.Feature} */ (evt.element);
+    this.selectedFeature = /** @type {import("ol/Feature.js").default} */ (evt.element);
     this.drawActive = false;
     this.scope_.$apply();
   });

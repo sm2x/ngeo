@@ -144,7 +144,7 @@ exports.prototype.disable_ = function() {
 /**
  * Called the the map is clicked. Create a regular polygon at the clicked
  * location using the configuration
- * @param {ol.MapBrowserEvent} evt Map browser event.
+ * @param {import("ol/MapBrowserEvent.js").default} evt Map browser event.
  * @private
  */
 exports.prototype.handleMapClick_ = function(evt) {

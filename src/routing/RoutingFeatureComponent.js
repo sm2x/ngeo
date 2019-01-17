@@ -94,13 +94,13 @@ exports.Controller = function($scope, $timeout, $q, ngeoNominatimService) {
   this.ngeoNominatimService_ = ngeoNominatimService;
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @private
    */
   this.map;
 
   /**
-   * @type {ol.Feature}
+   * @type {import("ol/Feature.js").default}
    * @export
    */
   this.feature;
@@ -130,7 +130,7 @@ exports.Controller = function($scope, $timeout, $q, ngeoNominatimService) {
   this.onChange;
 
   /**
-   * @type {ol.Collection}
+   * @type {import("ol/Collection.js").default}
    * @private
    */
   this.vectorFeatures_ = new olCollection();
@@ -263,7 +263,7 @@ exports.Controller.prototype.set = function() {
 };
 
 /**
- * @param {ol.Coordinate} coordinate LonLat coordinate.
+ * @param {import("ol/Coordinate.js").default} coordinate LonLat coordinate.
  * @param {string} label Feature name/label.
  * @private
  */
@@ -309,7 +309,7 @@ exports.Controller.prototype.onSelect_ = function(selected) {
 /**
  * Snaps a feature to the street network using the getNearest
  * function of the routing service. Replaces the feature.
- * @param {ol.Feature} feature Feature to snap
+ * @param {import("ol/Feature.js").default} feature Feature to snap
  * @private
  */
 exports.Controller.prototype.snapFeature_ = function(feature) {
@@ -335,8 +335,8 @@ exports.Controller.prototype.snapFeature_ = function(feature) {
 
 /**
  * Converts feature point into LonLat coordinate.
- * @param {ol.Feature} point Feature point to convert
- * @return {ol.Coordinate} LonLat coordinate
+ * @param {import("ol/Feature.js").default} point Feature point to convert
+ * @return {import("ol/Coordinate.js").default} LonLat coordinate
  * @private
  */
 exports.Controller.prototype.getLonLatFromPoint_ = function(point) {
@@ -365,8 +365,8 @@ exports.Controller.prototype.getLonLatFromPoint_ = function(point) {
  *
  * See the [../examples/routing.html](../examples/routing.html) example for a usage sample.
  *
- * @htmlAttribute {ol.Map} ngeo-routing-feature-map The map.
- * @htmlAttribute {ol.Feature} ngeo-routing-feature-feature The feature.
+ * @htmlAttribute {import("ol/Map.js").default} ngeo-routing-feature-map The map.
+ * @htmlAttribute {import("ol/Feature.js").default} ngeo-routing-feature-feature The feature.
  * @htmlAttribute {string} ngeo-routing-feature-fill-color The marker fill color.
  * @htmlAttribute {string} ngeo-routing-feature-stroke-color The marker stroke color.
  * @htmlAttribute {function(ol.Feature)} ngeo-routing-feature-on-change Event fired when feature changes.

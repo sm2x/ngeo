@@ -47,7 +47,7 @@ exports.Controller = function($scope, $filter, gettextCatalog) {
   this.gettextCatalog = gettextCatalog;
 
   /**
-   * @type {ol.Map}
+   * @type {import("ol/Map.js").default}
    * @export
    */
   this.map;
