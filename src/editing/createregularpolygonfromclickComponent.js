@@ -105,7 +105,7 @@ function Controller($scope) {
   this.angle;
 
   /**
-   * @type {ol.Collection.<ol.Feature>}
+   * @type {ol.Collection.<import("ol/Feature.js").default>}
    * @export
    */
   this.features;

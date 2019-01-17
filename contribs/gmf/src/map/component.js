@@ -73,7 +73,7 @@ function Controller(ngeoFeatureOverlayMgr, gmfPermalink, gmfSnapping) {
   // Scope properties
 
   /**
-   * @type {!ol.Map}
+   * @type {!import("ol/Map.js").default}
    * @export
    */
   this.map;

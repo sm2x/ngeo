@@ -344,7 +344,7 @@ function Controller($element, $q, $scope, $timeout,
   this.mapSelectToolActivate = new ngeoMiscToolActivate(this, 'mapSelectActive');
 
   /**
-   * @type {?ol.Feature}
+   * @type {?import("ol/Feature.js").default}
    * @export
    */
   this.feature = null;
@@ -437,7 +437,7 @@ function Controller($element, $q, $scope, $timeout,
   this.translateToolActivate;
 
   /**
-   * @type {!Array.<!ol.EventsKey>}
+   * @type {!Array.<!import("ol/EventsKey.js").default>}
    * @private
    */
   this.listenerKeys_ = [];
@@ -1095,7 +1095,7 @@ Controller.prototype.handleMapContextMenu_ = function(evt) {
 
 
 /**
- * @param {Array.<ol.Feature>} features Features.
+ * @param {Array.<import("ol/Feature.js").default>} features Features.
  * @private
  */
 Controller.prototype.handleGetFeatures_ = function(features) {
@@ -1146,8 +1146,8 @@ Controller.prototype.unregisterInteractions_ = function() {
 
 
 /**
- * @param {?ol.Feature} newFeature The new feature.
- * @param {?ol.Feature} oldFeature The old feature.
+ * @param {?import("ol/Feature.js").default} newFeature The new feature.
+ * @param {?import("ol/Feature.js").default} oldFeature The old feature.
  * @private
  */
 Controller.prototype.handleFeatureChange_ = function(newFeature, oldFeature) {

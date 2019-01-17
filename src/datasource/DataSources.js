@@ -10,7 +10,7 @@ import olView from 'ol/View.js';
 
 
 /**
- * @typedef {!ol.Collection.<!ngeo.datasource.DataSource>} DataSources
+ * @typedef {!import("ol/Collection.js").default.<!ngeo.datasource.DataSource>} DataSources
  */
 
 
@@ -46,7 +46,7 @@ const exports = class {
     this.map_ = null;
 
     /**
-     * @type {!Array.<!ol.EventsKey>}
+     * @type {!Array.<!import("ol/EventsKey.js").default>}
      * @private
      */
     this.listenerKeys_ = [];
@@ -56,7 +56,7 @@ const exports = class {
 
   /**
    * Set a map to this service. Null can be given to unset the map.
-   * @param {?ol.Map} map Map.
+   * @param {?import("ol/Map.js").default} map Map.
    */
   set map(map) {
     if (this.map_ === map) {

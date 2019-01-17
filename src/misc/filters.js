@@ -49,7 +49,7 @@ import {padNumber} from 'ol/string.js';
  * - opt_template Optional template. Default to '{x} {y}'.
  *     Where "{x}" will be replaced by the easting coordinate and "{y}" by the northing one. Note:
  *     Use a html entity to use the semicolon symbol into a template.
- * @typedef {function(ol.Coordinate, (number|string)=, string=, (boolean|string)=): string} numberCoordinates
+ * @typedef {function(import("ol/Coordinate.js").default, (number|string)=, string=, (boolean|string)=): string} numberCoordinates
  */
 
 
@@ -61,7 +61,7 @@ import {padNumber} from 'ol/string.js';
  * - opt_template Optional template. Default to '{x} {y}'.
  *     Where "{x}" will be replaced by the easting coordinate, {y} by the northing one. Note: Use a html
  *     entity to use the semicolon symbol into a template.
- * @typedef {function(ol.Coordinate, (number|string)=, string=): string} dmsCoordinates
+ * @typedef {function(import("ol/Coordinate.js").default, (number|string)=, string=): string} dmsCoordinates
  */
 
 

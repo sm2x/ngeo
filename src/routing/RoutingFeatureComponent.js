@@ -124,7 +124,7 @@ exports.Controller = function($scope, $timeout, $q, ngeoNominatimService) {
   this.strokeColor;
 
   /**
-   * @type {function(ol.Feature)}
+   * @type {function(import("ol/Feature.js").default)}
    * @export
    */
   this.onChange;
@@ -369,7 +369,7 @@ exports.Controller.prototype.getLonLatFromPoint_ = function(point) {
  * @htmlAttribute {import("ol/Feature.js").default} ngeo-routing-feature-feature The feature.
  * @htmlAttribute {string} ngeo-routing-feature-fill-color The marker fill color.
  * @htmlAttribute {string} ngeo-routing-feature-stroke-color The marker stroke color.
- * @htmlAttribute {function(ol.Feature)} ngeo-routing-feature-on-change Event fired when feature changes.
+ * @htmlAttribute {function(import("ol/Feature.js").default)} ngeo-routing-feature-on-change Event fired when feature changes.
  * @ngdoc directive
  * @ngname ngeoRoutingFeature
  */

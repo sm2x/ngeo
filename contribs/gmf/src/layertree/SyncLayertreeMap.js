@@ -51,7 +51,7 @@ const exports = function($rootScope, ngeoLayerHelper, ngeoWMSTime,
   });
 
   $rootScope.$on('ngeo-layertree-state', (map, treeCtrl, firstParent) => {
-    this.sync_(/** @type ol.Map */ (map), firstParent);
+    this.sync_(/** @type import("ol/Map.js").default */ (map), firstParent);
   });
 };
 

@@ -109,7 +109,7 @@ function gmfObjecteditingTemplateUrl($element, $attrs, gmfObjecteditingTemplateU
  * @htmlAttribute {string} gmf-objectediting-geomtype The geometry type.
  * @htmlAttribute {number} gmf-objectediting-layernodeid The GMF layer node id.
  * @htmlAttribute {import("ol/Map.js").default} gmf-objectediting-map The map.
- * @htmlAttribute {ol.Collection.<ol.Feature>} gmf-objectediting-sketchfeatures
+ * @htmlAttribute {ol.Collection.<import("ol/Feature.js").default>} gmf-objectediting-sketchfeatures
  *     Collection of temporary features being drawn by the tools.
  * @ngdoc component
  * @ngname gmfObjectediting
@@ -185,7 +185,7 @@ exports.Controller = function($scope, $timeout, gettextCatalog,
   this.map;
 
   /**
-   * @type {ol.Collection.<ol.Feature>}
+   * @type {ol.Collection.<import("ol/Feature.js").default>}
    * @export
    */
   this.sketchFeatures;
@@ -365,19 +365,19 @@ exports.Controller = function($scope, $timeout, gettextCatalog,
   this.dirty = false;
 
   /**
-   * @type {!Array.<!ol.EventsKey>}
+   * @type {!Array.<!import("ol/EventsKey.js").default>}
    * @private
    */
   this.listenerKeys_ = [];
 
   /**
-   * @type {!ol.Collection}
+   * @type {!import("ol/Collection.js").default}
    * @private
    */
   this.features_ = new olCollection();
 
   /**
-   * @type {!ol.Collection}
+   * @type {!import("ol/Collection.js").default}
    * @private
    */
   this.interactions_ = new olCollection();

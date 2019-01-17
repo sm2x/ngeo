@@ -103,7 +103,7 @@ function Controller($compile, $timeout, $scope, gmfRaster) {
   this.projections;
 
   /**
-   * @type {function(ol.Coordinate, Object):Object}
+   * @type {function(import("ol/Coordinate.js").default, Object):Object}
    * @export
    */
   this.callback;

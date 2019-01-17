@@ -96,7 +96,7 @@ exports.component('gmfBackgroundlayerselector', component);
 function Controller($scope, ngeoBackgroundLayerMgr, gmfThemes) {
 
   /**
-   * @type {?ol.Map}
+   * @type {?import("ol/Map.js").default}
    * @export
    */
   this.map;
@@ -139,7 +139,7 @@ function Controller($scope, ngeoBackgroundLayerMgr, gmfThemes) {
   this.gmfThemes_ = gmfThemes;
 
   /**
-   * @type {!Array.<!ol.EventsKey>}
+   * @type {!Array.<!import("ol/EventsKey.js").default>}
    * @private
    */
   this.listenerKeys_ = [];

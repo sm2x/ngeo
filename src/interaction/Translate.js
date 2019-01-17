@@ -47,25 +47,25 @@ import olSourceVector from 'ol/source/Vector.js';
 const exports = function(options) {
 
   /**
-   * @type {!Array.<ol.EventsKey>}
+   * @type {!Array.<import("ol/EventsKey.js").default>}
    * @private
    */
   this.listenerKeys_ = [];
 
   /**
-   * @type {!Object.<number, ol.EventsKey>}
+   * @type {!Object.<number, import("ol/EventsKey.js").default>}
    * @private
    */
   this.featureListenerKeys_ = {};
 
   /**
-   * @type {?ol.EventsKey}
+   * @type {?import("ol/EventsKey.js").default}
    * @private
    */
   this.keyPressListenerKey_ = null;
 
   /**
-   * @type {ol.Collection.<ol.Feature>}
+   * @type {ol.Collection.<import("ol/Feature.js").default>}
    * @private
    */
   this.myFeatures_ = options.features !== undefined ? options.features : null;
@@ -90,7 +90,7 @@ const exports = function(options) {
   });
 
   /**
-   * @type {!Object.<number, ol.Feature>}
+   * @type {!Object.<number, import("ol/Feature.js").default>}
    * @private
    */
   this.centerFeatures_ = {};

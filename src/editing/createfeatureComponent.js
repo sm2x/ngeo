@@ -98,7 +98,7 @@ function Controller(gettextCatalog, $compile, $filter, $scope, $timeout, ngeoEve
   this.active;
 
   /**
-   * @type {ol.Collection.<!ol.Feature>|!import("ol/source/Vector.js").default}
+   * @type {ol.Collection.<!import("ol/Feature.js").default>|!import("ol/source/Vector.js").default}
    * @export
    */
   this.features;
@@ -110,7 +110,7 @@ function Controller(gettextCatalog, $compile, $filter, $scope, $timeout, ngeoEve
   this.geomType;
 
   /**
-   * @type {!ol.Map}
+   * @type {!import("ol/Map.js").default}
    * @export
    */
   this.map;

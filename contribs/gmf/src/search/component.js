@@ -289,7 +289,7 @@ class SearchController {
     this.ngeoAutoProjection_ = ngeoAutoProjection;
 
     /**
-     * @type {!ol.Map}
+     * @type {!import("ol/Map.js").default}
      * @export
      */
     this.map;
@@ -811,7 +811,7 @@ class SearchController {
 
   /**
    * Style for search results.
-   * @param {null|ol.Feature|import("ol/render/Feature.js").default} feature The searched feature.
+   * @param {null|import("ol/Feature.js").default|import("ol/render/Feature.js").default} feature The searched feature.
    * @param {number} resolution The current resolution of the map.
    * @return {import("ol/style/Style.js").default} A style for this kind of features.
    * @private
@@ -919,7 +919,7 @@ class SearchController {
 
   /**
    * @param {jQuery.Event} event Event.
-   * @param {Object|ol.Feature} suggestion Suggestion.
+   * @param {Object|import("ol/Feature.js").default} suggestion Suggestion.
    * @param {TypeaheadDataset} dataset Dataset.
    * @private
    */

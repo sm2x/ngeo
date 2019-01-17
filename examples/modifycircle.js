@@ -55,7 +55,7 @@ exports.MainController = function() {
   const circle = new olGeomCircle([-10691093, 4966327], 465000);
 
   /**
-   * @type {ol.Collection.<ol.Feature>}
+   * @type {ol.Collection.<import("ol/Feature.js").default>}
    * @export
    */
   this.features = new olCollection();

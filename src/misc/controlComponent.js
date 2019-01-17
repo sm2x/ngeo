@@ -42,7 +42,7 @@ function component() {
      */
     link: (scope, element, attrs) => {
 
-      const control = /** @type {import("ol/control/Control.js").default} */
+      const control = /** @type {import("ol/control/Contrimport("ol/js.js").default").default} */
               (scope.$eval(attrs['ngeoControl']));
       googAsserts.assertInstanceof(control, olControlControl);
 

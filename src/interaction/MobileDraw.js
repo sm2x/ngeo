@@ -61,7 +61,7 @@ const exports = function(options) {
 
   /**
    * The key for view center change event.
-   * @type {?ol.EventsKey}
+   * @type {?import("ol/EventsKey.js").default}
    * @private
    */
   this.changeEventKey_ = null;
@@ -93,7 +93,7 @@ const exports = function(options) {
 
   /**
    * Previous sketch points, saved to be able to display them on the layer.
-   * @type {Array.<ol.Feature>}
+   * @type {Array.<import("ol/Feature.js").default>}
    * @private
    */
   this.sketchPoints_ = [];
@@ -197,7 +197,7 @@ exports.prototype.getValid = function() {
 
 /**
  * Returns the current sketch feature.
- * @return {?ol.Feature} The sketch feature, or null if none.
+ * @return {?import("ol/Feature.js").default} The sketch feature, or null if none.
  */
 exports.prototype.getFeature = function() {
   return this.sketchFeature_;
@@ -400,7 +400,7 @@ exports.prototype.modifyDrawing_ = function() {
 
 /**
  * Stop drawing without adding the sketch feature to the target layer.
- * @return {?ol.Feature} The sketch feature (or null if none).
+ * @return {?import("ol/Feature.js").default} The sketch feature (or null if none).
  * @private
  */
 exports.prototype.abortDrawing_ = function() {

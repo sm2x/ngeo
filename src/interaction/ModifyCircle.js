@@ -66,7 +66,7 @@ const exports = function(options) {
 
   /**
    * Segment RTree for each layer
-   * @type {import("ol/structs/RBush.js").default.<ol.ModifySegmentDataType>}
+   * @type {import("ol/structs/RBush.js").default.<import("ol/ModifySegmentDataType.js").default>}
    * @private
    */
   this.rBush_ = new olStructsRBush();
@@ -114,7 +114,7 @@ const exports = function(options) {
   });
 
   /**
-   * @type {!ol.Collection.<ol.Feature>}
+   * @type {!ol.Collection.<import("ol/Feature.js").default>}
    * @private
    */
   this.features_ = options.features;
@@ -181,7 +181,7 @@ exports.prototype.removeFeature_ = function(feature) {
  */
 exports.prototype.removeFeatureSegmentData_ = function(feature) {
   const rBush = this.rBush_;
-  const /** @type {Array.<ol.ModifySegmentDataType>} */ nodesToRemove = [];
+  const /** @type {Array.<import("ol/ModifySegmentDataType.js").default>} */ nodesToRemove = [];
   rBush.forEach(
     /**
        * @param {import("ol/ModifySegmentDataType.js").default} node RTree node.
@@ -377,7 +377,7 @@ exports.handleUpEvent_ = function(evt) {
 
 
 /**
- * Handles the {@link ol.MapBrowserEvent map browser event} and may modify the
+ * Handles the {@link import("ol/MapBrowserEvent.js").default map browser event} and may modify the
  * geometry.
  * @param {import("ol/MapBrowserEvent.js").default} mapBrowserEvent Map browser event.
  * @return {boolean} `false` to stop event propagation.

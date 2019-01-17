@@ -169,7 +169,7 @@ exports.MainController.prototype.handleMapSingleClick_ = function(evt) {
 
 
 /**
- * @param {Array.<ol.Feature>} features Features.
+ * @param {Array.<import("ol/Feature.js").default>} features Features.
  * @private
  */
 exports.MainController.prototype.handleGetFeatures_ = function(features) {

@@ -87,10 +87,10 @@ const exports = function($http, $injector, ngeoDebounce) {
 
   /**
    * @export
-   * @type {function(string,function(Array.<BloodhoundDatum>),(function(Array.<ol.Feature>)|undefined))}
+   * @type {function(string,function(Array.<BloodhoundDatum>),(function(Array.<import("ol/Feature.js").default>)|undefined))}
    */
   this.typeaheadSourceDebounced =
-    /** @type{function(string,function(Array.<BloodhoundDatum>),(function(Array.<ol.Feature>)|undefined))} */
+    /** @type{function(string,function(Array.<BloodhoundDatum>),(function(Array.<import("ol/Feature.js").default>)|undefined))} */
     (this.ngeoDebounce_(/** @type {function(?)} */ (this.typeaheadSource_.bind(this)), this.typeaheadDebounceDelay_, true));
 };
 

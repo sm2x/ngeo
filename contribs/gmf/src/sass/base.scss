@@ -1,7 +1,7 @@
 /**
  * Styles shared between the different apps (mobile and desktop).
  */
-@import '~ol/ol.css';
+@import '~ol/import("ol/css.js").default';
 @import '~gmf/css/reset.css';
 @import '~bootstrap/scss/bootstrap.scss';
 

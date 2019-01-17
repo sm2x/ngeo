@@ -18,7 +18,7 @@ const exports = function(manager, index) {
   this.manager_ = manager;
 
   /**
-   * @type {ol.Collection.<ol.Feature>}
+   * @type {ol.Collection.<import("ol/Feature.js").default>}
    * @private
    */
   this.features_ = null;
@@ -66,7 +66,7 @@ exports.prototype.clear = function() {
  * configure the feature overlay with a feature collection you will use the
  * collection to add and remove features instead of using the overlay's
  * `addFeature`, `removeFeature` and `clear` functions.
- * @param {ol.Collection.<ol.Feature>} features Feature collection.
+ * @param {ol.Collection.<import("ol/Feature.js").default>} features Feature collection.
  * @export
  */
 exports.prototype.setFeatures = function(features) {
@@ -88,7 +88,7 @@ exports.prototype.setFeatures = function(features) {
 
 /**
  * Set a style for the feature overlay.
- * @param {import("ol/style/Style.js").default|Array.<import("ol/style/Style.js").default>|ol.StyleFunction} style
+ * @param {import("ol/style/Style.js").default|Array.<import("ol/style/Style.js").default>|import("ol/StyleFunction.js").default} style
  * Style.
  * @export
  */

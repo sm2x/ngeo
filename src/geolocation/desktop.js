@@ -104,7 +104,7 @@ function Controller($scope, $element, ngeoFeatureOverlayMgr, ngeoNotification) {
   googAsserts.assertInstanceof(map, olMap);
 
   /**
-   * @type {!ol.Map}
+   * @type {!import("ol/Map.js").default}
    * @private
    */
   this.map_ = map;

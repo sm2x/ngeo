@@ -247,7 +247,7 @@ function Controller($injector, $scope, ngeoQueryResult, ngeoMapQuerent,
   /**
    * A mapping between row uid and the corresponding feature for each
    * source.
-   * @type {!Object.<string, Object.<string, ol.Feature>>}
+   * @type {!Object.<string, Object.<string, import("ol/Feature.js").default>>}
    * @private
    */
   this.featuresForSources_ = {};
@@ -255,7 +255,7 @@ function Controller($injector, $scope, ngeoQueryResult, ngeoMapQuerent,
   // Styles for displayed features (features) and selected features
   // (highlightFeatures_) (user can set both styles).
   /**
-   * @type {!ol.Collection}
+   * @type {!import("ol/Collection.js").default}
    * @private
    */
   this.features_ = new olCollection();
@@ -267,7 +267,7 @@ function Controller($injector, $scope, ngeoQueryResult, ngeoMapQuerent,
   this.ngeoFeatureOverlayMgr_ = ngeoFeatureOverlayMgr;
 
   /**
-   * @type {!ol.Collection}
+   * @type {!import("ol/Collection.js").default}
    * @private
    */
   this.highlightFeatures_ = new olCollection();

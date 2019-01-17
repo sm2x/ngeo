@@ -15,7 +15,7 @@ import * as olEvents from 'ol/events.js';
 const exports = function() {
 
   /**
-   * @type {Object.<number|string, Array.<ol.EventsKey>>}
+   * @type {Object.<number|string, Array.<import("ol/EventsKey.js").default>>}
    * @private
    */
   this.listenerKeys_ = {};

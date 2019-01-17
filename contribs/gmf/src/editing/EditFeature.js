@@ -87,7 +87,7 @@ exports.prototype.getFeaturesWithComparisonFilters = function(
 
 /**
  * @param {angular.IHttpResponse} resp Ajax response.
- * @return {Array.<ol.Feature>} List of features.
+ * @return {Array.<import("ol/Feature.js").default>} List of features.
  * @private
  */
 exports.prototype.handleGetFeatures_ = function(resp) {
@@ -97,7 +97,7 @@ exports.prototype.handleGetFeatures_ = function(resp) {
 
 /**
  * @param {number} layerId The layer id that contains the feature.
- * @param {Array.<ol.Feature>} features List of features to insert.
+ * @param {Array.<import("ol/Feature.js").default>} features List of features to insert.
  * @return {angular.IPromise} Promise.
  * @export
  */

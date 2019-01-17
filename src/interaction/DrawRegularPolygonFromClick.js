@@ -62,7 +62,7 @@ const exports = function(options) {
   this.sides_ = options.sides !== undefined ? options.sides : 3;
 
   /**
-   * @type {!Array.<ol.EventsKey>}
+   * @type {!Array.<import("ol/EventsKey.js").default>}
    * @private
    */
   this.listenerKeys_ = [];

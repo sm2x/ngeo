@@ -17,7 +17,7 @@ const exports = function() {};
  * Parse a string and return a coordinate if the result is valid. Given string
  * must be a two numbers separated by a space.
  * @param {string} str the string to parse.
- * @return {?ol.Coordinate} A coordinate or null if the format is not valid.
+ * @return {?import("ol/Coordinate.js").default} A coordinate or null if the format is not valid.
  * @export
  */
 exports.prototype.stringToCoordinates = function(str) {
@@ -69,7 +69,7 @@ exports.prototype.getProjectionList = function(projectionsCodes) {
  * @param {Array.<import("ol/proj/Projection.js").default>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of
  *     the array.
- * @return {?ol.Coordinate} A coordinates in the view's projection if it matches
+ * @return {?import("ol/Coordinate.js").default} A coordinates in the view's projection if it matches
  *     in one of the given projections, or null else.
  * @export
  */
@@ -103,7 +103,7 @@ exports.prototype.tryProjections = function(coordinates,
  * @param {Array.<import("ol/proj/Projection.js").default>=} opt_projections optional array of
  *     projections. The point is tested in each projection, in the order of
  *     the array.
- * @return {?ol.Coordinate} A coordinates in the view's projection if it matches
+ * @return {?import("ol/Coordinate.js").default} A coordinates in the view's projection if it matches
  *     in one of the given projections, or null else.
  * @export
  */

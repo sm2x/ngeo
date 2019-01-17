@@ -154,14 +154,14 @@ const exports = function(options = /** @type {ngeo.interaction.MeasureBaseOption
 
   /**
    * The key for geometry change event.
-   * @type {?ol.EventsKey}
+   * @type {?import("ol/EventsKey.js").default}
    * @private
    */
   this.changeEventKey_ = null;
 
   /**
    * The key for map postcompose event.
-   * @type {?ol.EventsKey}
+   * @type {?import("ol/EventsKey.js").default}
    * @private
    */
   this.postcomposeEventKey_ = null;
@@ -327,7 +327,7 @@ exports.prototype.getDrawInteraction = function() {
  * Creates the draw interaction.
  *
  * @abstract
- * @param {import("ol/style/Style.js").default|Array.<import("ol/style/Style.js").default>|ol.StyleFunction|undefined}
+ * @param {import("ol/style/Style.js").default|Array.<import("ol/style/Style.js").default>|import("ol/StyleFunction.js").default|undefined}
  *     style The sketchStyle used for the drawing interaction.
  * @param {import("ol/source/Vector.js").default} source Vector source.
  * @return {import("ol/interaction/Draw.js").default|ngeo.interaction.DrawAzimut|ngeo.interaction.MobileDraw} The interaction
@@ -511,7 +511,7 @@ exports.prototype.updateState_ = function() {
  * where to place the tooltip and determine which help message to display.
  *
  * @abstract
- * @param {function(string, ?ol.Coordinate)} callback The function
+ * @param {function(string, ?import("ol/Coordinate.js").default)} callback The function
  *     to be called.
  * @protected
  */

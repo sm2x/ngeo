@@ -44,7 +44,7 @@ const exports = angular.module('gmfDisclaimer', [
 function Controller($element, $sce, $timeout, gettextCatalog, ngeoCreatePopup, ngeoDisclaimer, ngeoEventHelper, ngeoLayerHelper) {
 
   /**
-   * @type {?ol.Map}
+   * @type {?import("ol/Map.js").default}
    * @export
    */
   this.map;

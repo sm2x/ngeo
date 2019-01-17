@@ -79,7 +79,7 @@ function Controller($scope, $timeout, ngeoFeatureOverlayMgr) {
   this.line;
 
   /**
-   * @type {?ol.Map}
+   * @type {?import("ol/Map.js").default}
    * @private
    */
   this.map_ = null;
@@ -91,7 +91,7 @@ function Controller($scope, $timeout, ngeoFeatureOverlayMgr) {
   this.active;
 
   /**
-   * @type {!ol.Collection}
+   * @type {!import("ol/Collection.js").default}
    * @private
    */
   this.features_ = new olCollection();

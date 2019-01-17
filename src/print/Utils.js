@@ -46,7 +46,7 @@ exports.DOTS_PER_INCH_ = 72;
 /**
  * Return a function to use as map postcompose listener for drawing a print
  * mask on the map.
- * @param {function():ol.Size} getSize User-defined function returning the
+ * @param {function():import("ol/Size.js").default} getSize User-defined function returning the
  *     size in dots of the map to print.
  * @param {function(olx.FrameState):number} getScale User-defined function
  *     returning the scale of the map to print.

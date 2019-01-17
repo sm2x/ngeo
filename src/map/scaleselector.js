@@ -166,7 +166,7 @@ const ScaleselectorController = function($scope, $element, $attrs) {
   this.$scope_ = $scope;
 
   /**
-   * @type {?ol.EventsKey}
+   * @type {?import("ol/EventsKey.js").default}
    * @private
    */
   this.resolutionChangeKey_ = null;

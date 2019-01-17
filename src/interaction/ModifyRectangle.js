@@ -57,7 +57,7 @@ const exports = function(options) {
   });
 
   /**
-   * @type {!ol.Collection.<ol.Feature>}
+   * @type {!ol.Collection.<import("ol/Feature.js").default>}
    * @private
    */
   this.features_ = options.features;

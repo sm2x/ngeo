@@ -186,7 +186,7 @@ exports.MainController = function($scope, ngeoFeatureHelper) {
   });
 
   /**
-   * @type {?ol.Feature}
+   * @type {?import("ol/Feature.js").default}
    * @export
    */
   this.selectedFeature = null;

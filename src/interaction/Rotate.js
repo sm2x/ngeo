@@ -42,7 +42,7 @@ const exports = function(options) {
   googAsserts.assert(options.features);
 
   /**
-   * @type {Array.<ol.EventsKey>}
+   * @type {Array.<import("ol/EventsKey.js").default>}
    * @private
    */
   this.listenerKeys_ = [];
@@ -54,7 +54,7 @@ const exports = function(options) {
   this.modified_ = false;
 
   /**
-   * @type {?ol.EventsKey}
+   * @type {?import("ol/EventsKey.js").default}
    * @private
    */
   this.keyPressListenerKey_ = null;
@@ -75,7 +75,7 @@ const exports = function(options) {
     options.pixelTolerance : 10;
 
   /**
-   * @type {!ol.Collection.<ol.Feature>}
+   * @type {!ol.Collection.<import("ol/Feature.js").default>}
    * @private
    */
   this.features_ = options.features;
@@ -115,7 +115,7 @@ const exports = function(options) {
   });
 
   /**
-   * @type {!Object.<number, ol.Feature>}
+   * @type {!Object.<number, import("ol/Feature.js").default>}
    * @private
    */
   this.centerFeatures_ = {};

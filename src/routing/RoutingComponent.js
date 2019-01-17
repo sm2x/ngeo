@@ -297,7 +297,7 @@ exports.Controller.prototype.reverseRoute = function() {
 
 /**
  * @param {Object} route Routes of OSRM response
- * @returns {Array<ol.Feature>} parsed route features
+ * @returns {Array<import("ol/Feature.js").default>} parsed route features
  * @private
  */
 exports.Controller.prototype.parseRoute_ = function(route) {

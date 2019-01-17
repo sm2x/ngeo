@@ -62,13 +62,13 @@ const exports = function(menuOptions, opt_overlayOptions) {
   options.positioning = olOverlayPositioning.TOP_LEFT;
 
   /**
-   * @type {Array.<ol.EventsKey>}
+   * @type {Array.<import("ol/EventsKey.js").default>}
    * @private
    */
   this.listenerKeys_ = [];
 
   /**
-   * @type {?ol.EventsKey}
+   * @type {?import("ol/EventsKey.js").default}
    * @private
    */
   this.clickOutListenerKey_ = null;

@@ -88,7 +88,7 @@ exports.component('gmfMouseposition', component);
  */
 function Controller($element, $filter, $scope, gettextCatalog) {
   /**
-   * @type {!ol.Map}
+   * @type {!import("ol/Map.js").default}
    * @export
    */
   this.map;

@@ -91,7 +91,7 @@ exports.MainController = function(gmfObjectEditingManager, gmfThemes,
   });
 
   /**
-   * @type {ol.Collection.<ol.Feature>}
+   * @type {ol.Collection.<import("ol/Feature.js").default>}
    * @export
    */
   this.sketchFeatures = new olCollection();
@@ -168,7 +168,7 @@ exports.MainController = function(gmfObjectEditingManager, gmfThemes,
     'mapTools', dummyToolActivate, false);
 
   /**
-   * @type {?ol.Feature}
+   * @type {?import("ol/Feature.js").default}
    * @export
    */
   this.objectEditingFeature = null;
