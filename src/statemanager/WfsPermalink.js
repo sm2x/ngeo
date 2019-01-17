@@ -374,7 +374,7 @@ WfsPermalinkService.or_ = function(filters) {
  * Join a list of filters with a given join function.
  *
  * @param {Array.<import("ol/format/filter.js").default.Filter>} filters The filters to join.
- * @param {function(!ol.format.filter.Filter, !import("ol/format/filter.js").default.Filter):
+ * @param {function(!import("ol/format/filter.js").default.Filter, !import("ol/format/filter.js").default.Filter):
  *    ol.format.filter.Filter} joinFn The function to join two filters.
  * @return {import("ol/format/filter.js").default.Filter} The joined filters.
  * @private
