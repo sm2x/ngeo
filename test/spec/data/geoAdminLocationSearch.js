@@ -1,4 +1,4 @@
-default export {
+export default {
   'results': [{
     'id': 1883,
     'weight': 9,

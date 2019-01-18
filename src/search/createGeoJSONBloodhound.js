@@ -63,7 +63,7 @@ function createGeoJSONBloodhound(url, opt_filter, opt_featureProjection,
   Object.assign(bloodhoundOptions.remote, remoteOptions);
 
   return new Bloodhound(bloodhoundOptions);
-};
+}
 
 
 /**

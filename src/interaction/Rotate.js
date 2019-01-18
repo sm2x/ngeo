@@ -370,4 +370,4 @@ Rotate.prototype.handleKeyUp_ = function(evt) {
 };
 
 
-export default Rotate
+export default Rotate;

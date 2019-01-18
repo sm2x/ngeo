@@ -1018,7 +1018,7 @@ class Querent {
     }
     this.requestCancelers_.length = 0;
   }
-};
+}
 
 
 /**

@@ -174,7 +174,7 @@ class DataSources {
     }
   }
 
-};
+}
 
 
 /**

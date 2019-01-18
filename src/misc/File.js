@@ -89,7 +89,7 @@ function File($q, $http, gettext) {
     });
     return defer.promise;
   };
-};
+}
 
 const module = angular.module('ngeoFile', []);
 

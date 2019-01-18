@@ -337,7 +337,7 @@ class MapQuerent {
     this.cleared_ = false;
   }
 
-};
+}
 
 
 /**

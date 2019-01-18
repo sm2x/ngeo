@@ -145,7 +145,7 @@ class Helper {
     delete this.cache_[dataSource.id];
   }
 
-};
+}
 
 
 /**

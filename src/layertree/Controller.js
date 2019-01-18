@@ -1,6 +1,6 @@
 import angular from 'angular';
 import googAsserts from 'goog/asserts.js';
-import ngeoMiscDecorate from 'ngeo/misc/decorate.js';
+import {layerLoading, layer} from 'ngeo/misc/decorate.js';
 import {getUid as olUtilGetUid} from 'ol/util.js';
 import * as olEvents from 'ol/events.js';
 import olLayerGroup from 'ol/layer/Group.js';
@@ -151,8 +151,8 @@ function Controller($scope, $rootScope, $attrs) {
   this.dataSource_ = null;
 
   if (this.layer) {
-    ngeoMiscDecorate.layerLoading(this.layer, $scope);
-    ngeoMiscDecorate.layer(this.layer);
+    layerLoading(this.layer, $scope);
+    layer(this.layer);
 
     olEvents.listen(this.layer, 'change:opacity', () => {
       this.rootScope_.$broadcast('ngeo-layertree-opacity', this);

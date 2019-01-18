@@ -440,4 +440,4 @@ ModifyRectangle.prototype.handleUp_ = function(evt) {
  */
 
 
-export default ModifyRectangle
+export default ModifyRectangle;

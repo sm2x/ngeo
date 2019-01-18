@@ -80,4 +80,4 @@ const module = angular.module('ngeoTime', []);
 module.service('ngeoTime', Time);
 
 
-export default Time;
+export default module;

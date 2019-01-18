@@ -142,7 +142,7 @@ function createLocationSearchBloodhound(opt_options) {
   Object.assign(bloodhoundOptions.remote, remoteOptions);
 
   return new Bloodhound(bloodhoundOptions);
-};
+}
 
 
 /**

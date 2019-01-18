@@ -1,5 +1,5 @@
 import googAsserts from 'goog/asserts.js';
-import ngeoFormatAttribute from 'ngeo/format/Attribute.js';
+import {setGeometryType} from 'ngeo/format/Attribute.js';
 import ngeoFormatAttributeType from 'ngeo/format/AttributeType.js';
 import {inherits as olUtilInherits} from 'ol/util.js';
 import olFormatXML from 'ol/format/XML.js';
@@ -104,7 +104,7 @@ XSDAttribute.prototype.readFromElementNode_ = function(node) {
 
   const type = node.getAttribute('type');
   if (type) {
-    if (!ngeoFormatAttribute.setGeometryType(attribute, type)) {
+    if (!setGeometryType(attribute, type)) {
       this.setAttributeByXsdType_(attribute, type);
     }
   } else {

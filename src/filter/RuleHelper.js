@@ -793,7 +793,7 @@ class RuleHelper {
 
     return filter;
   }
-};
+}
 
 
 /**
