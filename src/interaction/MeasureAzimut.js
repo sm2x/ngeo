@@ -50,7 +50,7 @@ function MeasureAzimut(unitPrefixFormat, numberFormat, options = /** @type {Meas
 
 }
 
-olUtilInherits(exports, ngeoInteractionMeasure);
+olUtilInherits(MeasureAzimut, ngeoInteractionMeasure);
 
 
 /**
@@ -131,4 +131,4 @@ function getAzimut(line) {
 }
 
 
-export default exports;
+export default MeasureAzimut;

@@ -48,7 +48,7 @@ function Notification($timeout) {
 
 }
 
-olUtilInherits(exports, ngeoMessageMessage);
+olUtilInherits(Notification, ngeoMessageMessage);
 
 
 /**
@@ -175,7 +175,7 @@ Notification.prototype.clearMessageByCacheItem_ = function(item) {
 const module = angular.module('ngeoNotification', [
 ]);
 
-module.service('ngeoNotification', exports);
+module.service('ngeoNotification', Notification);
 
 
 export default module;

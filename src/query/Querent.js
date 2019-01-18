@@ -96,7 +96,7 @@ import olSourceImageWMS from 'ol/source/ImageWMS.js';
  */
 
 
-const exports = class {
+class Querent {
 
   /**
    * The ngeo Querent is a service that issues all sorts of queries using
@@ -1033,7 +1033,7 @@ const module = angular.module('ngeoQuerent', [
   ngeoFilterRuleHelper.name,
   ngeoMiscWMSTime.name,
 ]);
-module.service('ngeoQuerent', exports);
+module.service('ngeoQuerent', Querent);
 
 
 export default module;

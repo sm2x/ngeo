@@ -108,7 +108,7 @@ function Modify(options) {
 
 }
 
-olUtilInherits(exports, olInteractionInteraction);
+olUtilInherits(Modify, olInteractionInteraction);
 
 
 /**
@@ -242,4 +242,4 @@ Modify.prototype.getFeatureCollection_ = function(feature) {
 };
 
 
-export default exports;
+export default Modify;

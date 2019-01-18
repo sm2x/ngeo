@@ -45,7 +45,7 @@ function Popover(opt_options) {
 
 }
 
-olUtilInherits(exports, olOverlay);
+olUtilInherits(Popover, olOverlay);
 
 
 /**
@@ -92,4 +92,4 @@ Popover.prototype.setMap = function(map) {
 };
 
 
-export default exports;
+export default Popover;

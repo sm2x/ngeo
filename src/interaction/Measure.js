@@ -214,7 +214,7 @@ function Measure(options = /** @type {import("ngeo/interaction/MeasureBaseOption
   olEvents.listen(this, 'change:active', this.updateState_, this);
 }
 
-olUtilInherits(exports, olInteractionInteraction);
+olUtilInherits(Measure, olInteractionInteraction);
 
 
 /**
@@ -538,4 +538,4 @@ Measure.prototype.handleDrawInteractionActiveChange_ = function() {
 };
 
 
-export default exports;
+export default Measure;

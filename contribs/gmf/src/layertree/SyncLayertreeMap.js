@@ -452,7 +452,7 @@ const module = angular.module('gmfSyncLayertreeMap', [
   ngeoLayertreeController.name,
   ngeoMiscWMSTime.name,
 ]);
-module.service('gmfSyncLayertreeMap', exports);
+module.service('gmfSyncLayertreeMap', SyncLayertreeMap);
 
 
 export default module;

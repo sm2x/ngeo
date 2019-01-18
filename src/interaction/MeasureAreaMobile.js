@@ -22,8 +22,7 @@ function MeasureAreaMobile(format, gettextCatalog, opt_options) {
 
 }
 
-olUtilInherits(
-  exports, ngeoInteractionMeasureArea);
+olUtilInherits(MeasureAreaMobile, ngeoInteractionMeasureArea);
 
 
 /**
@@ -38,4 +37,4 @@ MeasureAreaMobile.prototype.createDrawInteraction = function(style, source) {
 };
 
 
-export default exports;
+export default MeasureAreaMobile;

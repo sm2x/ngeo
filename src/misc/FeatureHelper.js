@@ -1405,7 +1405,7 @@ const module = angular.module('ngeoFeatureHelper', [
   ngeoDownloadService.name,
   ngeoMiscFilters.name,
 ]);
-module.service('ngeoFeatureHelper', exports);
+module.service('ngeoFeatureHelper', FeatureHelper);
 
 
 export default module;

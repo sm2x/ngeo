@@ -122,7 +122,7 @@ function ModifyCircle(options) {
 
 }
 
-olUtilInherits(exports, olInteractionPointer);
+olUtilInherits(ModifyCircle, olInteractionPointer);
 
 
 /**
@@ -482,4 +482,4 @@ ModifyCircle.prototype.setGeometryCoordinates_ = function(geometry, coordinates)
 };
 
 
-export default exports;
+export default ModifyCircle;

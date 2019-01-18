@@ -90,7 +90,7 @@ function DrawAzimut(options) {
   olEvents.listen(this, 'change:active', this.updateState_, this);
 }
 
-olUtilInherits(exports, olInteractionPointer);
+olUtilInherits(DrawAzimut, olInteractionPointer);
 
 
 /**
@@ -310,4 +310,4 @@ DrawAzimut.prototype.setMap = function(map) {
 };
 
 
-export default exports;
+export default DrawAzimut;

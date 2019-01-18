@@ -22,8 +22,7 @@ function MeasureLengthMobile(format, gettextCatalog, opt_options) {
 
 }
 
-olUtilInherits(
-  exports, ngeoInteractionMeasureLength);
+olUtilInherits(MeasureLengthMobile, ngeoInteractionMeasureLength);
 
 
 /**
@@ -38,4 +37,4 @@ MeasureLengthMobile.prototype.createDrawInteraction = function(style, source) {
 };
 
 
-export default exports;
+export default MeasureLengthMobile;

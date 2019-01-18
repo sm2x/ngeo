@@ -375,7 +375,7 @@ Location.prototype.setPath = function(path) {
  */
 function LocationFactory($rootScope, $window) {
   const history = $window.history;
-  const service = new exports($window.location, $window.history);
+  const service = new Location($window.location, $window.history);
 
   let lastUri = service.getUriString();
   $rootScope.$watch(() => {

@@ -1,4 +1,3 @@
-const exports = {};
 import googAsserts from 'goog/asserts.js';
 import olInteractionInteraction from 'ol/interaction/Interaction.js';
 import olLayerBase from 'ol/layer/Base.js';
@@ -181,6 +180,3 @@ export function layerLoading(layer, $scope) {
     }
   }
 }
-
-
-export default exports;

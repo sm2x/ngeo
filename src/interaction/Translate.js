@@ -96,7 +96,7 @@ function Translate(options) {
     this, /** @type {olx.interaction.TranslateOptions} */ (options));
 }
 
-olUtilInherits(exports, olInteractionTranslate);
+olUtilInherits(Translate, olInteractionTranslate);
 
 
 /**
@@ -299,4 +299,4 @@ Translate.prototype.handleKeyUp_ = function(evt) {
 };
 
 
-export default exports;
+export default Translate;

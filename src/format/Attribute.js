@@ -53,9 +53,6 @@ import ngeoFormatAttributeType from 'ngeo/format/AttributeType.js';
  */
 
 
-const exports = {};
-
-
 /**
  * Set the `type` and `geomType` properties of an attribute if the given
  * type is a geometry one.
@@ -85,6 +82,3 @@ export function setGeometryType(attribute, type) {
   }
   return !!attribute.type && !!attribute.geomType;
 }
-
-
-export default exports;

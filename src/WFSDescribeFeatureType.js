@@ -97,7 +97,7 @@ function WFSDescribeFeatureType() {
 
 }
 
-olUtilInherits(exports, olFormatXML);
+olUtilInherits(WFSDescribeFeatureType, olFormatXML);
 
 
 /**
@@ -229,4 +229,4 @@ function readSequence_(node, objectStack) {
 }
 
 
-export default exports;
+export default WFSDescribeFeatureType;

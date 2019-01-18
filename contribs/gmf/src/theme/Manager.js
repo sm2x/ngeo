@@ -151,7 +151,7 @@ const module = angular.module('gmfThemeManager', [
  */
 module.value('gmfTreeManagerModeFlush', true);
 
-module.service('gmfThemeManager', exports);
+module.service('gmfThemeManager', Manager);
 
 
 export default module;

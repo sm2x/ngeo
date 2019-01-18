@@ -289,7 +289,7 @@ function Factory($compile, $rootScope, $sce, $timeout) {
      * @return {!import("ngeo/message/Popup.js").default} The popup instance.
      */
     function() {
-      return new exports($compile, $rootScope, $sce, $timeout);
+      return new Popup($compile, $rootScope, $sce, $timeout);
     }
   );
 }

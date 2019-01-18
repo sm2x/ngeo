@@ -63,7 +63,7 @@ FulltextSearch.prototype.search = function(query, params) {
  * @type {!angular.IModule}
  */
 const module = angular.module('gmfSearchFulltextSearch', []);
-module.service('gmfSearchFulltextSearch', exports);
+module.service('gmfSearchFulltextSearch', FulltextSearch);
 
 
 export default module;

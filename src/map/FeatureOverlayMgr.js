@@ -186,7 +186,7 @@ FeatureOverlayMgr.prototype.styleFunction_ = function(feature, resolution) {
 const module = angular.module('ngeoFeatureOverlayMgr', [
   ngeoMapFeatureOverlay.name
 ]);
-module.service('ngeoFeatureOverlayMgr', exports);
+module.service('ngeoFeatureOverlayMgr', FeatureOverlayMgr);
 
 
 export default module;

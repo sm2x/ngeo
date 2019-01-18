@@ -70,8 +70,7 @@ RasterService.prototype.handleGetRaster_ = function(resp) {
  * @type {!angular.IModule}
  */
 const module = angular.module('gmfRaster', []);
-exports['module'] = module;
-module.service('gmfRaster', exports);
+module.service('gmfRaster', RasterService);
 
 
 export default module;

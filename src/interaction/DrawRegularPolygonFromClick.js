@@ -70,8 +70,7 @@ function DrawRegularPolygonFromClick(options) {
 
 }
 
-olUtilInherits(
-  exports, olInteractionInteraction);
+olUtilInherits(DrawRegularPolygonFromClick, olInteractionInteraction);
 
 
 /**
@@ -158,4 +157,4 @@ DrawRegularPolygonFromClick.prototype.handleMapClick_ = function(evt) {
 };
 
 
-export default exports;
+export default DrawRegularPolygonFromClick;

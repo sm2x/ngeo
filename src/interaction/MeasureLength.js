@@ -39,7 +39,7 @@ function MeasureLength(format, gettextCatalog, options = /** @type {MeasureOptio
 
 }
 
-olUtilInherits(exports, ngeoInteractionMeasure);
+olUtilInherits(MeasureLength, ngeoInteractionMeasure);
 
 
 /**
@@ -67,4 +67,4 @@ MeasureLength.prototype.handleMeasure = function(callback) {
 };
 
 
-export default exports;
+export default MeasureLength;

@@ -87,7 +87,7 @@ function ModifyRectangle(options) {
 
 }
 
-olUtilInherits(exports, olInteractionPointer);
+olUtilInherits(ModifyRectangle, olInteractionPointer);
 
 
 /**
@@ -440,4 +440,4 @@ ModifyRectangle.prototype.handleUp_ = function(evt) {
  */
 
 
-export default exports;
+export default ModifyRectangle

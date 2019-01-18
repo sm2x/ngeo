@@ -55,7 +55,7 @@ import moment from 'moment';
  */
 
 
-const exports = class {
+class RuleHelper {
 
   /**
    * A service that provides utility methods to create `ngeo.rule.Rule`
@@ -803,7 +803,7 @@ const module = angular.module('ngeoRuleHelper', [
   ngeoMiscFeatureHelper.name,
   ngeoMiscWMSTime.name,
 ]);
-module.service('ngeoRuleHelper', exports);
+module.service('ngeoRuleHelper', RuleHelper);
 
 
 export default module;

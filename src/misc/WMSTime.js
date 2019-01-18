@@ -30,7 +30,7 @@ function WMSTime($filter, gettextCatalog) {
   ngeoMiscTime.call(this);
 }
 
-olUtilInherits(exports, ngeoMiscTime);
+olUtilInherits(WMSTime, ngeoMiscTime);
 
 
 /**
@@ -102,7 +102,7 @@ WMSTime.prototype.formatWMSTimeParam = function(wmsTimeProperty, times, opt_toUT
 const module = angular.module('ngeoWMSTime', [
   ngeoMiscTime.name,
 ]);
-module.service('ngeoWMSTime', exports);
+module.service('ngeoWMSTime', WMSTime);
 
 
 export default module;

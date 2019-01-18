@@ -199,7 +199,7 @@ Query.prototype.getFeatureInfo = function(layerInfo, coordinate, map) {
 const module = angular.module('gmfObjectEditingQuery', [
   gmfThemeThemes.name,
 ]);
-module.service('gmfObjectEditingQuery', exports);
+module.service('gmfObjectEditingQuery', Query);
 
 
 export default module;

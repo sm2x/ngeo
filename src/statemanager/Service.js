@@ -190,7 +190,7 @@ Service.prototype.deleteParam = function(key) {
 const module = angular.module('ngeoStateManager', [
   ngeoStatemanagerLocation.name
 ]);
-module.service('ngeoStateManager', exports);
+module.service('ngeoStateManager', Service);
 module.value('ngeoUsedKeyRegexp', [new RegExp('.*')]);
 
 

@@ -34,7 +34,7 @@ function MeasurePointMobile(format, coordFormat, options = /** @type {MeasureOpt
   this.coordFormat_ = coordFormat;
 }
 
-olUtilInherits(exports, ngeoInteractionMeasure);
+olUtilInherits(MeasurePointMobile, ngeoInteractionMeasure);
 
 
 /**
@@ -61,4 +61,4 @@ MeasurePointMobile.prototype.handleMeasure = function(callback) {
 };
 
 
-export default exports;
+export default MeasurePointMobile;

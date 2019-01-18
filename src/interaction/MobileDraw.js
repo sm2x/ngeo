@@ -125,7 +125,7 @@ function MobileDraw(options) {
 
 }
 
-olUtilInherits(exports, olInteractionInteraction);
+olUtilInherits(MobileDraw, olInteractionInteraction);
 
 
 /**
@@ -514,4 +514,4 @@ MobileDraw.prototype.getCenter_ = function() {
 };
 
 
-export default exports;
+export default MobileDraw;

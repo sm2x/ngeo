@@ -126,7 +126,7 @@ function Menu(menuOptions, opt_overlayOptions) {
 
 }
 
-olUtilInherits(exports, olOverlay);
+olUtilInherits(Menu, olOverlay);
 
 
 /**
@@ -257,4 +257,4 @@ Menu.prototype.handleMapPointerMove_ = function(evt) {
 };
 
 
-export default exports;
+export default Menu;

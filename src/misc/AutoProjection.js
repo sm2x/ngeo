@@ -122,7 +122,7 @@ AutoProjection.prototype.tryProjectionsWithInversion = function(
  * @type {!angular.IModule}
  */
 const module = angular.module('ngeoAutoProjection', []);
-module.service('ngeoAutoProjection', exports);
+module.service('ngeoAutoProjection', AutoProjection);
 
 
 export default module;

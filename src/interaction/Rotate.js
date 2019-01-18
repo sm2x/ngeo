@@ -125,7 +125,7 @@ function Rotate(options) {
 
 }
 
-olUtilInherits(exports, olInteractionPointer);
+olUtilInherits(Rotate, olInteractionPointer);
 
 
 /**
@@ -370,4 +370,4 @@ Rotate.prototype.handleKeyUp_ = function(evt) {
 };
 
 
-export default exports;
+export default Rotate

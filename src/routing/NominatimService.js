@@ -188,7 +188,7 @@ const module = angular.module('ngeoNominatimService', [
   ngeoMiscDebounce.name
 ]);
 
-module.service('ngeoNominatimService', exports);
+module.service('ngeoNominatimService', NominatimService);
 
 
 export default module;

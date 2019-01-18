@@ -61,7 +61,7 @@ function Disclaimer($sce, gettextCatalog, ngeoCreatePopup) {
 
 }
 
-olUtilInherits(exports, ngeoMessageMessage);
+olUtilInherits(Disclaimer, ngeoMessageMessage);
 
 
 /**
@@ -227,7 +227,7 @@ const module = angular.module('ngeoDisclaimer', [
   ngeoMessagePopup.name,
 ]);
 
-module.service('ngeoDisclaimer', exports);
+module.service('ngeoDisclaimer', Disclaimer);
 
 
 export default module;

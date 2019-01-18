@@ -111,7 +111,7 @@ function Themes($http, $injector, $q, ngeoLayerHelper, gettextCatalog, gmfThemes
   this.bgLayerPromise_ = null;
 }
 
-olUtilInherits(exports, olEventsEventTarget);
+olUtilInherits(Themes, olEventsEventTarget);
 
 
 /**

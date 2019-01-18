@@ -444,4 +444,4 @@ VectorEncoder.prototype.encodeTextStyle = function(symbolizers, textStyle) {
 };
 
 
-export default exports;
+export default VectorEncoder;

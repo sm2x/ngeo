@@ -44,7 +44,7 @@ function MeasureArea(format, gettextCatalog, options = {}) {
 
 }
 
-olUtilInherits(exports, ngeoInteractionMeasure);
+olUtilInherits(MeasureArea, ngeoInteractionMeasure);
 
 
 /**
@@ -76,4 +76,4 @@ MeasureArea.prototype.handleMeasure = function(callback) {
 };
 
 
-export default exports;
+export default MeasureArea;

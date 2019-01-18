@@ -77,7 +77,7 @@ Time.prototype.getUTCDate = function(localDate) {
  * @type {!angular.IModule}
  */
 const module = angular.module('ngeoTime', []);
-module.service('ngeoTime', exports);
+module.service('ngeoTime', Time);
 
 
-export default module;
+export default Time;
