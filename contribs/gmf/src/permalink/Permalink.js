@@ -13,7 +13,7 @@ import ngeoDrawFeatures from 'ngeo/draw/features.js';
 
 import ngeoDatasourceGroup from 'ngeo/datasource/Group.js';
 import ngeoDatasourceOGC, {guessServiceTypeByUrl, Type} from 'ngeo/datasource/OGC.js';
-import ngeoOlcsConstants from 'ngeo/olcs/constants.js';
+import {Permalink3dParam} from 'ngeo/olcs/constants.js';
 import ngeoFormatFeatureHash from 'ngeo/format/FeatureHash.js';
 import ngeoFormatFeatureProperties from 'ngeo/format/FeatureProperties.js';
 
@@ -739,7 +739,7 @@ Permalink.prototype.registerMap_ = function(map, oeFeature) {
       maxZoom
     });
   } else {
-    const enabled3d = this.ngeoStateManager_.getInitialBooleanValue(ngeoOlcsConstants.Permalink3dParam.ENABLED);
+    const enabled3d = this.ngeoStateManager_.getInitialBooleanValue(Permalink3dParam.ENABLED);
     if (!enabled3d) {
       center = this.getMapCenter();
       if (center) {
