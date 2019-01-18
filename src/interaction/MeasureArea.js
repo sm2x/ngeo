@@ -44,7 +44,7 @@ function MeasureArea(format, gettextCatalog, options = {}) {
    */
   this.format = format;
 
-};
+}
 
 olUtilInherits(exports, ngeoInteractionMeasure);
 

@@ -61,7 +61,7 @@ function Disclaimer($sce, gettextCatalog, ngeoCreatePopup) {
    */
   this.messages_ = {};
 
-};
+}
 
 olUtilInherits(exports, ngeoMessageMessage);
 

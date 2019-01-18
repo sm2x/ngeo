@@ -22,7 +22,7 @@ function MeasureLengthMobile(format, gettextCatalog, opt_options) {
 
   ngeoInteractionMeasureLength.call(this, format, gettextCatalog, options);
 
-};
+}
 
 olUtilInherits(
   exports, ngeoInteractionMeasureLength);

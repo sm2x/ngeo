@@ -27,7 +27,7 @@ function Config(data, columnDefs) {
    * @export
    */
   this.selectedRows = {};
-};
+}
 
 
 /**
@@ -38,7 +38,7 @@ function Config(data, columnDefs) {
  */
 function getRowUid(attributes) {
   return `${olUtilGetUid(attributes)}`;
-};
+}
 
 
 /**

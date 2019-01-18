@@ -44,7 +44,7 @@ function ColorPickerController() {
     ['red', 'yellow', 'green', 'lightgreen', 'lightblue', 'orange', 'purple'],
     ['#ffffff', '#f7f7f7', '#c3c3c3', '#000000']];
 
-};
+}
 
 module.controller('AppColorpickerController',
   ColorPickerController);
@@ -64,7 +64,7 @@ function MainController($scope) {
    */
   this.color = 'red';
 
-};
+}
 
 
 module.controller('MainController', MainController);

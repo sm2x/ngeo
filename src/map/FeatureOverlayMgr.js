@@ -73,7 +73,7 @@ function FeatureOverlayMgr() {
     updateWhileInteracting: true
   });
 
-};
+}
 
 
 /**

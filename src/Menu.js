@@ -126,7 +126,7 @@ function Menu(menuOptions, opt_overlayOptions) {
 
   olOverlay.call(this, options);
 
-};
+}
 
 olUtilInherits(exports, olOverlay);
 

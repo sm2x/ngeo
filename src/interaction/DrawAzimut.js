@@ -90,7 +90,7 @@ function DrawAzimut(options) {
   });
 
   olEvents.listen(this, 'change:active', this.updateState_, this);
-};
+}
 
 olUtilInherits(exports, olInteractionPointer);
 
@@ -104,7 +104,7 @@ olUtilInherits(exports, olInteractionPointer);
 function handleDownEvent_(event) {
   this.downPx_ = event.pixel;
   return true;
-};
+}
 
 
 /**
@@ -130,7 +130,7 @@ function handleUpEvent_(event) {
     pass = false;
   }
   return pass;
-};
+}
 
 
 /**
@@ -147,7 +147,7 @@ function handleEvent_(mapBrowserEvent) {
     pass = false;
   }
   return olInteractionPointer.prototype.handleEvent.call(this, mapBrowserEvent) && pass;
-};
+}
 
 
 /**

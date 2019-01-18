@@ -55,7 +55,7 @@ function ToolActivateMgr($rootScope) {
    * @private
    */
   this.scope_ = $rootScope;
-};
+}
 
 
 /**

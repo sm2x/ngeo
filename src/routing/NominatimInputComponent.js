@@ -116,7 +116,7 @@ function Controller($element, $injector, $scope, ngeoNominatimService) {
    */
   this.placeholder = '';
 
-};
+}
 
 /**
  * @param {jQuery.Event} event Event.

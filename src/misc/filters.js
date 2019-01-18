@@ -182,7 +182,7 @@ function Number($locale) {
     );
   };
   return result;
-};
+}
 
 module.filter('ngeoNumber', Number);
 
@@ -244,7 +244,7 @@ function UnitPrefix($filter) {
     return numberFilter(number, opt_precision) + space + postfix;
   };
   return result;
-};
+}
 
 module.filter('ngeoUnitPrefix', UnitPrefix);
 
@@ -297,7 +297,7 @@ function NumberCoordinates($filter) {
     return template.replace('{x}', x).replace('{y}', y);
   };
   return filterFn;
-};
+}
 
 module.filter('ngeoNumberCoordinates', NumberCoordinates);
 
@@ -355,7 +355,7 @@ function DMSCoordinates() {
   };
 
   return filterFn;
-};
+}
 
 module.filter('ngeoDMSCoordinates', DMSCoordinates);
 
@@ -382,7 +382,7 @@ function trustHtmlFilter($sce) {
       return $sce.trustAsHtml('&nbsp;');
     }
   };
-};
+}
 
 module.filter('ngeoTrustHtml', trustHtmlFilter);
 
@@ -423,7 +423,7 @@ function trustHtmlAutoFilter($sce, ngeoStringToHtmlReplacements) {
       return $sce.trustAsHtml('&nbsp;');
     }
   };
-};
+}
 
 module.filter('ngeoTrustHtmlAuto', trustHtmlAutoFilter);
 
@@ -527,7 +527,7 @@ function Duration(gettextCatalog) {
   };
 
   return result;
-};
+}
 
 module.filter('ngeoDuration', Duration);
 

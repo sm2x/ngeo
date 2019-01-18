@@ -122,7 +122,7 @@ function FeatureHelper($injector, $filter) {
    */
   this.download_ = $injector.get('ngeoDownload');
 
-};
+}
 
 
 /**
@@ -882,7 +882,7 @@ function getFilteredFeatureValues(feature) {
   delete properties[feature.getGeometryName()];
   delete properties['ngeo_feature_type_'];
   return properties;
-};
+}
 
 /**
  * @param {import("ol/Feature.js").default} feature Feature.

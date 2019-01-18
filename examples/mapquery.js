@@ -73,7 +73,7 @@ function QueryresultController(ngeoQueryResult) {
    */
   this.result = ngeoQueryResult;
 
-};
+}
 
 
 module.controller('AppQueryresultController', QueryresultController);
@@ -165,7 +165,7 @@ function MainController($scope, ngeoDataSources, ngeoToolActivateMgr) {
   const dummyToolActivate = new ngeoMiscToolActivate(this, 'dummyActive');
   ngeoToolActivateMgr.registerTool('mapTools', dummyToolActivate);
 
-};
+}
 
 
 /**

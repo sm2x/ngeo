@@ -39,7 +39,7 @@ function MeasureLength(format, gettextCatalog, options = /** @type {MeasureOptio
    */
   this.format = format;
 
-};
+}
 
 olUtilInherits(exports, ngeoInteractionMeasure);
 

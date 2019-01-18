@@ -27,7 +27,7 @@ function FeatureOverlay(manager, index) {
    * @private
    */
   this.index_ = index;
-};
+}
 
 
 /**

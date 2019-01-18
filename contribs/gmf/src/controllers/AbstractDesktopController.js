@@ -231,7 +231,7 @@ function AbstractDesktopController(config, $scope, $injector) {
     ngeoDebounce(this.setDataPanelMaxResizableWidth_.bind(this), 50, true)
   );
   this.setDataPanelMaxResizableWidth_();
-};
+}
 
 olUtilInherits(AbstractDesktopController, gmfControllersAbstractAPIController);
 

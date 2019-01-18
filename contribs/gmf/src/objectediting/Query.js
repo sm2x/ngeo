@@ -44,7 +44,7 @@ function Query($http, $q, gmfThemes) {
    */
   this.getQueryableLayerNodesDefered_ = null;
 
-};
+}
 
 
 /**
@@ -142,7 +142,7 @@ function getQueryableLayersInfoFromThemes(
   }
 
   return queryableLayersInfo;
-};
+}
 
 
 /**

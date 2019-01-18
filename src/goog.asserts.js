@@ -65,7 +65,7 @@ function doAssertFailure_(
   // the assertion message instead of in the middle of it).
   const e = new AssertionError(`${message}`, args || []);
   errorHandler_(e);
-};
+}
 
 
 /**
@@ -78,7 +78,7 @@ function setErrorHandler(errorHandler) {
   if (exports.ENABLE_ASSERTS) {
     errorHandler_ = errorHandler;
   }
-};
+}
 
 
 /**
@@ -97,7 +97,7 @@ function assert(condition, opt_message, var_args) {
       '', null, opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return condition;
-};
+}
 
 
 /**
@@ -125,7 +125,7 @@ function fail(opt_message, var_args) {
         `Failure${opt_message ? `: ${opt_message}` : ''}`,
         Array.prototype.slice.call(arguments, 1)));
   }
-};
+}
 
 
 /**
@@ -143,7 +143,7 @@ function assertNumber(value, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return /** @type {number} */ (value);
-};
+}
 
 
 /**
@@ -161,7 +161,7 @@ function assertString(value, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return /** @type {string} */ (value);
-};
+}
 
 
 /**
@@ -180,7 +180,7 @@ function assertFunction(value, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return /** @type {!Function} */ (value);
-};
+}
 
 
 /**
@@ -200,7 +200,7 @@ function assertObject(value, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return /** @type {!Object} */ (value);
-};
+}
 
 
 /**
@@ -218,7 +218,7 @@ function assertArray(value, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return /** @type {!Array<?>} */ (value);
-};
+}
 
 
 /**
@@ -237,7 +237,7 @@ function assertBoolean(value, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return /** @type {boolean} */ (value);
-};
+}
 
 
 /**
@@ -259,7 +259,7 @@ function assertElement(value, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 2));
   }
   return /** @type {!Element} */ (value);
-};
+}
 
 
 /**
@@ -285,7 +285,7 @@ function assertInstanceof(value, type, opt_message, var_args) {
       opt_message, Array.prototype.slice.call(arguments, 3));
   }
   return value;
-};
+}
 
 
 /**
@@ -296,7 +296,7 @@ function assertObjectPrototypeIsIntact() {
   for (const key in Object.prototype) {
     fail(`${key} should not be enumerable in Object.prototype.`);
   }
-};
+}
 
 
 /**

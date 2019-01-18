@@ -30,7 +30,7 @@ function WMSTime($filter, gettextCatalog) {
   this.gettextCatalog_ = gettextCatalog;
 
   ngeoMiscTime.call(this);
-};
+}
 
 olUtilInherits(exports, ngeoMiscTime);
 

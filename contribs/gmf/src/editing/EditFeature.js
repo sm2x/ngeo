@@ -33,7 +33,7 @@ function EditFeature($http, gmfLayersUrl) {
    */
   this.baseUrl_ = gmfLayersUrl;
 
-};
+}
 
 
 /**

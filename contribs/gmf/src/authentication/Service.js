@@ -222,7 +222,7 @@ class Service extends olEventsEventTarget {
       this.load_();
     }
   }
-};
+}
 
 /**
  * @enum {string}

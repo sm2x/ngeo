@@ -32,7 +32,7 @@ function XSDAttribute($http, gmfLayersUrl) {
    */
   this.promises_ = {};
 
-};
+}
 
 
 /**

@@ -41,7 +41,7 @@ function Manager($q, gmfEditFeature, ngeoLocation) {
    */
   this.getFeatureDefered_ = null;
 
-};
+}
 
 
 /**

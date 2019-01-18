@@ -26,7 +26,7 @@ function RasterService($http, gmfRasterUrl) {
    * @private
    */
   this.url_ = gmfRasterUrl;
-};
+}
 
 
 /**

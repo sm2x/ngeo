@@ -82,7 +82,7 @@ function QueryresultController(ngeoQueryResult) {
    */
   this.result = ngeoQueryResult;
 
-};
+}
 
 
 module.controller('AppQueryresultController', QueryresultController);
@@ -173,7 +173,7 @@ function MainController(gmfThemes, gmfDataSourcesManager,
   });
 
   ngeoFeatureOverlayMgr.init(this.map);
-};
+}
 
 module.controller('MainController', MainController);
 

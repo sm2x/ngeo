@@ -409,7 +409,7 @@ function Controller($scope, $timeout, gettextCatalog,
    * @private
    */
   this.toolsToolActivate_ = new ngeoMiscToolActivate(this, 'toolsActive');
-};
+}
 
 /**
  * Init the controller

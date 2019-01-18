@@ -191,7 +191,7 @@ function Controller($scope, $timeout, $q, ngeoNominatimService) {
    * @export
    */
   this.errorMessage = '';
-};
+}
 
 Controller.prototype.$onInit = function() {
   this.map.addLayer(this.vectorLayer_);

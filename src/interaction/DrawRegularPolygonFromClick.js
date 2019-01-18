@@ -70,7 +70,7 @@ function DrawRegularPolygonFromClick(options) {
     handleEvent: TRUE
   });
 
-};
+}
 
 olUtilInherits(
   exports, olInteractionInteraction);

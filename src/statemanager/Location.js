@@ -86,7 +86,7 @@ function replaceState(history, state) {
     // replaceState fails on some browser if the domain in the state
     // is not the same as location.origin
   }
-};
+}
 
 
 /**
@@ -471,7 +471,7 @@ function MockProvider($locationProvider) {
     });
     return locationMock;
   };
-};
+}
 
 
 /**

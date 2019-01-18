@@ -662,7 +662,7 @@ class ExternalDatSourcesManager {
       }
     }
   }
-};
+}
 
 
 /**
@@ -680,7 +680,7 @@ class ExternalDatSourcesManager {
  */
 function getId(layer) {
   return olUtilGetUid(layer) + 1000000;
-};
+}
 
 
 const module = angular.module('gmfExternalDataSourcesManager', [

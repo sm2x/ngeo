@@ -113,7 +113,7 @@ function Snapping($http, $q, $rootScope, $timeout, gmfThemes,
    */
   this.ogcServers_ = null;
 
-};
+}
 
 
 /**

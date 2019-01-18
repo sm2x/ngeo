@@ -125,7 +125,7 @@ function MobileDraw(options) {
   this.set('drawing', false);
   this.set('valid', false);
 
-};
+}
 
 olUtilInherits(exports, olInteractionInteraction);
 

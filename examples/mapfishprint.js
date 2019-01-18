@@ -155,7 +155,7 @@ function MainController($timeout, ngeoCreatePrint, ngeoPrintUtils) {
    * Draw the print window in a map postcompose listener.
    */
   this.map.on('postcompose', postcomposeListener);
-};
+}
 
 
 /**

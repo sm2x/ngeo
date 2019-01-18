@@ -43,7 +43,7 @@ class WFSAlias {
       this.ngeoDataSourcesHelper_.getDataSourceAttributes(dataSource);
     }
   }
-};
+}
 
 
 const module = angular.module('gmfDatasourceWFSAliases', [

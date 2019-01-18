@@ -39,7 +39,7 @@ function FulltextSearch($injector, $http) {
    * @private
    */
   this.defaultParams_ = ngeoUtils.decodeQueryString(queryString);
-};
+}
 
 /**
  * Perform a search query on the c2c-geoportal full-text search.

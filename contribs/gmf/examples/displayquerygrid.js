@@ -85,7 +85,7 @@ function QueryresultController(ngeoQueryResult) {
    */
   this.result = ngeoQueryResult;
 
-};
+}
 
 
 module.controller('gmfappQueryresultController', QueryresultController);

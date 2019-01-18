@@ -67,7 +67,7 @@ function AbstractAPIController(config, $scope, $injector) {
   });
 
   gmfControllersAbstractAppController.call(this, config, $scope, $injector);
-};
+}
 
 olUtilInherits(AbstractAPIController, gmfControllersAbstractAppController);
 

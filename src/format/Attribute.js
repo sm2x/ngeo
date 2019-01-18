@@ -87,7 +87,7 @@ function setGeometryType(attribute, type) {
     }
   }
   return !!attribute.type && !!attribute.geomType;
-};
+}
 
 
 export default exports;

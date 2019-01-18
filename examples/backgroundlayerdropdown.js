@@ -67,7 +67,7 @@ function BackgroundlayerController($http, ngeoBackgroundLayerMgr) {
    * @private
    */
   this.backgroundLayerMgr_ = ngeoBackgroundLayerMgr;
-};
+}
 
 
 /**
@@ -138,7 +138,7 @@ function MainController($scope) {
 
   map.addLayer(overlay);
 
-};
+}
 
 
 module.controller('MainController', MainController);

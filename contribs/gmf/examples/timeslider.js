@@ -85,7 +85,7 @@ function MainController($scope, ngeoWMSTime) {
     $scope.$digest();
   };
 
-};
+}
 
 
 module.controller('MainController', MainController);

@@ -65,7 +65,7 @@ function Manager($rootScope, gmfThemes, gmfTreeManagerModeFlush,
    * @private
    */
   this.themeName_ = '';
-};
+}
 
 
 /**

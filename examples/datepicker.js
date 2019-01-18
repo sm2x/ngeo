@@ -77,7 +77,7 @@ function MainController(ngeoTime) {
   this.onDateRangeSelected = function(date) {
     this.rangeValue = date;
   };
-};
+}
 
 
 module.controller('MainController', MainController);

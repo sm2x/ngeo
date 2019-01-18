@@ -138,7 +138,7 @@ function Controller($scope, $sce, gettextCatalog,
     }
   );
 
-};
+}
 
 
 /**

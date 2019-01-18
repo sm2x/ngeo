@@ -27,7 +27,7 @@ function isEmpty(geom) {
     isEmpty = geom.getFlatCoordinates().length === 0;
   }
   return isEmpty;
-};
+}
 
 
 /**
@@ -60,7 +60,7 @@ function toXY(geom) {
   } else {
     throw 'gmf.objectediting.geom.toXY - unsupported geometry type';
   }
-};
+}
 
 
 export default exports;

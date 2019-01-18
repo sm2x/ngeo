@@ -65,7 +65,7 @@ function RoutingService($http, $injector) {
    */
   this.protocolVersion_ = 'v1';
 
-};
+}
 
 /**
  * Route request

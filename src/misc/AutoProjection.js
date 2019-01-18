@@ -9,7 +9,7 @@ import * as olExtent from 'ol/extent.js';
  * @ngdoc service
  * @ngname ngeoAutoProjection
  */
-function AutoProjection() {};
+function AutoProjection() {}
 
 
 /**

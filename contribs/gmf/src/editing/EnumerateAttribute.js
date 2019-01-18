@@ -65,7 +65,7 @@ class EnumerateAttribute {
     return data.items;
   }
 
-};
+}
 
 
 /**

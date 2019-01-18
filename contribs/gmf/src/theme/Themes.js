@@ -111,7 +111,7 @@ function Theme($http, $injector, $q, ngeoLayerHelper, gettextCatalog, gmfThemesO
    * @private
    */
   this.bgLayerPromise_ = null;
-};
+}
 
 olUtilInherits(exports, olEventsEventTarget);
 
@@ -134,7 +134,7 @@ function findGroupByLayerNodeName(themes, name) {
     }
   }
   return null;
-};
+}
 
 /**
  * Find a layer group object by its name. Return null if not found.
@@ -155,7 +155,7 @@ function findGroupByName(themes, name) {
     }
   }
   return null;
-};
+}
 
 
 /**
@@ -167,7 +167,7 @@ function findGroupByName(themes, name) {
  */
 function findObjectByName(objects, objectName) {
   return olArray.find(objects, object => object['name'] === objectName);
-};
+}
 
 
 /**
@@ -178,7 +178,7 @@ function findObjectByName(objects, objectName) {
  */
 function findThemeByName(themes, themeName) {
   return findObjectByName(themes, themeName);
-};
+}
 
 
 /**
@@ -196,7 +196,7 @@ function getFlatInternalNodes(node, nodes) {
       getFlatInternalNodes(children[i], nodes);
     }
   }
-};
+}
 
 
 /**
@@ -215,7 +215,7 @@ function getFlatNodes(node, nodes) {
   } else {
     nodes.push(node);
   }
-};
+}
 
 
 /**
@@ -495,7 +495,7 @@ function getSnappingConfig(node) {
   const config = (node.metadata && node.metadata.snappingConfig !== undefined) ?
     node.metadata.snappingConfig : null;
   return config;
-};
+}
 
 
 /**
@@ -514,7 +514,7 @@ function getNodeMaxResolution(gmfLayer) {
     maxResolution = metadata.maxResolution;
   }
   return maxResolution;
-};
+}
 
 
 /**
@@ -533,7 +533,7 @@ function getNodeMinResolution(gmfLayer) {
     minResolution = metadata.minResolution;
   }
   return minResolution;
-};
+}
 
 
 /**

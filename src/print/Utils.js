@@ -25,7 +25,7 @@ function Utils() {
    */
   this.extentHalfVerticalDistance_;
 
-};
+}
 
 
 /**

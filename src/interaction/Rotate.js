@@ -125,7 +125,7 @@ function Rotate(options) {
     handleUpEvent: this.handleUp_
   });
 
-};
+}
 
 olUtilInherits(exports, olInteractionPointer);
 

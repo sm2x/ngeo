@@ -125,7 +125,7 @@ function SearchController($element, $rootScope, $compile, ngeoSearchCreateGeoJSO
   this.listeners = /** @type {SearchDirectiveListeners} */ ({
     select: SearchController.select_.bind(this)
   });
-};
+}
 
 
 /**
@@ -189,7 +189,7 @@ function select_(event, suggestion, dataset) {
     size: size,
     maxZoom: 16
   });
-};
+}
 
 
 module.controller('AppSearchController', SearchController);
@@ -216,7 +216,7 @@ function MainController() {
     })
   });
 
-};
+}
 
 
 module.controller('MainController', MainController);

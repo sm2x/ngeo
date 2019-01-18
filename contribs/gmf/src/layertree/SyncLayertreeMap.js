@@ -52,7 +52,7 @@ function SyncLayertreeMap($rootScope, ngeoLayerHelper, ngeoWMSTime,
   $rootScope.$on('ngeo-layertree-state', (map, treeCtrl, firstParent) => {
     this.sync_(/** @type import("ol/Map.js").default */ (map), firstParent);
   });
-};
+}
 
 
 /**
@@ -443,7 +443,7 @@ function getLayer(treeCtrl) {
     tree = tree.parent;
   }
   return layer;
-};
+}
 
 
 /**

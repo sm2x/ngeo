@@ -76,7 +76,7 @@ function MainController($timeout) {
   $timeout(() => {
     self.open = true;
   }, 0);
-};
+}
 
 
 module.controller('MainController', MainController);

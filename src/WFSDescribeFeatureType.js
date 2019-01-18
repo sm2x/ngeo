@@ -17,7 +17,7 @@ function WFSDescribeFeatureType() {
 
   olFormatXML.call(this);
 
-};
+}
 
 olUtilInherits(exports, olFormatXML);
 
@@ -78,7 +78,7 @@ function readElement_(node, objectStack) {
     attributes['type'] = attributes['type'].split(':').pop();
   }
   return attributes;
-};
+}
 
 
 /**
@@ -98,7 +98,7 @@ function readComplexType_(node, objectStack) {
   object['complexContent'] =
     object['complexContent']['extension']['sequence']['element'];
   return object;
-};
+}
 
 
 /**
@@ -116,7 +116,7 @@ function readComplexContent_(
     node,
     objectStack
   );
-};
+}
 
 
 /**
@@ -132,7 +132,7 @@ function readExtension_(node, objectStack) {
     node,
     objectStack
   );
-};
+}
 
 
 /**
@@ -148,7 +148,7 @@ function readSequence_(node, objectStack) {
     node,
     objectStack
   );
-};
+}
 
 
 /**

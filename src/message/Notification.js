@@ -48,7 +48,7 @@ function Notification($timeout) {
    */
   this.cache_ = {};
 
-};
+}
 
 olUtilInherits(exports, ngeoMessageMessage);
 

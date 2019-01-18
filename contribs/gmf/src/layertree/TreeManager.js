@@ -126,7 +126,7 @@ function TreeManager($timeout, $injector, gettextCatalog, ngeoLayerHelper,
   this.ogcServers_ = null;
 
   olEvents.listen(this.gmfThemes_, 'change', this.handleThemesChange_, this);
-};
+}
 
 /**
  * Called when the themes change. Get the OGC servers, then listen to the

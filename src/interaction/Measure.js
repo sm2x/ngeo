@@ -214,7 +214,7 @@ function Measure(options = /** @type {import("ngeo/interaction/MeasureBaseOption
   olEvents.listen(this.drawInteraction_, 'drawend', this.onDrawEnd_, this);
 
   olEvents.listen(this, 'change:active', this.updateState_, this);
-};
+}
 
 olUtilInherits(exports, olInteractionInteraction);
 
@@ -239,7 +239,7 @@ function getFormattedArea(polygon, projection, precision, format) {
   const geom = /** @type {import("ol/geom/Polygon.js").default} */ (polygon.clone().transform(projection, 'EPSG:4326'));
   const area = Math.abs(olSphere.getArea(geom, {'projection': 'EPSG:4326'}));
   return format(area, 'm²', 'square', precision);
-};
+}
 
 
 /**
@@ -253,7 +253,7 @@ function getFormattedArea(polygon, projection, precision, format) {
 function getFormattedCircleArea(circle, precision, format) {
   const area = Math.PI * Math.pow(circle.getRadius(), 2);
   return format(area, 'm²', 'square', precision);
-};
+}
 
 
 /**
@@ -274,7 +274,7 @@ function getFormattedLength(lineString, projection, precision, format) {
     length += olSphere.getDistance(c1, c2);
   }
   return format(length, 'm', 'unit', precision);
-};
+}
 
 
 /**
@@ -287,7 +287,7 @@ function getFormattedLength(lineString, projection, precision, format) {
  */
 function getFormattedPoint(point, decimals, format, opt_template) {
   return format(point.getCoordinates(), decimals, opt_template);
-};
+}
 
 
 /**
@@ -311,7 +311,7 @@ function handleEvent_(evt) {
   }
 
   return true;
-};
+}
 
 
 /**

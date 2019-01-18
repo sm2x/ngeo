@@ -96,7 +96,7 @@ function Translate(options) {
 
   olInteractionTranslate.call(
     this, /** @type {olx.interaction.TranslateOptions} */ (options));
-};
+}
 
 olUtilInherits(exports, olInteractionTranslate);
 

@@ -241,7 +241,7 @@ function Controller($injector, $scope, ngeoRoutingService, ngeoNominatimService,
             /** @type {function(?)} */ (this.calculateRoute.bind(this)),
             debounceDelay,
             true));
-};
+}
 
 /**
  * Init the controller

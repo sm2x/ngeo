@@ -133,7 +133,7 @@ function MainController($scope, gmfEditFeature, gmfUser) {
     container: 'body',
     trigger: 'hover'
   });
-};
+}
 
 
 /**

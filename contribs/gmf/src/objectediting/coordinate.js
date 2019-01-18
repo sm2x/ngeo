@@ -22,7 +22,7 @@ function toXY(coordinates, nesting) {
     }
   }
   return coordinates;
-};
+}
 
 
 export default exports;

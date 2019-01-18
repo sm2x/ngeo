@@ -34,7 +34,7 @@ function MeasurePointMobile(format, coordFormat, options = /** @type {MeasureOpt
    * @private
    */
   this.coordFormat_ = coordFormat;
-};
+}
 
 olUtilInherits(exports, ngeoInteractionMeasure);
 

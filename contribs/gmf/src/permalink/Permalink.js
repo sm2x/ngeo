@@ -477,7 +477,7 @@ function Permalink($q, $timeout, $rootScope, $injector, ngeoDebounce, gettextCat
   }
 
   this.initLayers_();
-};
+}
 
 
 // === Map X, Y, Z ===

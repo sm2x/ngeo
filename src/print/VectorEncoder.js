@@ -19,7 +19,7 @@ function VectorEncoder() {
    * @type {import("ol/format/GeoJSON.js").default}
    */
   this.geojsonFormat = new olFormatGeoJSON();
-};
+}
 
 
 /**

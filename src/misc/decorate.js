@@ -30,7 +30,7 @@ function interaction(interaction) {
       interaction.setActive(val);
     }
   });
-};
+}
 
 
 /**
@@ -74,7 +74,7 @@ function layer(layer) {
       layer.setOpacity(val);
     }
   });
-};
+}
 
 
 /**
@@ -182,7 +182,7 @@ function layerLoading(layer, $scope) {
       decrement_(parent);
     }
   }
-};
+}
 
 
 export default exports;

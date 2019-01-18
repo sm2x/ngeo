@@ -87,7 +87,7 @@ function ModifyRectangle(options) {
     this.addFeature_(feature);
   });
 
-};
+}
 
 olUtilInherits(exports, olInteractionPointer);
 

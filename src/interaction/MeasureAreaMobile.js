@@ -22,7 +22,7 @@ function MeasureAreaMobile(format, gettextCatalog, opt_options) {
 
   ngeoInteractionMeasureArea.call(this, format, gettextCatalog, options);
 
-};
+}
 
 olUtilInherits(
   exports, ngeoInteractionMeasureArea);

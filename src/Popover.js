@@ -45,7 +45,7 @@ function Popover(opt_options) {
 
   olOverlay.call(this, options);
 
-};
+}
 
 olUtilInherits(exports, olOverlay);
 

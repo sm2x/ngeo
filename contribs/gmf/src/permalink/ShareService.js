@@ -27,7 +27,7 @@ function ShareService($http, gmfShortenerCreateUrl) {
    */
   this.gmfShortenerCreateUrl_ = gmfShortenerCreateUrl;
 
-};
+}
 
 
 /**

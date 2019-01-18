@@ -19,7 +19,7 @@ function EventHelper() {
    */
   this.listenerKeys_ = {};
 
-};
+}
 
 
 /**

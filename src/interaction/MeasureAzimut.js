@@ -50,7 +50,7 @@ function MeasureAzimut(unitPrefixFormat, numberFormat, options = /** @type {Meas
    */
   this.unitPrefixFormat = googAsserts.assert(unitPrefixFormat);
 
-};
+}
 
 olUtilInherits(exports, ngeoInteractionMeasure);
 
@@ -102,7 +102,7 @@ function getFormattedAzimutRadius(
     line, projection, precision, formatLength)}`;
 
   return output;
-};
+}
 
 
 /**
@@ -115,7 +115,7 @@ function getFormattedAzimutRadius(
 function getFormattedAzimut(line, decimals, format) {
   const azimut = getAzimut(line);
   return `${format(azimut, decimals)}°`;
-};
+}
 
 
 /**
@@ -130,7 +130,7 @@ function getAzimut(line) {
   const rad = Math.acos(dy / Math.sqrt(dx * dx + dy * dy));
   const factor = dx > 0 ? 1 : -1;
   return (factor * rad * 180 / Math.PI) % 360;
-};
+}
 
 
 export default exports;

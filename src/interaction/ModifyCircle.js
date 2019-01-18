@@ -122,7 +122,7 @@ function ModifyCircle(options) {
   olEvents.listen(this.features_, 'add', this.handleFeatureAdd_, this);
   olEvents.listen(this.features_, 'remove', this.handleFeatureRemove_, this);
 
-};
+}
 
 olUtilInherits(exports, olInteractionPointer);
 
@@ -322,7 +322,7 @@ function handleDownEvent_(evt) {
     }
   }
   return !!this.vertexFeature_;
-};
+}
 
 
 /**
@@ -351,7 +351,7 @@ function handleDragEvent_(evt) {
   this.features_.getArray()[0].set(ngeoFormatFeatureProperties.AZIMUT, azimut);
 
   this.createOrUpdateVertexFeature_(vertex);
-};
+}
 
 
 /**
@@ -372,7 +372,7 @@ function handleUpEvent_(evt) {
     this.modified_ = false;
   }
   return false;
-};
+}
 
 
 /**
@@ -395,7 +395,7 @@ function handleEvent(mapBrowserEvent) {
   }
 
   return olInteractionPointer.prototype.handleEvent.call(this, mapBrowserEvent) && !handled;
-};
+}
 
 
 /**

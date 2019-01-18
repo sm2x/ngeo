@@ -175,7 +175,7 @@ function adaptListeners_(object) {
     };
   }
   return typeaheadListeners;
-};
+}
 
 
 /**

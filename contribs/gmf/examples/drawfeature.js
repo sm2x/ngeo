@@ -121,7 +121,7 @@ function MainController($scope, ngeoFeatureHelper, ngeoFeatures,
     container: 'body',
     trigger: 'hover'
   });
-};
+}
 
 
 /**

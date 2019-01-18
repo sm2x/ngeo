@@ -114,7 +114,7 @@ function Popup($compile, $rootScope, $sce, $timeout) {
   // Compile the element, link it to the scope and add it to the document.
   $compile(this.element_)(this.scope);
   angular.element(document.body).append(this.element_);
-};
+}
 
 
 /**
@@ -294,7 +294,7 @@ function Factory($compile, $rootScope, $sce, $timeout) {
       return new exports($compile, $rootScope, $sce, $timeout);
     }
   );
-};
+}
 
 /**
  * @type {angular.IModule}

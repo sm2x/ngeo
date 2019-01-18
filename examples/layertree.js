@@ -106,7 +106,7 @@ function LayertreeController($http, $sce, appGetLayer, ngeoCreatePopup) {
    * @private
    */
   this.promises_ = {};
-};
+}
 
 
 /**
@@ -236,7 +236,7 @@ function MainController() {
       zoom: 4
     })
   });
-};
+}
 
 
 module.controller('MainController', MainController);

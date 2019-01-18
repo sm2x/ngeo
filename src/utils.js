@@ -35,7 +35,7 @@ function toMulti(geometry) {
     multiGeom = geometry;
   }
   return multiGeom;
-};
+}
 
 /**
  * Checks if on Safari.
@@ -43,7 +43,7 @@ function toMulti(geometry) {
  */
 function isSafari() {
   return navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
-};
+}
 
 /**
  * Takes a hex value and prepends a zero if it's a single digit.
@@ -53,7 +53,7 @@ function isSafari() {
  */
 function colorZeroPadding(hex) {
   return hex.length == 1 ? `0${hex}` : hex;
-};
+}
 
 /**
  * Converts a color from RGB to hex representation.
@@ -71,7 +71,7 @@ function rgbArrayToHex(rgb) {
   const hexG = colorZeroPadding(g.toString(16));
   const hexB = colorZeroPadding(b.toString(16));
   return `#${hexR}${hexG}${hexB}`;
-};
+}
 
 /**
  * Decode the encoded query string into a query data dictionary.
@@ -95,7 +95,7 @@ function decodeQueryString(queryString) {
     }
   }
   return queryData;
-};
+}
 
 /**
  * Encode the query data dictionary into an encoded query string.
@@ -109,7 +109,7 @@ function encodeQueryString(queryData) {
     queryItem.push(`${encodeURIComponent(key)}=${encodeURIComponent(value)}`);
   }
   return queryItem.join('&');
-};
+}
 
 
 /**
@@ -119,7 +119,7 @@ function encodeQueryString(queryData) {
  */
 function deleteCondition(event) {
   return platformModifierKeyOnly(event) && singleClick(event);
-};
+}
 
 
 export default exports;

@@ -100,7 +100,7 @@ function Service(url, $http, gettextCatalog, ngeoLayerHelper) {
    * @private
    */
   this.printNativeAngle_ = true;
-};
+}
 
 
 /**
@@ -301,7 +301,7 @@ function getAbsoluteUrl_(url) {
   const a = document.createElement('a');
   a.href = encodeURI(url);
   return decodeURI(a.href);
-};
+}
 
 
 /**
@@ -496,7 +496,7 @@ function createPrintServiceFactory($http, gettextCatalog, ngeoLayerHelper) {
       return new exports(url, $http, gettextCatalog, ngeoLayerHelper);
     }
   );
-};
+}
 
 /**
  * @type {!angular.IModule}

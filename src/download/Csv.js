@@ -78,7 +78,7 @@ function Csv($injector, gettextCatalog) {
    * @private
    */
   this.download_ = $injector.get('ngeoDownload');
-};
+}
 
 
 /**

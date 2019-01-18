@@ -67,7 +67,7 @@ function QueryresultController(ngeoQueryResult) {
    */
   this.result = ngeoQueryResult;
 
-};
+}
 
 
 module.controller('AppQueryresultController', QueryresultController);
@@ -147,7 +147,7 @@ function MainController($scope, ngeoDataSources) {
       queryable: true
     }]
   }));
-};
+}
 
 module.controller('MainController', MainController);
 

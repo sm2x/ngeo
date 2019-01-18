@@ -108,7 +108,7 @@ function Modify(options) {
     handleEvent: TRUE
   });
 
-};
+}
 
 olUtilInherits(exports, olInteractionInteraction);
 
