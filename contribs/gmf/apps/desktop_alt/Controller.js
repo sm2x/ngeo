@@ -142,7 +142,7 @@ function Controller($scope, $injector) {
   }
 }
 
-olUtilInherits(exports, gmfControllersAbstractDesktopController);
+olUtilInherits(Controller, gmfControllersAbstractDesktopController);
 
 
 /**
