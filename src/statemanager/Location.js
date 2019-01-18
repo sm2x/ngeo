@@ -1,6 +1,6 @@
 import angular from 'angular';
 import googAsserts from 'goog/asserts.js';
-import ngeoUtils from 'ngeo/utils.js';
+import {encodeQueryString, decodeQueryString} from 'ngeo/utils.js';
 
 /**
  * Provides a service for interacting with the URL in the
@@ -63,13 +63,13 @@ function Location(location, history) {
    * @type {!Object.<string, string>}
    * @private
    */
-  this.queryData_ = ngeoUtils.decodeQueryString(location.search);
+  this.queryData_ = decodeQueryString(location.search);
 
   /**
    * @type {!Object.<string, string>}
    * @private
    */
-  this.fragment_ = ngeoUtils.decodeQueryString(location.hash);
+  this.fragment_ = decodeQueryString(location.hash);
 }
 
 
@@ -126,12 +126,12 @@ Location.prototype.getUriString = function() {
     out.push(this.path_);
   }
 
-  const encodedQueryData = ngeoUtils.encodeQueryString(this.queryData_);
+  const encodedQueryData = encodeQueryString(this.queryData_);
   if (encodedQueryData.length > 0) {
     out.push('?', encodedQueryData);
   }
 
-  const encodedFragment = ngeoUtils.encodeQueryString(this.fragment_);
+  const encodedFragment = encodeQueryString(this.fragment_);
   if (encodedFragment.length > 0) {
     out.push('#', encodedFragment);
   }

@@ -2,7 +2,7 @@
  */
 import angular from 'angular';
 
-import gmfBase from 'gmf/index.js';
+import {DATALAYERGROUP_NAME} from 'gmf/index.js';
 
 import gmfAuthenticationService from 'gmf/authentication/Service.js';
 
@@ -1131,8 +1131,7 @@ class Controller {
     const gettextCatalog = this.gettextCatalog_;
 
     // Get layers from layertree only.
-    const dataLayerGroup = this.ngeoLayerHelper_.getGroupFromMap(this.map,
-      gmfBase.DATALAYERGROUP_NAME);
+    const dataLayerGroup = this.ngeoLayerHelper_.getGroupFromMap(this.map, DATALAYERGROUP_NAME);
     const layers = this.ngeoLayerHelper_.getFlatLayers(dataLayerGroup);
 
     // For each visible layer in reverse order, get the legend url.

@@ -1,7 +1,7 @@
 /**
  */
 import googAsserts from 'goog/asserts.js';
-import ngeoInteractionCommon from 'ngeo/interaction/common.js';
+import {getDefaultModifyStyleFunction} from 'ngeo/interaction/common.js';
 import ngeoCustomEvent from 'ngeo/CustomEvent.js';
 import {
   getUid as olUtilGetUid,
@@ -108,7 +108,7 @@ function Rotate(options) {
       useSpatialIndex: false,
       wrapX: !!options.wrapX
     }),
-    style: options.style || ngeoInteractionCommon.getDefaultModifyStyleFunction(),
+    style: options.style || getDefaultModifyStyleFunction(),
     updateWhileAnimating: true,
     updateWhileInteracting: true
   });

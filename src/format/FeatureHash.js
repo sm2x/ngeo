@@ -3,7 +3,7 @@
 import googAsserts from 'goog/asserts.js';
 import ngeoFormatFeatureProperties from 'ngeo/format/FeatureProperties.js';
 import ngeoFormatFeatureHashStyleType from 'ngeo/format/FeatureHashStyleType.js';
-import ngeoUtils from 'ngeo/utils.js';
+import {rgbArrayToHex} from 'ngeo/utils.js';
 import {inherits as olUtilInherits} from 'ol/util.js';
 import olFeature from 'ol/Feature.js';
 import * as olColor from 'ol/color.js';
@@ -369,7 +369,7 @@ function encodeStyleFill_(fillStyle, encodedStyles, opt_propertyName) {
     googAsserts.assert(Array.isArray(fillColor), 'only supporting fill colors');
     const fillColorRgba = olColor.asArray(fillColor);
     googAsserts.assert(Array.isArray(fillColorRgba), 'fill color must be an array');
-    const fillColorHex = ngeoUtils.rgbArrayToHex(fillColorRgba);
+    const fillColorHex = rgbArrayToHex(fillColorRgba);
     if (encodedStyles.length > 0) {
       encodedStyles.push('\'');
     }
@@ -392,7 +392,7 @@ function encodeStyleStroke_(strokeStyle, encodedStyles) {
     googAsserts.assert(Array.isArray(strokeColor));
     const strokeColorRgba = olColor.asArray(strokeColor);
     googAsserts.assert(Array.isArray(strokeColorRgba), 'only supporting stroke colors');
-    const strokeColorHex = ngeoUtils.rgbArrayToHex(strokeColorRgba);
+    const strokeColorHex = rgbArrayToHex(strokeColorRgba);
     if (encodedStyles.length > 0) {
       encodedStyles.push('\'');
     }

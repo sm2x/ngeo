@@ -1,7 +1,7 @@
 /**
  */
 import googAsserts from 'goog/asserts.js';
-import ngeoUtils from 'ngeo/utils.js';
+import {deleteCondition} from 'ngeo/utils.js';
 import ngeoFormatFeatureProperties from 'ngeo/format/FeatureProperties.js';
 import ngeoInteractionModifyCircle from 'ngeo/interaction/ModifyCircle.js';
 import ngeoInteractionModifyRectangle from 'ngeo/interaction/ModifyRectangle.js';
@@ -70,7 +70,7 @@ function Modify(options) {
   this.otherFeatures_ = new olCollection();
 
   this.interactions_.push(new olInteractionModify({
-    deleteCondition: ngeoUtils.deleteCondition,
+    deleteCondition: deleteCondition,
     features: this.otherFeatures_,
     pixelTolerance: options.pixelTolerance,
     style: options.style,

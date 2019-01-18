@@ -3,7 +3,7 @@
 import googAsserts from 'goog/asserts.js';
 import ngeoCustomEvent from 'ngeo/CustomEvent.js';
 import ngeoFormatFeatureProperties from 'ngeo/format/FeatureProperties.js';
-import ngeoInteractionCommon from 'ngeo/interaction/common.js';
+import {getDefaultModifyStyleFunction} from 'ngeo/interaction/common.js';
 import ngeoInteractionMeasureAzimut from 'ngeo/interaction/MeasureAzimut.js';
 import {
   getUid as olUtilGetUid,
@@ -107,7 +107,7 @@ function ModifyCircle(options) {
       useSpatialIndex: false,
       wrapX: !!options.wrapX
     }),
-    style: options.style || ngeoInteractionCommon.getDefaultModifyStyleFunction(),
+    style: options.style || getDefaultModifyStyleFunction(),
     updateWhileAnimating: true,
     updateWhileInteracting: true
   });

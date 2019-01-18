@@ -1,7 +1,7 @@
 /**
  */
 import angular from 'angular';
-import gmfBase from 'gmf/index.js';
+import {PermalinkParam} from 'gmf/index.js';
 import gmfThemeThemes from 'gmf/theme/Themes.js';
 import googAsserts from 'goog/asserts.js';
 import ngeoLayertreeController from 'ngeo/layertree/Controller.js';
@@ -157,7 +157,7 @@ TreeManager.prototype.handleThemesChange_ = function() {
  */
 TreeManager.prototype.setFirstLevelGroups = function(firstLevelGroups) {
   this.root.children.length = 0;
-  this.ngeoStateManager_.deleteParam(gmfBase.PermalinkParam.TREE_GROUPS);
+  this.ngeoStateManager_.deleteParam(PermalinkParam.TREE_GROUPS);
   return this.addFirstLevelGroups(firstLevelGroups);
 };
 
@@ -196,7 +196,7 @@ TreeManager.prototype.addFirstLevelGroups = function(firstLevelGroups,
  */
 TreeManager.prototype.updateTreeGroupsState_ = function(groups) {
   const treeGroupsParam = {};
-  treeGroupsParam[gmfBase.PermalinkParam.TREE_GROUPS] = groups.map(node => node.name).join(',');
+  treeGroupsParam[PermalinkParam.TREE_GROUPS] = groups.map(node => node.name).join(',');
   this.ngeoStateManager_.updateState(treeGroupsParam);
   if (this.$injector_.has('gmfPermalink')) {
     /** @type {import("gmf/permalink/Permalink.js").default} */(this.$injector_.get('gmfPermalink')).cleanParams(groups);
