@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import googAsserts from 'goog/asserts.js';
 import ngeoUtils from 'ngeo/utils.js';
@@ -407,7 +405,7 @@ function LocationFactory($rootScope, $window) {
  *     provider.
  * @ngInject
  */
-function MockProvider($locationProvider) {
+export function MockProvider($locationProvider) {
   /**
    * @return {angular.ILocationService} Mock object for Angular location service.
    */

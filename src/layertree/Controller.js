@@ -183,7 +183,7 @@ function Controller($scope, $rootScope, $attrs) {
   }
 
   $scope['layertreeCtrl'] = this;
-};
+}
 
 
 /**
@@ -368,7 +368,7 @@ function getFirstParentTree(treeCtrl) {
     tree = tree.parent;
   }
   return tree;
-};
+}
 
 
 /**
@@ -420,7 +420,7 @@ Controller.prototype.traverseDepthFirst = function(visitor) {
  * @type {!angular.IModule}
  */
 const module = angular.module('ngeoLayertreeController', []);
-module.controller('ngeoLayertreeController', const ;
+module.controller('ngeoLayertreeController', Controller);
 
 
 export default module;

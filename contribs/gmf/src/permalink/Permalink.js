@@ -36,6 +36,38 @@ import olStyleRegularShape from 'ol/style/RegularShape.js';
 import olStyleStyle from 'ol/style/Style.js';
 import olLayerGroup from 'ol/layer/Group.js';
 
+
+/**
+ * @enum {string}
+ */
+export const OpenLayersLayerProperties = {
+  OPACITY: 'opacity'
+};
+
+
+/**
+ * External data source separators
+ * @enum {string}
+ */
+const ExtDSSeparator = {
+  LIST: ',',
+  NAMES: ';'
+};
+
+
+/**
+ * @enum {string}
+ */
+const ParamPrefix = {
+  DIMENSIONS: 'dim_',
+  TREE_ENABLE: 'tree_enable_',
+  TREE_GROUP_LAYERS: 'tree_group_layers_',
+  TREE_GROUP_OPACITY: 'tree_group_opacity_',
+  TREE_OPACITY: 'tree_opacity_',
+  WFS: 'wfs_'
+};
+
+
 /**
  * The Permalink service for GMF, which uses the `ngeo.statemanager.Service` to
  * manage the GMF application state. Here's the list of states are are managed:
@@ -1558,37 +1590,7 @@ const module = angular.module('gmfPermalink', [
   ngeoStatemanagerModule.name,
 ]);
 
-module.service('gmfPermalink', exports);
-
-
-/**
- * @enum {string}
- */
-const OpenLayersLayerProperties = {
-  OPACITY: 'opacity'
-};
-
-/**
- * @enum {string}
- */
-const ParamPrefix = {
-  DIMENSIONS: 'dim_',
-  TREE_ENABLE: 'tree_enable_',
-  TREE_GROUP_LAYERS: 'tree_group_layers_',
-  TREE_GROUP_OPACITY: 'tree_group_opacity_',
-  TREE_OPACITY: 'tree_opacity_',
-  WFS: 'wfs_'
-};
-
-
-/**
- * External data source separators
- * @enum {string}
- */
-const ExtDSSeparator = {
-  LIST: ',',
-  NAMES: ';'
-};
+module.service('gmfPermalink', Permalink);
 
 
 module.value('gmfPermalinkOptions',

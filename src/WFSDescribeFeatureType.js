@@ -1,9 +1,87 @@
-/**
- */
 import googAsserts from 'goog/asserts.js';
 import {inherits as olUtilInherits} from 'ol/util.js';
 import olFormatXML from 'ol/format/XML.js';
 import * as olXml from 'ol/xml.js';
+
+
+/**
+ * @const
+ * @private
+ * @type {Array.<string>}
+ */
+const NAMESPACE_URIS_ = [
+  null,
+  'http://www.w3.org/2001/XMLSchema'
+];
+
+
+/**
+ * @const
+ * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
+ * @private
+ */
+const PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
+  NAMESPACE_URIS_, {
+    'element': olXml.makeObjectPropertyPusher(
+      readElement_
+    ),
+    'complexType': olXml.makeObjectPropertyPusher(
+      readComplexType_
+    )
+  }));
+
+
+/**
+ * @const
+ * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
+ * @private
+ */
+const COMPLEX_TYPE_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
+  NAMESPACE_URIS_, {
+    'complexContent': olXml.makeObjectPropertySetter(
+      readComplexContent_
+    )
+  }));
+
+
+/**
+ * @const
+ * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
+ * @private
+ */
+const COMPLEX_CONTENT_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
+  NAMESPACE_URIS_, {
+    'extension': olXml.makeObjectPropertySetter(
+      readExtension_
+    )
+  }));
+
+
+/**
+ * @const
+ * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
+ * @private
+ */
+const EXTENSION_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
+  NAMESPACE_URIS_, {
+    'sequence': olXml.makeObjectPropertySetter(
+      readSequence_
+    )
+  }));
+
+
+/**
+ * @const
+ * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
+ * @private
+ */
+const SEQUENCE_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
+  NAMESPACE_URIS_, {
+    'element': olXml.makeObjectPropertyPusher(
+      readElement_
+    )
+  }));
+
 
 /**
  * @classdesc
@@ -149,85 +227,6 @@ function readSequence_(node, objectStack) {
     objectStack
   );
 }
-
-
-/**
- * @const
- * @private
- * @type {Array.<string>}
- */
-const NAMESPACE_URIS_ = [
-  null,
-  'http://www.w3.org/2001/XMLSchema'
-];
-
-
-/**
- * @const
- * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
- * @private
- */
-const PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
-  NAMESPACE_URIS_, {
-    'element': olXml.makeObjectPropertyPusher(
-      readElement_
-    ),
-    'complexType': olXml.makeObjectPropertyPusher(
-      readComplexType_
-    )
-  }));
-
-
-/**
- * @const
- * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
- * @private
- */
-const COMPLEX_TYPE_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
-  NAMESPACE_URIS_, {
-    'complexContent': olXml.makeObjectPropertySetter(
-      readComplexContent_
-    )
-  }));
-
-
-/**
- * @const
- * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
- * @private
- */
-const COMPLEX_CONTENT_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
-  NAMESPACE_URIS_, {
-    'extension': olXml.makeObjectPropertySetter(
-      readExtension_
-    )
-  }));
-
-
-/**
- * @const
- * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
- * @private
- */
-const EXTENSION_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
-  NAMESPACE_URIS_, {
-    'sequence': olXml.makeObjectPropertySetter(
-      readSequence_
-    )
-  }));
-
-
-/**
- * @const
- * @type {!Object.<string, !Object.<string, !import("ol/XmlParser.js").default>>}
- * @private
- */
-const SEQUENCE_PARSERS_ = googAsserts.assert(olXml.makeStructureNS(
-  NAMESPACE_URIS_, {
-    'element': olXml.makeObjectPropertyPusher(
-      readElement_
-    )
-  }));
 
 
 export default exports;

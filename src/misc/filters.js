@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import {modulo} from 'ol/math.js';
 import {padNumber} from 'ol/string.js';
@@ -536,7 +534,7 @@ module.filter('ngeoDuration', Duration);
  * @type {!Array.<!StringToHtmlReplacement>}
  * @ngname ngeoStringToHtmlReplacements
  */
-module.StringToHtmlReplacements = [
+const StringToHtmlReplacements = [
   // Hyperlink
   {
     expression: /^(https?:\/\/.+)$/gm,
@@ -549,10 +547,7 @@ module.StringToHtmlReplacements = [
   }
 ];
 
-module.constant(
-  'ngeoStringToHtmlReplacements',
-  StringToHtmlReplacements
-);
+module.constant('ngeoStringToHtmlReplacements', StringToHtmlReplacements);
 
 
 /**

@@ -1119,7 +1119,7 @@ Controller.prototype.handleDestroy_ = function() {
  * @return {?import("ol/geom/Geometry.js").default} A geometry clone or null value.
  * @private
  */
-function cloneGeometry(geometry) {
+export function cloneGeometry(geometry) {
   let clone = null;
   if (geometry) {
     clone = geometry.clone();
@@ -1132,13 +1132,13 @@ function cloneGeometry(geometry) {
  * @const
  * @private
  */
-const NAMESPACE = 'oe';
+export const NAMESPACE = 'oe';
 
 
 /**
  * @enum {string}
  */
-const State = {
+export const State = {
   INSERT: 'insert',
   UPDATE: 'update'
 };

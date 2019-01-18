@@ -54,7 +54,7 @@ module.constant('defaultTheme', 'Filters');
 module.constant('angularLocaleScript', '../build/angular-locale_{{locale}}.js');
 
 
-MainController = class {
+class MainController {
 
   /**
    * @param {!angular.IScope} $scope Angular scope.
@@ -164,7 +164,7 @@ MainController = class {
     });
 
   }
-};
+}
 
 
 module.controller('MainController', MainController);

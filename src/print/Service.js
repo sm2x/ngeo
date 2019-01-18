@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import googAsserts from 'goog/asserts.js';
 import ngeoPrintVectorEncoder from 'ngeo/print/VectorEncoder.js';
@@ -491,9 +489,10 @@ function createPrintServiceFactory($http, gettextCatalog, ngeoLayerHelper) {
   return (
     /**
      * @param {string} url URL to MapFish print service.
+     * @return {Service} The print service
      */
     function(url) {
-      return new exports(url, $http, gettextCatalog, ngeoLayerHelper);
+      return new Service(url, $http, gettextCatalog, ngeoLayerHelper);
     }
   );
 }
@@ -504,7 +503,7 @@ function createPrintServiceFactory($http, gettextCatalog, ngeoLayerHelper) {
 const module = angular.module('ngeoPrint', [
   ngeoMapLayerHelper.name
 ]);
-module.service('ngeoPrintService', exports);
+module.service('ngeoPrintService', Service);
 module.factory('ngeoCreatePrint', createPrintServiceFactory);
 
 

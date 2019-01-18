@@ -94,7 +94,7 @@ function SearchController(ngeoCreateLocationSearchBloodhound) {
    * @export
    */
   this.listeners = /** @type {SearchDirectiveListeners} */ ({
-    select: SearchController.select_.bind(this)
+    select: select_.bind(this)
   });
 
 }

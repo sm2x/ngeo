@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import googAsserts from 'goog/asserts.js';
 import ngeoMiscFilters from 'ngeo/misc/filters.js';
@@ -28,6 +26,33 @@ import olStyleRegularShape from 'ol/style/RegularShape.js';
 import olStyleStroke from 'ol/style/Stroke.js';
 import olStyleStyle from 'ol/style/Style.js';
 import olStyleText from 'ol/style/Text.js';
+
+
+/**
+ * The radius, in pixels, of the regular shape rendered as style for
+ * the vertex of a feature while it's being edited.
+ * @private
+ */
+const VertexStyleRegularShapeRadius = 6;
+
+
+/**
+ * Format types
+ * @enum {string}
+ * @export
+ */
+const FormatType = {
+  /**
+   * @type {string}
+   * @export
+   */
+  GPX: 'GPX',
+  /**
+   * @type {string}
+   * @export
+   */
+  KML: 'KML'
+};
 
 /**
  * Provides methods for features, such as:
@@ -876,7 +901,7 @@ FeatureHelper.prototype.getHaloStyle_ = function(feature) {
  * @return {!Object.<string, *>} Filtered properties of the current feature.
  * @export
  */
-function getFilteredFeatureValues(feature) {
+export function getFilteredFeatureValues(feature) {
   const properties = feature.getProperties();
   delete properties['boundedBy'];
   delete properties[feature.getGeometryName()];
@@ -1371,35 +1396,6 @@ FeatureHelper.prototype.findFeatureIndexByFid = function(features, fid) {
   }
   return index;
 };
-
-
-// === FORMAT TYPES ===
-
-
-/**
- * @enum {string}
- * @export
- */
-const FormatType = {
-  /**
-   * @type {string}
-   * @export
-   */
-  GPX: 'GPX',
-  /**
-   * @type {string}
-   * @export
-   */
-  KML: 'KML'
-};
-
-
-/**
- * The radius, in pixels, of the regular shape rendered as style for
- * the vertex of a feature while it's being edited.
- * @private
- */
-const VertexStyleRegularShapeRadius = 6;
 
 
 /**

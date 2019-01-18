@@ -29,7 +29,7 @@ import olLayerTile from 'ol/layer/Tile.js';
  * @ngdoc service
  * @ngname gmfThemes
  */
-function Theme($http, $injector, $q, ngeoLayerHelper, gettextCatalog, gmfThemesOptions) {
+function Themes($http, $injector, $q, ngeoLayerHelper, gettextCatalog, gmfThemesOptions) {
 
   olEventsEventTarget.call(this);
 
@@ -121,7 +121,7 @@ olUtilInherits(exports, olEventsEventTarget);
  * @param {string} name The layer name.
  * @return {gmfThemes.GmfGroup} The group.
  */
-function findGroupByLayerNodeName(themes, name) {
+export function findGroupByLayerNodeName(themes, name) {
   for (let i = 0, ii = themes.length; i < ii; i++) {
     const theme = themes[i];
     for (let j = 0, jj = theme.children.length; j < jj; j++) {
@@ -142,7 +142,7 @@ function findGroupByLayerNodeName(themes, name) {
  * @param {string} name The group name.
  * @return {gmfThemes.GmfGroup} The group.
  */
-function findGroupByName(themes, name) {
+export function findGroupByName(themes, name) {
   for (let i = 0, ii = themes.length; i < ii; i++) {
     const theme = themes[i];
     for (let j = 0, jj = theme.children.length; j < jj; j++) {
@@ -222,7 +222,7 @@ function getFlatNodes(node, nodes) {
  * Get background layers.
  * @return {!angular.IPromise.<!Array.<!import("ol/layer/Base.js").default>>} Promise.
  */
-Theme.prototype.getBgLayers = function() {
+Themes.prototype.getBgLayers = function() {
   const gettextCatalog = this.gettextCatalog;
   if (this.bgLayerPromise_) {
     return this.bgLayerPromise_;
@@ -382,7 +382,7 @@ Theme.prototype.getBgLayers = function() {
  * @return {angular.IPromise.<gmfThemes.GmfTheme>} Promise.
  * @export
  */
-Theme.prototype.getThemeObject = function(themeName) {
+Themes.prototype.getThemeObject = function(themeName) {
   return this.promise_.then(
     /**
        * @param {gmfThemes.GmfThemesResponse} data The "themes" web service
@@ -399,7 +399,7 @@ Theme.prototype.getThemeObject = function(themeName) {
  * @return {angular.IPromise.<!Array.<!gmfThemes.GmfTheme>>} Promise.
  * @export
  */
-Theme.prototype.getThemesObject = function() {
+Themes.prototype.getThemesObject = function() {
   return this.promise_.then(
     /**
        * @param {!gmfThemes.GmfThemesResponse} data The "themes" web service
@@ -414,7 +414,7 @@ Theme.prototype.getThemesObject = function() {
  * Get an array of background layer objects.
  * @return {angular.IPromise.<!Array.<!gmfThemes.GmfLayer>>} Promise.
  */
-Theme.prototype.getBackgroundLayersObject = function() {
+Themes.prototype.getBackgroundLayersObject = function() {
   googAsserts.assert(this.promise_ !== null);
   return this.promise_.then(
     /**
@@ -432,7 +432,7 @@ Theme.prototype.getBackgroundLayersObject = function() {
  * @return {angular.IPromise.<!gmfThemes.GmfOgcServers>} Promise.
  * @export
  */
-Theme.prototype.getOgcServersObject = function() {
+Themes.prototype.getOgcServersObject = function() {
   googAsserts.assert(this.promise_ !== null);
   return this.promise_.then(
     /**
@@ -448,7 +448,7 @@ Theme.prototype.getOgcServersObject = function() {
  * Returns a promise to check if one of the layers in the themes is editable.
  * @return {angular.IPromise.<boolean>} Promise.
  */
-Theme.prototype.hasEditableLayers = function() {
+Themes.prototype.hasEditableLayers = function() {
   googAsserts.assert(this.promise_ !== null);
   return this.promise_.then(this.hasEditableLayers_.bind(this));
 };
@@ -459,7 +459,7 @@ Theme.prototype.hasEditableLayers = function() {
  * @param {gmfThemes.GmfThemesResponse} data The "themes" web service response.
  * @return {boolean} Editable layers?
  */
-Theme.prototype.hasEditableLayers_ = function(data) {
+Themes.prototype.hasEditableLayers_ = function(data) {
   return data.themes.some((theme) => {
     const hasEditableLayers = theme.children.some(this.hasNodeEditableLayers_.bind(this));
     return hasEditableLayers;
@@ -471,7 +471,7 @@ Theme.prototype.hasEditableLayers_ = function(data) {
  * @param {gmfThemes.GmfGroup|gmfThemes.GmfLayer} node Theme node
  * @return {boolean} Editable layers?
  */
-Theme.prototype.hasNodeEditableLayers_ = function(node) {
+Themes.prototype.hasNodeEditableLayers_ = function(node) {
   if (node.editable) {
     return true;
   }
@@ -491,7 +491,7 @@ Theme.prototype.hasNodeEditableLayers_ = function(node) {
  * @return {?gmfThemes.GmfSnappingConfig} Snapping configuration, if found.
  * @export
  */
-function getSnappingConfig(node) {
+export function getSnappingConfig(node) {
   const config = (node.metadata && node.metadata.snappingConfig !== undefined) ?
     node.metadata.snappingConfig : null;
   return config;
@@ -507,7 +507,7 @@ function getSnappingConfig(node) {
  *     on the node).
  * @return {number|undefined} the max resolution or undefined if any.
  */
-function getNodeMaxResolution(gmfLayer) {
+export function getNodeMaxResolution(gmfLayer) {
   const metadata = gmfLayer.metadata;
   let maxResolution = gmfLayer.maxResolutionHint;
   if (maxResolution === undefined && metadata !== undefined) {
@@ -526,7 +526,7 @@ function getNodeMaxResolution(gmfLayer) {
  *     on the node).
  * @return {number|undefined} the min resolution or undefined if any.
  */
-function getNodeMinResolution(gmfLayer) {
+export function getNodeMinResolution(gmfLayer) {
   const metadata = gmfLayer.metadata;
   let minResolution = gmfLayer.minResolutionHint;
   if (minResolution === undefined && metadata !== undefined) {
@@ -541,7 +541,7 @@ function getNodeMinResolution(gmfLayer) {
  * Load themes from the "themes" service.
  * @export
  */
-Theme.prototype.loadThemes = function(opt_roleId) {
+Themes.prototype.loadThemes = function(opt_roleId) {
 
   googAsserts.assert(this.treeUrl_, 'gmfTreeUrl should be defined.');
 
@@ -583,7 +583,7 @@ Theme.prototype.loadThemes = function(opt_roleId) {
 /**
  * @enum {string}
  */
-const NodeType = {
+export const NodeType = {
   MIXED_GROUP: 'MixedGroup',
   NOT_MIXED_GROUP: 'NotMixedGroup',
   WMTS: 'WMTS',
@@ -597,8 +597,9 @@ const NodeType = {
 const module = angular.module('gmfThemes', [
   ngeoMapLayerHelper.name,
 ]);
+
 module.value('gmfThemesOptions', {});
-module.service('gmfThemes', exports);
+module.service('gmfThemes', Themes);
 
 
 export default module;

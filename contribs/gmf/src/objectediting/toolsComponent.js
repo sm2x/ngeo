@@ -17,6 +17,16 @@ import ngeoMiscToolActivate from 'ngeo/misc/ToolActivate.js';
 import ngeoMiscToolActivateMgr from 'ngeo/misc/ToolActivateMgr.js';
 import {getUid as olUtilGetUid} from 'ol/util.js';
 
+
+/**
+ * @enum {string}
+ */
+const ProcessType = {
+  ADD: 'add',
+  DELETE: 'delete'
+};
+
+
 /**
  * @type {!angular.IModule}
  */
@@ -366,14 +376,6 @@ Controller.prototype.handleDestroy_ = function() {};
 
 
 module.controller('GmfObjecteditingtoolsController', Controller);
-
-/**
- * @enum {string}
- */
-const ProcessType = {
-  ADD: 'add',
-  DELETE: 'delete'
-};
 
 
 export default module;

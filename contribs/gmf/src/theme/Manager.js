@@ -1,9 +1,19 @@
-/**
- */
 import angular from 'angular';
 import gmfLayertreeTreeManager from 'gmf/layertree/TreeManager.js';
 import gmfThemeThemes from 'gmf/theme/Themes.js';
 import ngeoStatemanagerService from 'ngeo/statemanager/Service.js';
+
+
+/**
+ * @enum {string}
+ */
+const EventType = {
+  /**
+   * Triggered when the theme name change.
+   */
+  THEME_NAME_SET: 'gmf-thememanager-theme_name_set'
+};
+
 
 /**
  * Manage a tree with children. This service can be used in mode 'flush'
@@ -124,17 +134,6 @@ Manager.prototype.setThemeName = function(name, opt_silent) {
  */
 Manager.prototype.removeAll = function() {
   this.gmfTreeManager_.removeAll();
-};
-
-
-/**
- * @enum {string}
- */
-const EventType = {
-  /**
-   * Triggered when the theme name change.
-   */
-  THEME_NAME_SET: 'gmf-thememanager-theme_name_set'
 };
 
 

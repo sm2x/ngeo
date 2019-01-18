@@ -5,6 +5,40 @@ import gmfEditingEditFeature from 'gmf/editing/EditFeature.js';
 import ngeoStatemanagerLocation from 'ngeo/statemanager/Location.js';
 import olFeature from 'ol/Feature.js';
 
+
+/**
+ * @enum {string}
+ * @export
+ */
+const Param = {
+  /**
+   * @type {string}
+   * @export
+   */
+  GEOM_TYPE: 'objectediting_geomtype',
+  /**
+   * @type {string}
+   * @export
+   */
+  ID: 'objectediting_id',
+  /**
+   * @type {string}
+   * @export
+   */
+  LAYER: 'objectediting_layer',
+  /**
+   * @type {string}
+   * @export
+   */
+  PROPERTY: 'objectediting_property',
+  /**
+   * @type {string}
+   * @export
+   */
+  THEME: 'objectediting_theme'
+};
+
+
 /**
  * A service that looks for certain parameters in the url and use them to fetch
  * a feature using the GMF protocol.
@@ -134,39 +168,6 @@ Manager.prototype.handleGetFeatures_ = function(key, value, features) {
   }
 
   this.getFeatureDefered_.resolve(feature);
-};
-
-
-/**
- * @enum {string}
- * @export
- */
-const Param = {
-  /**
-   * @type {string}
-   * @export
-   */
-  GEOM_TYPE: 'objectediting_geomtype',
-  /**
-   * @type {string}
-   * @export
-   */
-  ID: 'objectediting_id',
-  /**
-   * @type {string}
-   * @export
-   */
-  LAYER: 'objectediting_layer',
-  /**
-   * @type {string}
-   * @export
-   */
-  PROPERTY: 'objectediting_property',
-  /**
-   * @type {string}
-   * @export
-   */
-  THEME: 'objectediting_theme'
 };
 
 

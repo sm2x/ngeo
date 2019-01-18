@@ -67,7 +67,7 @@ const exports = {};
  * @param {string} type Type.
  * @return {boolean} Whether both attribute type and geomType were set.
  */
-function setGeometryType(attribute, type) {
+export function setGeometryType(attribute, type) {
   const geomRegex =
     /gml:((Multi)?(Point|Line|Polygon|Curve|Surface|Geometry)).*/;
   if (geomRegex.exec(type)) {
