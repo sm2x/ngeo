@@ -1,5 +1,3 @@
-/**
- */
 import googAsserts from 'goog/asserts.js';
 import {rgbArrayToHex} from 'ngeo/utils.js';
 import {getUid as olUtilGetUid} from 'ol/util.js';

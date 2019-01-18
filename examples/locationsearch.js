@@ -1,6 +1,3 @@
-/**
- */
-
 import './locationsearch.css';
 import angular from 'angular';
 import googAsserts from 'goog/asserts.js';

@@ -1,6 +1,3 @@
-/**
- */
-
 import './measure.css';
 import angular from 'angular';
 import ngeoInteractionMeasureArea from 'ngeo/interaction/MeasureArea.js';

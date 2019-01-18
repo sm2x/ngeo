@@ -1,6 +1,3 @@
-/**
- */
-
 import angular from 'angular';
 import './datepicker.css';
 import ngeoMiscDatepickerComponent from 'ngeo/misc/datepickerComponent.js';

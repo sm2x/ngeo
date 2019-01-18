@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import gmfThemeThemes from 'gmf/theme/Themes.js';
 import {WMSInfoFormat} from 'ngeo/datasource/OGC.js';

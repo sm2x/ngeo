@@ -1,6 +1,3 @@
-/**
- */
-
 import angular from 'angular';
 import './drawfeature.css';
 import 'jquery-ui/ui/widgets/tooltip.js';

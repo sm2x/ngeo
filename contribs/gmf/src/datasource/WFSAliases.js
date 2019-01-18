@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import ngeoDatasourceHelper from 'ngeo/datasource/Helper.js';
 import {ServerType} from 'ngeo/datasource/OGC.js';

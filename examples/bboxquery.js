@@ -1,6 +1,3 @@
-/**
- */
-
 import angular from 'angular';
 import {MAPSERVER_PROXY, MAPSERVER_WFS_FEATURE_NS} from './url.js';
 import './bboxquery.css';

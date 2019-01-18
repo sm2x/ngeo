@@ -1,6 +1,3 @@
-/**
- */
-
 import './colorpicker.css';
 import angular from 'angular';
 import ngeoMiscColorpickerComponent from 'ngeo/misc/colorpickerComponent.js';

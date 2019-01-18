@@ -1,6 +1,3 @@
-/**
- */
-
 import './permalink.css';
 import angular from 'angular';
 import ngeoFormatFeatureHash from 'ngeo/format/FeatureHash.js';

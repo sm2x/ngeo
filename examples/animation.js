@@ -1,6 +1,3 @@
-/**
- */
-
 import './animation.css';
 import angular from 'angular';
 import olMap from 'ol/Map.js';

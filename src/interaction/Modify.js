@@ -1,5 +1,3 @@
-/**
- */
 import googAsserts from 'goog/asserts.js';
 import {deleteCondition} from 'ngeo/utils.js';
 import ngeoFormatFeatureProperties from 'ngeo/format/FeatureProperties.js';

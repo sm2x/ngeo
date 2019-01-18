@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import * as olProj from 'ol/proj.js';
 

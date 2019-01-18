@@ -1,6 +1,3 @@
-/**
- */
-const exports = {};
 import gmfObjecteditingCoordinate from 'gmf/objectediting/coordinate.js';
 import olGeomLineString from 'ol/geom/LineString.js';
 import olGeomMultiLineString from 'ol/geom/MultiLineString.js';
@@ -61,6 +58,3 @@ export function toXY(geom) {
     throw 'gmf.objectediting.geom.toXY - unsupported geometry type';
   }
 }
-
-
-export default exports;

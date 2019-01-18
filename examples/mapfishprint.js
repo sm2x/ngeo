@@ -1,6 +1,3 @@
-/**
- */
-
 import angular from 'angular';
 import {MAPSERVER_PROXY, PRINT_PROXY} from './url.js';
 import './mapfishprint.css';

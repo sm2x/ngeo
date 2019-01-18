@@ -1,9 +1,4 @@
 /**
- */
-const exports = {};
-
-
-/**
  * Convert a given coordinate or list of coordinates of any 'nesting' level
  * to XY, i.e. remove any extra dimensions to the coordinates and keep only 2.
  *
@@ -23,6 +18,3 @@ export function toXY(coordinates, nesting) {
   }
   return coordinates;
 }
-
-
-export default exports;

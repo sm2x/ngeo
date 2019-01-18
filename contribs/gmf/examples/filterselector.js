@@ -1,7 +1,4 @@
-/**
- */
 // Todo - use the 'Filter' theme instead if the 'Edit' theme
-
 import angular from 'angular';
 import appURL from './url.js';
 import './filterselector.css';

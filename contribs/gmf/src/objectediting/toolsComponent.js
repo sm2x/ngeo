@@ -1,6 +1,3 @@
-/**
- */
-
 import angular from 'angular';
 
 import gmfObjecteditingGetWMSFeatureComponent from 'gmf/objectediting/getWMSFeatureComponent.js';

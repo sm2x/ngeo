@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import {getUid as olUtilGetUid} from 'ol/util.js';
 

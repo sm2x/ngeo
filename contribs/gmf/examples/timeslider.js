@@ -1,6 +1,3 @@
-/**
- */
-
 import './timeslider.css';
 import angular from 'angular';
 import gmfLayertreeTimeSliderComponent from 'gmf/layertree/timeSliderComponent.js';

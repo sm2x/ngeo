@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import ngeoFormatXSDAttribute from 'ngeo/format/XSDAttribute.js';
 

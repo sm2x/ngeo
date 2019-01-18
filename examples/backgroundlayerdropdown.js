@@ -1,6 +1,3 @@
-/**
- */
-
 import './backgroundlayerdropdown.css';
 import angular from 'angular';
 import ngeoSourceAsitVD from 'ngeo/source/AsitVD.js';

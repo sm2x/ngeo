@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 
 import {DATALAYERGROUP_NAME} from 'gmf/index.js';

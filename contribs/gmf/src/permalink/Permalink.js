@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 
 import {PermalinkParam} from 'gmf/index.js';

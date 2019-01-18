@@ -1,5 +1,3 @@
-/**
- */
 import 'jquery';
 import angular from 'angular';
 import 'angular-gettext';
