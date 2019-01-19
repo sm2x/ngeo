@@ -7,7 +7,7 @@ import angular from 'angular';
  * @ngdoc service
  * @ngname ngeoTime
  */
-function Time() {}
+export function Time() {}
 
 /**
  * @param {number|string|null} value The value
