@@ -7,7 +7,7 @@ import ngeoStatemanagerService from 'ngeo/statemanager/Service.js';
 /**
  * @enum {string}
  */
-const EventType = {
+export const EventType = {
   /**
    * Triggered when the theme name change.
    */

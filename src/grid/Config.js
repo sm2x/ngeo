@@ -7,7 +7,7 @@ import {getUid as olUtilGetUid} from 'ol/util.js';
  * @constructor
  * @export
  */
-function Config(data, columnDefs) {
+export function GridConfig(data, columnDefs) {
   /**
    * @type {Array.<Object>|undefined}
    * @export
@@ -34,7 +34,7 @@ function Config(data, columnDefs) {
  * @return {string} Unique id for this object.
  * @export
  */
-function getRowUid(attributes) {
+export function getRowUid(attributes) {
   return `${olUtilGetUid(attributes)}`;
 }
 
@@ -45,7 +45,7 @@ function getRowUid(attributes) {
  * @return {boolean} True if already selected. False otherwise.
  * @export
  */
-Config.prototype.isRowSelected = function(attributes) {
+GridConfig.prototype.isRowSelected = function(attributes) {
   return !!this.selectedRows[getRowUid(attributes)];
 };
 
@@ -55,7 +55,7 @@ Config.prototype.isRowSelected = function(attributes) {
  * @return {number} Number of selected rows.
  * @export
  */
-Config.prototype.getSelectedCount = function() {
+GridConfig.prototype.getSelectedCount = function() {
   return Object.keys(this.selectedRows).length;
 };
 
@@ -65,7 +65,7 @@ Config.prototype.getSelectedCount = function() {
  * @return {Array.<Object>} Selected rows in the current ordering.
  * @export
  */
-Config.prototype.getSelectedRows = function() {
+GridConfig.prototype.getSelectedRows = function() {
   return this.data.filter(row => this.isRowSelected(row));
 };
 
@@ -74,7 +74,7 @@ Config.prototype.getSelectedRows = function() {
  * @param {Object} attributes An entry/row.
  * @public
  */
-Config.prototype.selectRow = function(attributes) {
+GridConfig.prototype.selectRow = function(attributes) {
   const uid = getRowUid(attributes);
   this.selectedRows[uid] = attributes;
 };
@@ -84,7 +84,7 @@ Config.prototype.selectRow = function(attributes) {
  * @param {Object} attributes An entry/row.
  * @public
  */
-Config.prototype.toggleRow = function(attributes) {
+GridConfig.prototype.toggleRow = function(attributes) {
   const uid = getRowUid(attributes);
   const isSelected = this.isRowSelected(attributes);
   if (isSelected) {
@@ -99,7 +99,7 @@ Config.prototype.toggleRow = function(attributes) {
  * Select all rows.
  * @export
  */
-Config.prototype.selectAll = function() {
+GridConfig.prototype.selectAll = function() {
   this.data.forEach((attributes) => {
     this.selectRow(attributes);
   });
@@ -110,7 +110,7 @@ Config.prototype.selectAll = function() {
  * Deselect all rows.
  * @export
  */
-Config.prototype.unselectAll = function() {
+GridConfig.prototype.unselectAll = function() {
   for (const rowId in this.selectedRows) {
     delete this.selectedRows[rowId];
   }
@@ -121,7 +121,7 @@ Config.prototype.unselectAll = function() {
  * Invert selection.
  * @export
  */
-Config.prototype.invertSelection = function() {
+GridConfig.prototype.invertSelection = function() {
   this.data.forEach((attributes) => {
     this.toggleRow(attributes);
   });

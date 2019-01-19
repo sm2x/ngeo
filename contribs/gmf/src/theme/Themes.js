@@ -174,7 +174,7 @@ function findObjectByName(objects, objectName) {
  * @param {string} themeName The theme name.
  * @return {gmfThemes.GmfTheme} The theme object or null.
  */
-function findThemeByName(themes, themeName) {
+export function findThemeByName(themes, themeName) {
   return findObjectByName(themes, themeName);
 }
 

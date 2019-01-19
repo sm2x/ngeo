@@ -4,9 +4,9 @@ import {PermalinkParam} from 'gmf/index.js';
 
 import gmfAuthenticationService from 'gmf/authentication/Service.js';
 
-import gmfThemeManager from 'gmf/theme/Manager.js';
+import gmfThemeManager, {EventType} from 'gmf/theme/Manager.js';
 
-import gmfThemeThemes from 'gmf/theme/Themes.js';
+import gmfThemeThemes, {findThemeByName, findGroupByName} from 'gmf/theme/Themes.js';
 import ngeoPopover from 'ngeo/Popover.js';
 
 import ngeoDrawFeatures from 'ngeo/draw/features.js';
@@ -452,7 +452,7 @@ function Permalink($q, $timeout, $rootScope, $injector, ngeoDebounce, gettextCat
   }
 
   if (this.gmfThemeManager_) {
-    this.rootScope_.$on(gmfThemeManager.EventType.THEME_NAME_SET, (event, name) => {
+    this.rootScope_.$on(EventType.THEME_NAME_SET, (event, name) => {
       this.setThemeInUrl_(name);
     });
   }
@@ -984,13 +984,13 @@ Permalink.prototype.initLayers_ = function() {
     const groupsNames = this.ngeoLocation_.getParam(PermalinkParam.TREE_GROUPS);
     if (groupsNames === undefined) {
       googAsserts.assertString(themeName);
-      theme = gmfThemeThemes.findThemeByName(themes, themeName);
+      theme = findThemeByName(themes, themeName);
       if (theme) {
         firstLevelGroups = theme.children;
       }
     } else {
       groupsNames.split(',').forEach((groupName) => {
-        const group = gmfThemeThemes.findGroupByName(themes, groupName);
+        const group = findGroupByName(themes, groupName);
         if (group) {
           firstLevelGroups.push(group);
         } else {
@@ -1603,7 +1603,7 @@ module.value('gmfPermalinkOptions', /** @type {gmfx.PermalinkOptions} */ ({}));
   for (const key2 in PermalinkParam) {
     regexp.push(new RegExp(ParamPrefix[key2]));
   }
-  ngeoStatemanagerService.module.value('ngeoUsedKeyRegexp', regexp);
+  ngeoStatemanagerService.value('ngeoUsedKeyRegexp', regexp);
 })();
 
 

@@ -6,7 +6,7 @@ import olEventsEventTarget from 'ol/events/Target.js';
 /**
  * @enum {string}
  */
-const RouteSuffix = {
+export const RouteSuffix = {
   CHANGE_PASSWORD: 'loginchange',
   IS_LOGGED_IN: 'loginuser',
   LOGIN: 'login',

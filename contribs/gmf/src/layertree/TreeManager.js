@@ -1,6 +1,6 @@
 import angular from 'angular';
 import {PermalinkParam} from 'gmf/index.js';
-import gmfThemeThemes from 'gmf/theme/Themes.js';
+import gmfThemeThemes, {findGroupByName, findGroupByLayerNodeName} from 'gmf/theme/Themes.js';
 import googAsserts from 'goog/asserts.js';
 import ngeoLayertreeController from 'ngeo/layertree/Controller.js';
 import ngeoMessageMessage from 'ngeo/message/Message.js';
@@ -305,7 +305,7 @@ TreeManager.prototype.manageExclusiveGroupSingleChecked_ = function(node, found)
  */
 TreeManager.prototype.addGroupByName = function(groupName, opt_add) {
   this.gmfThemes_.getThemesObject().then((themes) => {
-    const group = gmfThemeThemes.findGroupByName(themes, groupName);
+    const group = findGroupByName(themes, groupName);
     if (group) {
       this.addFirstLevelGroups([group], opt_add, false);
     }
@@ -324,7 +324,7 @@ TreeManager.prototype.addGroupByName = function(groupName, opt_add) {
  */
 TreeManager.prototype.addGroupByLayerName = function(layerName, opt_add, opt_silent) {
   this.gmfThemes_.getThemesObject().then((themes) => {
-    const group = gmfThemeThemes.findGroupByLayerNodeName(themes, layerName);
+    const group = findGroupByLayerNodeName(themes, layerName);
     if (group) {
       const groupAdded = this.addFirstLevelGroups([group], opt_add, opt_silent);
       this.$timeout_(() => {
@@ -518,7 +518,7 @@ TreeManager.prototype.refreshFirstLevelGroups_ = function(themes) {
     const name = node.name;
 
     // Find the right firstlevelgroup in the new theme.
-    const nodeToRestore = gmfThemeThemes.findGroupByName(themes, name);
+    const nodeToRestore = findGroupByName(themes, name);
     if (nodeToRestore) {
       // Restore state.
       const fullState = firstLevelGroupsFullState[name];

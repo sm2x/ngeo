@@ -17,7 +17,7 @@ import olLayerLayer from 'ol/layer/Layer.js';
  * @ngdoc controller
  * @ngname NgeoLayertreeController
  */
-function Controller($scope, $rootScope, $attrs) {
+export function LayertreeController($scope, $rootScope, $attrs) {
 
   const isRoot = $attrs['ngeoLayertreeNotroot'] === undefined;
 
@@ -189,7 +189,7 @@ function Controller($scope, $rootScope, $attrs) {
  * @return {string} 'on', 'off', 'indeterminate'.
  * @export
  */
-Controller.prototype.getState = function() {
+LayertreeController.prototype.getState = function() {
   return this.state_;
 };
 
@@ -201,7 +201,7 @@ Controller.prototype.getState = function() {
  * @param {boolean=} opt_broadcast Broadcast.
  * @export
  */
-Controller.prototype.setState = function(state, opt_broadcast) {
+LayertreeController.prototype.setState = function(state, opt_broadcast) {
   if (state === this.state_) {
     return;
   }
@@ -225,7 +225,7 @@ Controller.prototype.setState = function(state, opt_broadcast) {
 /**
  * @param {string} state 'on' or 'off'.
  */
-Controller.prototype.setStateInternal_ = function(state) {
+LayertreeController.prototype.setStateInternal_ = function(state) {
   // Set the state
   this.state_ = state === 'on' ? 'on' : 'off';
 
@@ -260,7 +260,7 @@ Controller.prototype.setStateInternal_ = function(state) {
  * @param {boolean=} opt_broadcast Broadcast.
  * @public
  */
-Controller.prototype.refreshState = function(opt_onChild, opt_broadcast) {
+LayertreeController.prototype.refreshState = function(opt_onChild, opt_broadcast) {
 
   if (this.node.children &&
       opt_onChild &&
@@ -292,7 +292,7 @@ Controller.prototype.refreshState = function(opt_onChild, opt_broadcast) {
  * @return {string} 'on', 'off' or 'indeterminate'.
  * @export
  */
-Controller.prototype.getCalculateState = function() {
+LayertreeController.prototype.getCalculateState = function() {
   if (this.node.children === undefined) {
     return this.state_;
   }
@@ -316,7 +316,7 @@ Controller.prototype.getCalculateState = function() {
  * @return {boolean|undefined} Value.
  * @export
  */
-Controller.prototype.getSetActive = function(val) {
+LayertreeController.prototype.getSetActive = function(val) {
   const layer = this.layer;
   const map = this.map;
   if (!layer) {
@@ -339,7 +339,7 @@ Controller.prototype.getSetActive = function(val) {
  *     this layer tree controller.
  * @export
  */
-Controller.prototype.getDataSource = function() {
+LayertreeController.prototype.getDataSource = function() {
   return this.dataSource_;
 };
 
@@ -348,7 +348,7 @@ Controller.prototype.getDataSource = function() {
  * @param {?import("ngeo/datasource/DataSource.js").default} dataSource Data source or null.
  * @export
  */
-Controller.prototype.setDataSource = function(dataSource) {
+LayertreeController.prototype.setDataSource = function(dataSource) {
   this.dataSource_ = dataSource;
 };
 
@@ -360,7 +360,7 @@ Controller.prototype.setDataSource = function(dataSource) {
  * @return {import("ngeo/layertree/Controller.js").default} the top level layertree.
  * @public
  */
-function getFirstParentTree(treeCtrl) {
+export function getFirstParentTree(treeCtrl) {
   let tree = treeCtrl;
   while (!tree.parent.isRoot) {
     tree = tree.parent;
@@ -372,7 +372,7 @@ function getFirstParentTree(treeCtrl) {
 /**
  * @enum {string}
  */
-const VisitorDecision = {
+export const VisitorDecision = {
   STOP: 'STOP',
   SKIP: 'SKIP',
   DESCEND: 'DESCEND'
@@ -390,7 +390,7 @@ const VisitorDecision = {
  * @return {boolean} whether to stop traversing.
  * @export
  */
-Controller.prototype.traverseDepthFirst = function(visitor) {
+LayertreeController.prototype.traverseDepthFirst = function(visitor) {
   // First visit the current controller
   const decision = visitor(this) || VisitorDecision.DESCEND;
 
@@ -418,7 +418,7 @@ Controller.prototype.traverseDepthFirst = function(visitor) {
  * @type {!angular.IModule}
  */
 const module = angular.module('ngeoLayertreeController', []);
-module.controller('ngeoLayertreeController', Controller);
+module.controller('ngeoLayertreeController', LayertreeController);
 
 
 export default module;

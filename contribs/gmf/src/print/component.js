@@ -8,7 +8,7 @@ import gmfThemeThemes from 'gmf/theme/Themes.js';
 import googAsserts from 'goog/asserts.js';
 import ngeoMapLayerHelper from 'ngeo/map/LayerHelper.js';
 import ngeoMapFeatureOverlayMgr from 'ngeo/map/FeatureOverlayMgr.js';
-import ngeoMiscFeatureHelper from 'ngeo/misc/FeatureHelper.js';
+import ngeoMiscFeatureHelper, {getFilteredFeatureValues} from 'ngeo/misc/FeatureHelper.js';
 import ngeoPrintService from 'ngeo/print/Service.js';
 import ngeoPrintUtils from 'ngeo/print/Utils.js';
 import ngeoQueryMapQuerent from 'ngeo/query/MapQuerent.js';
@@ -1011,7 +1011,7 @@ class Controller {
       columns = [];
       source.features.forEach(function(feature, i) {
         googAsserts.assert(feature);
-        const properties = ngeoMiscFeatureHelper.getFilteredFeatureValues(feature);
+        const properties = getFilteredFeatureValues(feature);
         if (i === 0) {
           columns = Object.keys(properties).map(function tanslateColumns(prop) {
             return this.translate_(prop);

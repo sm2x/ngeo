@@ -62,7 +62,7 @@ import olTilegridWMTS from 'ol/tilegrid/WMTS.js';
  * @param {!angular.gettext.gettextCatalog} gettextCatalog Gettext service.
  * @param {import("ngeo/map/LayerHelper.js").default} ngeoLayerHelper Ngeo Layer Helper service.
  */
-function Service(url, $http, gettextCatalog, ngeoLayerHelper) {
+export function PrintService(url, $http, gettextCatalog, ngeoLayerHelper) {
   /**
    * @type {string}
    * @private
@@ -108,7 +108,7 @@ function Service(url, $http, gettextCatalog, ngeoLayerHelper) {
  * @return {angular.IHttpPromise} HTTP promise.
  * @export
  */
-Service.prototype.cancel = function(ref, opt_httpConfig) {
+PrintService.prototype.cancel = function(ref, opt_httpConfig) {
   const httpConfig = opt_httpConfig !== undefined ? opt_httpConfig :
     /** @type {angular.IRequestShortcutConfig} */ ({});
   const url = `${this.url_}/cancel/${ref}`;
@@ -128,7 +128,7 @@ Service.prototype.cancel = function(ref, opt_httpConfig) {
  * @return {MapFishPrintSpec} The print spec.
  * @export
  */
-Service.prototype.createSpec = function(
+PrintService.prototype.createSpec = function(
   map, scale, dpi, layout, format, customAttributes) {
 
   const specMap = /** @type {MapFishPrintMap} */ ({
@@ -162,7 +162,7 @@ Service.prototype.createSpec = function(
  * @param {MapFishPrintMap} object Object.
  * @private
  */
-Service.prototype.encodeMap_ = function(map, scale, object) {
+PrintService.prototype.encodeMap_ = function(map, scale, object) {
   const view = map.getView();
   const viewCenter = view.getCenter();
   const viewProjection = view.getProjection();
@@ -201,7 +201,7 @@ Service.prototype.encodeMap_ = function(map, scale, object) {
  * @param {import("ol/layer/Base.js").default} layer Layer.
  * @param {number} resolution Resolution.
  */
-Service.prototype.encodeLayer = function(arr, layer, resolution) {
+PrintService.prototype.encodeLayer = function(arr, layer, resolution) {
   if (layer instanceof olLayerImage) {
     this.encodeImageLayer_(arr, layer);
   } else if (layer instanceof olLayerTile) {
@@ -217,7 +217,7 @@ Service.prototype.encodeLayer = function(arr, layer, resolution) {
  * @param {import("ol/layer/Image.js").default} layer Layer.
  * @private
  */
-Service.prototype.encodeImageLayer_ = function(arr, layer) {
+PrintService.prototype.encodeImageLayer_ = function(arr, layer) {
   googAsserts.assertInstanceof(layer, olLayerImage);
   const source = layer.getSource();
   if (source instanceof olSourceImageWMS) {
@@ -231,7 +231,7 @@ Service.prototype.encodeImageLayer_ = function(arr, layer) {
  * @param {import("ol/layer/Image.js").default} layer Layer.
  * @private
  */
-Service.prototype.encodeImageWmsLayer_ = function(arr, layer) {
+PrintService.prototype.encodeImageWmsLayer_ = function(arr, layer) {
   const source = layer.getSource();
 
   googAsserts.assertInstanceof(layer, olLayerImage);
@@ -252,7 +252,7 @@ Service.prototype.encodeImageWmsLayer_ = function(arr, layer) {
  * @param {Object} params Url parameters
  * @private
  */
-Service.prototype.encodeWmsLayer_ = function(arr, layer, url, params) {
+PrintService.prototype.encodeWmsLayer_ = function(arr, layer, url, params) {
   if (url.startsWith('//')) {
     url = window.location.protocol + url;
   }
@@ -307,7 +307,7 @@ function getAbsoluteUrl_(url) {
  * @param {import("ol/layer/Tile.js").default} layer Layer.
  * @private
  */
-Service.prototype.encodeTileLayer_ = function(arr, layer) {
+PrintService.prototype.encodeTileLayer_ = function(arr, layer) {
   googAsserts.assertInstanceof(layer, olLayerTile);
   const source = layer.getSource();
   if (source instanceof olSourceWMTS) {
@@ -323,7 +323,7 @@ Service.prototype.encodeTileLayer_ = function(arr, layer) {
  * @param {import("ol/layer/Tile.js").default} layer Layer.
  * @private
  */
-Service.prototype.encodeTileWmtsLayer_ = function(arr, layer) {
+PrintService.prototype.encodeTileWmtsLayer_ = function(arr, layer) {
   googAsserts.assertInstanceof(layer, olLayerTile);
   const source = layer.getSource();
   googAsserts.assertInstanceof(source, olSourceWMTS);
@@ -378,7 +378,7 @@ Service.prototype.encodeTileWmtsLayer_ = function(arr, layer) {
  * @param {import("ol/layer/Tile.js").default} layer Layer.
  * @private
  */
-Service.prototype.encodeTileWmsLayer_ = function(arr, layer) {
+PrintService.prototype.encodeTileWmsLayer_ = function(arr, layer) {
   const source = layer.getSource();
 
   googAsserts.assertInstanceof(layer, olLayerTile);
@@ -395,7 +395,7 @@ Service.prototype.encodeTileWmsLayer_ = function(arr, layer) {
  * @return {string} URL.
  * @private
  */
-Service.prototype.getWmtsUrl_ = function(source) {
+PrintService.prototype.getWmtsUrl_ = function(source) {
   const urls = source.getUrls();
   googAsserts.assert(urls.length > 0);
   return getAbsoluteUrl_(urls[0]);
@@ -407,7 +407,7 @@ Service.prototype.getWmtsUrl_ = function(source) {
  * @returns {number} opacity Opacity value.
  * @private
  */
-Service.prototype.getOpacityOrInherited_ = function(layer) {
+PrintService.prototype.getOpacityOrInherited_ = function(layer) {
   if (layer.get('inheritedOpacity') !== undefined) {
     return layer.get('inheritedOpacity');
   }
@@ -421,7 +421,7 @@ Service.prototype.getOpacityOrInherited_ = function(layer) {
  * @return {angular.IHttpPromise} HTTP promise.
  * @export
  */
-Service.prototype.createReport = function(printSpec, opt_httpConfig) {
+PrintService.prototype.createReport = function(printSpec, opt_httpConfig) {
   const format = printSpec.format || 'pdf';
   const url = `${this.url_}/report.${format}`;
   const httpConfig = /** @type {!angular.IRequestShortcutConfig} */ ({
@@ -442,7 +442,7 @@ Service.prototype.createReport = function(printSpec, opt_httpConfig) {
  * @return {angular.IHttpPromise} HTTP promise.
  * @export
  */
-Service.prototype.getStatus = function(ref, opt_httpConfig) {
+PrintService.prototype.getStatus = function(ref, opt_httpConfig) {
   const httpConfig = opt_httpConfig !== undefined ? opt_httpConfig :
     /** @type {angular.IRequestShortcutConfig} */ ({});
   const url = `${this.url_}/status/${ref}.json`;
@@ -456,7 +456,7 @@ Service.prototype.getStatus = function(ref, opt_httpConfig) {
  * @return {string} The report URL for this ref.
  * @export
  */
-Service.prototype.getReportUrl = function(ref) {
+PrintService.prototype.getReportUrl = function(ref) {
   return `${this.url_}/report/${ref}`;
 };
 
@@ -466,7 +466,7 @@ Service.prototype.getReportUrl = function(ref) {
  * @param {angular.IRequestShortcutConfig=} opt_httpConfig $http config object.
  * @return {angular.IHttpPromise} HTTP promise.
  */
-Service.prototype.getCapabilities = function(opt_httpConfig) {
+PrintService.prototype.getCapabilities = function(opt_httpConfig) {
   const httpConfig =
     opt_httpConfig !== undefined ? opt_httpConfig : /** @type {angular.IRequestShortcutConfig} */ ({
       withCredentials: true
@@ -492,7 +492,7 @@ function createPrintServiceFactory($http, gettextCatalog, ngeoLayerHelper) {
      * @return {Service} The print service
      */
     function(url) {
-      return new Service(url, $http, gettextCatalog, ngeoLayerHelper);
+      return new PrintService(url, $http, gettextCatalog, ngeoLayerHelper);
     }
   );
 }
@@ -503,7 +503,7 @@ function createPrintServiceFactory($http, gettextCatalog, ngeoLayerHelper) {
 const module = angular.module('ngeoPrint', [
   ngeoMapLayerHelper.name
 ]);
-module.service('ngeoPrintService', Service);
+module.service('ngeoPrintService', PrintService);
 module.factory('ngeoCreatePrint', createPrintServiceFactory);
 
 

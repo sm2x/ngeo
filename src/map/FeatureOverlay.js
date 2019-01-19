@@ -6,7 +6,7 @@ import * as olEvents from 'ol/events.js';
  * @param {import("ngeo/map/FeatureOverlayMgr.js").default} manager The feature overlay manager.
  * @param {number} index This feature overlay's index.
  */
-function FeatureOverlay(manager, index) {
+export function FeatureOverlay(manager, index) {
 
   /**
    * @type {import("ngeo/map/FeatureOverlayMgr.js").default}

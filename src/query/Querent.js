@@ -1,5 +1,3 @@
-/**
- */
 import angular from 'angular';
 import googAsserts from 'goog/asserts.js';
 import ngeoDatasourceOGC from 'ngeo/datasource/OGC.js';
