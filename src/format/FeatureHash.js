@@ -62,7 +62,7 @@ let LegacyProperties_ = {};
  * @const
  * @private
  */
-const ACCURACY_ = 0.1;
+const DEFAULT_ACCURACY = 0.1;
 
 
 /**
@@ -99,7 +99,7 @@ function FeatureHash(opt_options) {
    * @private
    */
   this.accuracy_ = options.accuracy !== undefined ?
-    options.accuracy : ACCURACY_;
+    options.accuracy : DEFAULT_ACCURACY;
 
   /**
    * @type {boolean}

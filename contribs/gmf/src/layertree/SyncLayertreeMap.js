@@ -431,7 +431,7 @@ SyncLayertreeMap.prototype.getFirstLevelGroupCtrl_ = function(
  * @return {import("ol/layer/Base.js").default} The layer.
  * @public
  */
-function getLayer(treeCtrl) {
+export function getLayer(treeCtrl) {
   let tree = treeCtrl;
   let layer = null;
   while (!tree.isRoot && layer === null) {
